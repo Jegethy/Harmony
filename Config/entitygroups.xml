@@ -1,0 +1,6 @@
+<Config>
+	<!-- Reduces the spawn rate of Vultures -->
+	<set xpath="/entitygroups/entitygroup/entity[@name='animalZombieVulture']/@prob">0.02</set>
+	<!-- Replaces snakes with ... not snakes -->
+	<set xpath="/entitygroups/entitygroup[contains(@name, '')]/entity[contains(@name, 'Snake')]/@name">animalChicken</set>
+</Config>

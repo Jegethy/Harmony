@@ -1,0 +1,6 @@
+<configs>
+
+	<!-- Reduced Encumbrance Penalty -->
+	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @operation='multiply']/@value">0.006</set>
+	
+</configs>

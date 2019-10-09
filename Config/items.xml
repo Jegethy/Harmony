@@ -1,0 +1,275 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<configs>
+
+	<!-- Adjusts the amount of mod slots on an item so that it is equal to its quality -->
+	<remove xpath="/items/item/effect_group/passive_effect[@name='ModSlots'][@value='1,1,2,2,3,4']"/>
+	<append xpath="/items/item/effect_group">
+		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+	</append>
+	<!-- Modifies the damage and range of zombie attacks -->
+	<!-- Reduced reach - A18 NOTE: 1.20 placeholder, needs testing -->
+	<insertAfter xpath="/items/item[@name='meleeHandZombie01']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeHandZombie02']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+   <insertAfter xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeHandZombieStrong']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+    <insertAfter xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+    <insertAfter xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+    <insertAfter xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+    <insertAfter xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+    <insertAfter xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']" >
+		<property name="Range" value="1.20"/>
+	</insertAfter>
+	<!-- Damage of all zombies increased. This is to balance the fact that their range has been drastically reduced. Dodge or die (or have armour). -->
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">19</set>
+	<set xpath="/items/item[@name='meleeHandZombie01']/effect_group[@name='meleeHandZombie01']/passive_effect[2]/@value">15</set>
+	<set xpath="/items/item[@name='meleeHandZombie02Feral']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageEntity']/@value">1000</set> <!-- I don't know what this is, but it sounds like it should be strong -->
+	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='DamageEntity']/@value">28</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">48</set>
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">24</set>
+	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
+	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">28</set>
+	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrong']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">48</set>
+	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']/property[@name='DamageEntity']/@value">24</set>
+	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">76</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">155</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBearFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">260</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageEntity']/@value">12</set>
+	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
+	<!-- Adds damage tags for zombies that don't have their own -->
+	<append xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']">
+		<property name="DamageEntity" value="16"/>
+	</append>
+	<append xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']">
+		<property name="DamageEntity" value="16"/>
+	</append>
+	<append xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']">
+		<property name="DamageEntity" value="16"/>
+	</append>
+	<append xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']">
+		<property name="DamageEntity" value="16"/>
+	</append>
+	<!-- Re-adding the default player damage 'hand' item -->
+	<append xpath="/items/item[@name='meleeHandPlayer']/property[@class='Action0']">
+		<property name="DamageEntity" value="10"/>
+	</append>
+	<!-- Greatly reduces the amount of block damage zombies deal to hardened materials -->
+	<append xpath="/items/item[@name='meleeHandMaster']/effect_group[@name='meleeHandMaster']">
+		<passive_effect name="DamageModifier" operation="perc_add" value="-80" tags="concrete,metal,stone"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'meleeHandZombie')]/effect_group[starts-with(@name, 'meleeHandZombie')]">
+		<passive_effect name="DamageModifier" operation="perc_add" value="-80" tags="concrete,metal,stone"/>
+	</append>
+	<!-- Moderately reduces the amount of block damage zombies deal to other materials -->
+	<append xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']">
+		<property name="DamageBonus.glass" value="1"/>
+		<property name="DamageBonus.earth" value="0.8"/>
+		<property name="DamageBonus.wood" value="0.3"/>
+		<property name="DamageBonus.metal" value="0.45"/>
+		<property name="DamageBonus.stone" value="0.35"/>
+	</append>
+	<!-- End of zombie modification section -->
+	<!-- Weapons Modifications -->
+	<!-- Increases Sniper Rifle magazine to 24 rounds -->
+	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='gunMR10']/passive_effect[@name='MagazineSize']/@value">24</set>
+	<!-- Reduces Sledgehammer stamina usage -->
+	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[1]/passive_effect[10]/@value">18</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[1]/passive_effect[10]/@value">20</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/effect_group[1]/passive_effect[10]/@value">22</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[2]/passive_effect[4]/@value">22</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[2]/passive_effect[3]/@value">25</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/effect_group[2]/passive_effect[3]/@value">28</set>
+	<!-- Increased bullet damage -->
+	<append xpath="/items/item[starts-with(@name, 'ammo9mmBullet')]/effect_group[starts-with(@name, 'ammo9mmBullet')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammo44MagnumBullet')]/effect_group[starts-with(@name, 'ammo44MagnumBullet')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammo762mmBullet')]/effect_group[starts-with(@name, 'ammo762mmBullet')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammoShotgun')]/effect_group[starts-with(@name, 'ammoShotgun')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammoBlunderbuss')]/effect_group[starts-with(@name, 'ammoBlunderbuss')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammoRocket')]/effect_group[starts-with(@name, 'ammoRocket')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="3.62" tags="head"/>
+	</append>
+	<!-- Increased arrow damage -->
+	<append xpath="/items/item[starts-with(@name, 'ammoArrow')]/effect_group[starts-with(@name, 'ammoArrow')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>
+	</append>
+	<append xpath="/items/item[starts-with(@name, 'ammoCrossbowBolt')]/effect_group[starts-with(@name, 'ammoCrossbowBolt')]">
+		<passive_effect name="DamageModifier" operation="perc_set" value="2.2" tags="EntityDamage"/>
+		<passive_effect name="DamageModifier" operation="perc_set" value="4" tags="head"/>
+	</append>
+	<!-- Increased crossbow reload speed -->
+	<set xpath="/items/item[@name='gunCrossbowIron']/effect_group[@name='gunCrossbowIron']/passive_effect[5]/@value">.6</set>
+	<set xpath="/items/item[@name='gunCrossbowCompound']/effect_group[@name='gunCrossbowCompound']/passive_effect[5]/@value">.8</set>
+	<!-- Miscellaneous Changes -->
+	<!-- Increases the stack size of items -->
+	<!-- Drinks -->
+	<set xpath="/items/item[contains(@name, 'drink')]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
+	<!-- Food -->
+	<set xpath="/items/item[contains(@name, 'food') and not (contains(@name, 'RawMeat'))]/property[@name='Stacknumber' and not(@value='1')]/@value">250</set>
+	<set xpath="/items/item[@name='foodRawMeat']/property[@name='Stacknumber']/@value">1000</set>
+	<!-- Health -->
+	<set xpath="/items/item[contains(@name, 'drug')]/property[@name='Stacknumber' and not(@value='1')]/@value">100</set>
+	<set xpath="/items/item[contains(@name, 'medical')]/property[@name='Stacknumber' and not(@value='1')]/@value">150</set>
+	<!-- Magazines & Schematics -->
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='Stacknumber']/@value">100</set>
+	<set xpath="/items/item[@name='unlockBookMaster']/property[@name='Stacknumber']/@value">100</set>
+	<!-- Ammo -->
+	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'GasCan'))]/property[@name='Stacknumber' and not(@value='1')]/@value">3750</set>
+	<set xpath="/items/item[@name='ammoGasCan']/property[@name='Stacknumber']/@value">10000</set>
+	<!-- Misc -->
+	<set xpath="/items/item[contains(@name, 'resource')]/property[@name='Stacknumber' and not(@value='1')]/@value">10000</set>
+	<set xpath="/items/item[contains(@name, 'tool')]/property[@name='Stacknumber' and not(@value='1')]/@value">100</set>
+	<set xpath="/items/item[@name='casinoCoin']/property[@name='Stacknumber']/@value">30000</set>
+	<set xpath="/items/item[@name='oldCash']/property[@name='Stacknumber']/@value">30000</set>
+	<!-- All other items -->
+	<!-- <set xpath="/items/item/property[@name='Stacknumber' and not(@value='1')]/@value">200</set> -->
+	<!-- End of Stack Size adjustments -->
+	<!-- Adjusts the movement speed penalty of armour - A18 Updated-->
+	<set xpath="/items/item[contains(@name,'armorScrap')]/effect_group/passive_effect[6]/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorLeather')]/effect_group/passive_effect[5]/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorIron')]/effect_group/passive_effect[7]/@value">-.03</set>
+	<set xpath="/items/item[contains(@name,'armorMilitary')]/effect_group/passive_effect[5]/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorSteel')]/effect_group/passive_effect[6]/@value">-.03</set>
+	<set xpath="/items/item[@name='armorMiningHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[5]/@value">-.02</set>
+	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group[@name='steel']/passive_effect[6]/@value">-.03</set>
+	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[5]/@value">-.02</set>
+	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military']/passive_effect[5]/@value">-.02</set>
+	<!-- Speeds up forge smelting and increases maximum stack count to 75,000 (Default = 30,000) -->
+	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.05</set>
+	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
+	<set xpath="/items/item[@name='unit_iron']/property[@name='Stacknumber']/@value">75000</set>
+	<!-- Increases the Nailgun speed -->
+	<set xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.1</set>
+	<!-- Reduces the amount of time it takes to scrap things -->
+	<append xpath="/items/item[@name='resourceYuccaFibers']">
+		<property name="CraftingIngredientTime" value="0.5"/>
+	</append>
+	<append xpath="/items/item[@name='resourceScrapBrass']">
+		<property name="CraftingIngredientTime" value="0.3"/>
+	</append>
+	<append xpath="/items/item[@name='resourceScrapLead']">
+		<property name="CraftingIngredientTime" value="0.3"/>
+	</append>
+	<append xpath="/items/item[@name='resourceCloth']">
+		<property name="CraftingIngredientTime" value="0.5"/>
+	</append>
+	<append xpath="/items/item[@name='resourcePaper']">
+		<property name="CraftingIngredientTime" value="0.5"/>
+	</append>
+	<set xpath="/items/item[@name='resourceScrapIron']/property[@name='CraftingIngredientTime']/@value">0.1</set>
+	<set xpath="/items/item[@name='resourceRockSmall']/property[@name='CraftingIngredientTime']/@value">0.25</set>
+	<set xpath="/items/item[@name='resourceWood']/property[@name='CraftingIngredientTime']/@value">0.125</set>
+	<set xpath="/items/item[@name='resourceScrapPolymers']/property[@name='CraftingIngredientTime']/@value">1</set>
+	<set xpath="/items/item[@name='resourceLeather']/property[@name='CraftingIngredientTime']/@value">1</set>
+	<set xpath="/items/item[@name='resourceMilitaryFiber']/property[@name='CraftingIngredientTime']/@value">5</set>
+	<set xpath="/items/item[@name='resourceElectricParts']/property[@name='CraftingIngredientTime']/@value">1</set>
+	<set xpath="/items/item[@name='resourceElectronicParts']/property[@name='CraftingIngredientTime']/@value">1</set>
+	<set xpath="/items/item[@name='resourceMechanicalParts']/property[@name='CraftingIngredientTime']/@value">1</set>
+	<insertAfter  xpath="/items/item[@name='resourceBrokenGlass']/property[@name='EconomicBundleSize']">
+		<property name="CraftingIngredientTime" value="0.5"/>
+	</insertAfter>
+	<!-- Adds medicinal honey item -->
+	<append xpath="/items">
+		<item name="foodMedicalHoney">
+			<property name="HoldType" value="3"/>
+			<property name="DisplayType" value="water"/>
+			<property name="CustomIcon" value="drinkJarGrainAlcohol"/> <property name="CustomIconTint" value="e3d54f"/>
+			<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
+			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Material" value="Mglass"/>
+			<property name="EconomicValue" value="320"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="name_key" value="foodMedicalHoney" />
+			<property name="description_key" value="foodMedicalHoneyDesc" />
+			<property name="Stacknumber" value="50"/> <!-- STK loot -->
+			<property class="Action0">
+				<property name="Class" value="Eat"/>
+				<property name="Delay" value="1.0"/>
+				<property name="Sound_start" value="player_drinking"/>
+				<property name="Create_item" value="drinkJarEmpty"/>
+			</property>
+			<property name="Group" value="Food/Cooking"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffIllInfection0,buffIllInfection1,buffIllDysentery0,buffIllDysentery1"/>
+			</effect_group>
+		</item>
+	</append>
+	<!-- Adds the Skillbook item for quest rewards -->
+	<append xpath="/items">
+		<item name="skillbook">
+			<property name="CreativeMode" value="Player"/>
+			<property name="HoldType" value="21"/>
+			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="Mpaper"/>
+			<property name="EconomicValue" value="25000"/>
+			<property name="SellableToTrader" value="true"/>
+			<property class="Action0">
+				<property name="Class" value="Quest"/>
+				<property name="Delay" value="0"/>
+				<property name="QuestGiven" value="quest_SkillPointReward"/>
+			</property>
+			<property name="FuelValue" value="2"/>
+			<property name="Weight" value="2"/>
+			<property name="Group" value="Special Items"/>
+			<property name="name_key" value="Skill Point Book" />
+			<property name="desc_key" value="Awards 2 Skill Points for that quest you just completed. Good job!\n\n*Pats you on the head*" />
+			<property name="CustomIcon" value="challengeQuestMaster"/>
+			<property name="CustomIconTint" value="9f9fff"/>
+			<property name="Stacknumber" value="200"/>
+		</item>
+	</append>
+</configs>

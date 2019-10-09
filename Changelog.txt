@@ -1,0 +1,78 @@
+----- Alpha 18 Changelog -----
+
+9 October, 2019
+
+Skill Books rewarded by quests can now be sold to the trader for a hefty sum... though I am not sure why you would
+Medicinal Honey can now be sold to traders
+Reduced the amount of stamina required to use sledgehammer power attacks
+Fixed Crossbow reload speed adjustments - Compound Crossbow loads around 40% faster, Crossbow loads around 20% faster
+Fixed a bug causing the power attack grunting sound to not be removed
+Fixed the zombie reach and damage modifications --- NEEDS FURTHER TESTING
+Fixed the adjustment to mobility stat reduction on armour
+Fixed items not having mod slots equal to their level
+Fixed a bug causing the sniper rifle to have a smaller magazine than intended
+Fixed a bug causing air drops to contain no loot
+Removed updated 9mm and 7.62mm Steel ammo
+Fixed many other small bugs
+
+8 October, 2019
+
+Updated Skillbook item
+Removed large portions of the mod as they need to be rewritten
+Fixed several bugs introduced by the config structure changing
+
+7 October, 2019
+
+Reimplemented level 5 and 6 loot drops
+Began implementation of localisation updates
+Updated Medicinal Honey to remove disentry (level 1) in additional to its current effects
+
+----- Alpha 17 Changelog -----
+
+4 August, 2019
+
+Reverted change to shotgun slug spreading
+Reduced the amount of items found in air drops
+Helmet Light mod is now usable in clothing items
+Corrected Shotgun Slug stack size
+
+3 August, 2019
+
+Significantly increased the amount and variety of items found in air drops... like, by a lot
+Air drop frequency reduced to every 4 days (up from 2 days)
+All 'Bed' items are now able to be picked up
+Shotgun ammo now deals less damage to wood, stone, and metal
+Regular 7.62 and 9mm ammunition can now be upgraded to their steel counterpart in the workbench
+Regular and Steel 9mm ammo can be upgraded to 7.62 ammo
+Steel ammo can once again be sold to the trader
+Shotguns can now utilise magazine extenders, and magazine extenders have increased capacity on all weapons
+
+31 July, 2019
+
+Reworked Steel Ammo
+
+	Removed 7.62mm and 9mm Steel ammo
+	Added a new version of 7.62mm and 9mm Steel ammo with increased damage and reduced degredation penalty. Additionally, it applies the Rad-Remover debuff to zombies
+	Slightly increased the drop rate
+	Updates steel bullet casing recipe
+	Steel ammo can no longer be sold to the trader (excludes steel .44 ammo)
+	
+Slightly reduced the damage dealt by birds
+Weapon silencers should now work correctly
+Added various new lightning items which are craftable in the workbench
+
+30 July, 2019
+
+Removed Snakes and added Chicken spawns in their place
+Reduced the amount of experience given by Chickens due to increased spawn rate
+Slightly reduced the amount of zombie dogs found in the wasteland
+Increased the experience given when slaying a rare and elusive boss zombie
+Further reduced the spawn rate of birds
+Added additional slots to the crafting queue, output queue, and forge input queue
+Reduced the reach of a few zombies to prevent phantom swings
+Traders now open at 04:30 and close at 21:59, and their inventory refreshes every 3 days (down from 5)
+Updated the Skillbook item to state it gives 2 skill points
+Slightly increased the chance to find Acid and Medicinal Honey in loot containers
+
+Recommended: Remove "S420_SimpleUI-CraftingQueue" and "S420_SimpleUI-ForgeInput" to prevent possible conflicts. These are both now controlled by this mod and have been changed server-side. 
+The "item.xml" file from zAlinasTweaks is obsolete and should be removed.

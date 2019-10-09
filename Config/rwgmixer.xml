@@ -1,0 +1,14 @@
+<configs>
+	
+	<!-- Increases the amount of trader spawns -->
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='settlement_trader_01']/@max_count">2</set>
+
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='settlement_trader_02']/@max_count">2</set>
+
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='settlement_trader_03']/@max_count">2</set>
+
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='settlement_trader_04']/@max_count">2</set>
+
+	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='settlement_trader_05']/@max_count">2</set>
+
+</configs>

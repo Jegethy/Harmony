@@ -1,0 +1,61 @@
+<configs>
+	<remove xpath="/item_modifiers/item_modifier[@name='modGunMagazineExtender']" />
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">clothing,armorFeet</set>
+	<!-- Remove crosshair from reflex sight mod -->
+	<set xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
+	<!-- Remove crosshair from laser sight mod -->
+	<set xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
+	<!-- Adding the modded customised fittings items -->	
+	<append xpath="/item_modifiers">
+		<item_modifier name="modLightweightMasterFitting" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
+			<property name="DisplayType" value="modArmorMobility"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="modLightArmorMasterFittingsDesc"/>
+			<property name="CustomIcon" value="modArmorPlatingBasic" />
+			<property name="CustomIconTint" value="171,171,255"/>
+			<property name="EconomicValue" value="385"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="Mobility" operation="perc_add" value="0.04"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.0281" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.0562" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="0.562"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.10" />
+			</effect_group>
+		</item_modifier>
+		
+	<!-- Adding the craftable mod item -->
+		<item_modifier name="modReinforcedMasterFitting" installable_tags="heavyarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
+			<property name="DisplayType" value="modArmorMobility"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DescriptionKey" value="modHeavyArmorMasterFittingsDesc"/>
+			<property name="CustomIcon" value="modArmorPlatingReinforced" />
+			<property name="CustomIconTint" value="171,171,255"/>
+			<property name="EconomicValue" value="542"/>
+
+			<effect_group tiered="false">
+				<passive_effect name="Mobility" operation="perc_add" value="0.06"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.045" tags="walking"/>
+				<passive_effect name="StaminaChangeOT" operation="perc_add" value="0.09" tags="running"/>
+				<display_value name="dStaminaChangeOT" value="0.9"/>
+				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.20" />
+			</effect_group>
+		</item_modifier>
+	</append>
+	
+	<!-- Adding the craftable mod item -->
+	<append xpath="/item_modifiers">
+		<item_modifier name="modGunMagazineExtender" installable_tags="magazine,shotgun" modifier_tags="magazine" type="attachment">
+		<property name="Stacknumber" value="1"/>
+		<!--Adds increased Ammunition-->
+		<effect_group tiered="false">
+		<!--
+			<passive_effect name="MagazineSize" operation="perc_add" value=".5"/>
+		-->
+			<passive_effect name="MagazineSize" operation="perc_add" value=".8"/>
+		</effect_group>
+		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+	</append>
+	
+</configs>
