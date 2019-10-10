@@ -1,22 +1,27 @@
 <configs>
 	<!-- Modifies the movement speed and fuel tank capacity of all vehicles -->
 	<!-- The original values of each vehicle are as follows: -->
-	<!-- Gyrocopter			7,10	-->
+	<!-- Gyrocopter			9,15	-->
 	<!-- Bicycle			5,10	-->
 	<!-- Minibike			7,10	-->
 	<!-- Motorcycle			9,14	-->
 	<!-- Truck				9,13	-->
 	<!-- The latter value is maximum speed a vehicle can reach in metres per second. -->
-	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">9,15.5</set>
-	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">6,10.5</set>
-	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">8.5,11.5</set>
-	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">10,14.6</set>
-	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">10,14.8</set>
-	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='fuelTank']/property[@name='capacity']/@value">48</set>
-	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='fuelTank']/property[@name='capacity']/@value">18</set>
-	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='fuelTank']/property[@name='capacity']/@value">32</set>
-	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='fuelTank']/property[@name='capacity']/@value">56</set>
-	<!-- Reduces the fuel usage of the Gyrocopter -->
-	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='engine']/property[@name='fuelKmPerL']/@value">4</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">14,19</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">6,11</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">9,12</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">12,16</set>
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">11,15</set>
+	<!-- Increases the fuel tank capacity of vehicles -->
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='fuelTank']/property[@name='capacity']/@value">110</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='fuelTank']/property[@name='capacity']/@value">60</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='fuelTank']/property[@name='capacity']/@value">180</set>
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='fuelTank']/property[@name='capacity']/@value">600</set>
+	<!-- Increases the fuel efficiency of vehicles -->
+	<!-- A18 NOTE: Perhaps now TOO efficient? -->
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.9</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.6</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.4</set>
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@class='engine']/property[@name='fuelKmPerL']/@value">0.3</set>
 
 </configs>
