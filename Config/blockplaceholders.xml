@@ -20,5 +20,5 @@
 	<set xpath="/blockplaceholders/*/block[@name='cntRetroFridgeVer2Open']/@prob">0.3</set>
 	<set xpath="/blockplaceholders/*/block[@name='cntStoveOldVer1Closed']/@prob">0.7</set>
 	<set xpath="/blockplaceholders/*/block[@name='cntStoveOldVer2Open']/@prob">0.3</set>
-	
+
 </config>

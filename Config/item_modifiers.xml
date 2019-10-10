@@ -23,8 +23,8 @@
 				<passive_effect name="NoiseMultiplier" operation="perc_subtract" value="0.10" />
 			</effect_group>
 		</item_modifier>
-		
-	<!-- Adding the craftable mod item -->
+
+		<!-- Adding the craftable mod item -->
 		<item_modifier name="modReinforcedMasterFitting" installable_tags="heavyarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
 			<property name="DisplayType" value="modArmorMobility"/>
 			<property name="Stacknumber" value="1"/>
@@ -42,20 +42,20 @@
 			</effect_group>
 		</item_modifier>
 	</append>
-	
+
 	<!-- Adding the craftable mod item -->
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGunMagazineExtender" installable_tags="magazine,shotgun" modifier_tags="magazine" type="attachment">
-		<property name="Stacknumber" value="1"/>
-		<!--Adds increased Ammunition-->
-		<effect_group tiered="false">
-		<!--
+			<property name="Stacknumber" value="1"/>
+			<!--Adds increased Ammunition-->
+			<effect_group tiered="false">
+				<!--
 			<passive_effect name="MagazineSize" operation="perc_add" value=".5"/>
 		-->
-			<passive_effect name="MagazineSize" operation="perc_add" value=".8"/>
-		</effect_group>
-		<property name="PickupJournalEntry" value="augmentGunsTip"/>
+				<passive_effect name="MagazineSize" operation="perc_add" value=".8"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
 	</append>
-	
+
 </configs>

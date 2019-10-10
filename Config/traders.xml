@@ -9,7 +9,7 @@
 	<!-- Modifies the opening and closing times of the trader -->
 	<set xpath="/traders/trader_info[@id='1']/@open_time">4:30</set>
 	<set xpath="/traders/trader_info[@id='1']/@close_time">21:59</set>
-	
+
 	<!-- Modifies how often the trader's inventory will refresh -->
 	<set xpath="/traders/trader_info[@id='1']/@reset_interval">3</set>
 
