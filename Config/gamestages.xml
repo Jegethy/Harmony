@@ -42,4 +42,9 @@
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='48']/spawn/@num">40</set>
 	<set xpath="/gamestages/spawner[@name='WanderingHorde']/gamestage[@stage='49']/spawn/@num">40</set>
 
+	<!-- Fixes Slow Spawning During Blood Moon -->
+	<append xpath='/gamestages/spawner[@name="BloodMoonHorde"]/gamestage[ @stage &gt;23]' >
+		<spawn group="ZombiesNight" num="100" maxAlive="8"/>
+	</append>
+
 </config>

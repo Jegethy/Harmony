@@ -20,7 +20,7 @@
 	<insertAfter xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
-   <insertAfter xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']" >
+	<insertAfter xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
 	<insertAfter xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']" >
@@ -32,19 +32,19 @@
 	<insertAfter xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
-    <insertAfter xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']" >
+	<insertAfter xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
-    <insertAfter xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']" >
+	<insertAfter xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
-    <insertAfter xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']" >
+	<insertAfter xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
-    <insertAfter xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']" >
+	<insertAfter xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
-    <insertAfter xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']" >
+	<insertAfter xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']" >
 		<property name="Range" value="1.20"/>
 	</insertAfter>
 	<!-- Damage of all zombies increased. This is to balance the fact that their range has been drastically reduced. Dodge or die (or have armour). -->
@@ -270,6 +270,15 @@
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="9f9fff"/>
 			<property name="Stacknumber" value="200"/>
+		</item>
+	</append>
+	<!-- Adds the Bile Duct item -->	
+	<append xpath="/items">
+		<item name="itemBileDuct">
+			<property name="Extends" value="resourceSteelPolish"/>
+			<property name="CustomIcon" value="copBileDuct" />	
+			<property name="Material" value="MresourceClayLump"/>
+			<property name="CreativeMode" value="None"/>
 		</item>
 	</append>
 </configs>
