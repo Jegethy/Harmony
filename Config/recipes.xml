@@ -178,6 +178,7 @@
 			<ingredient name="resourceBrokenGlass" count="10"/>
 		</recipe>
 	</append>
+	
 	<!-- Adds recipe for crafting acid from Bile Ducts -->	
 	<append xpath="/recipes">
 		<recipe name="resourceAcid" count="1" craft_area="chemistryStation">
@@ -185,4 +186,29 @@
 			<ingredient name="itemBileDuct" count="1"/>
 		</recipe>
 	</append>
+
+	<!-- Adds arrow and bolt crafting recipes -->
+    <append xpath="/recipes">
+		<recipe name="ammoArrowStone" count="1">
+			<ingredient name="ammoCrossbowBoltStone" count="1"/>
+		</recipe>
+		<recipe name="ammoArrowIron" count="1">
+			<ingredient name="ammoCrossbowBoltIron" count="1"/>
+		</recipe>
+		<recipe name="ammoArrowSteelAP" count="1">
+			<ingredient name="ammoCrossbowBoltSteelAP" count="1"/>
+		</recipe>
+        <recipe name="ammoArrowSteelAP" count="1">
+			<ingredient name="ammoArrowIron" count="3"/>
+		</recipe>
+		<recipe name="ammoCrossbowBoltStone" count="1">
+			<ingredient name="ammoArrowStone" count="1"/>
+		</recipe>
+		<recipe name="ammoCrossbowBoltIron" count="1">
+			<ingredient name="ammoArrowIron" count="1"/>
+		</recipe>
+        <recipe name="ammoCrossbowBoltSteelAP" count="1">
+			<ingredient name="ammoArrowSteelAP" count="1"/>
+		</recipe>
+    </append>
 </configs>
