@@ -58,20 +58,4 @@
 		</item_modifier>
 	</append>
 
-	<!-- Makes dyes sellable to vendors -->
-    <append xpath="/item_modifiers/item_modifier[contains(@name, 'modDye')]">
-        <property name="EconomicValue" value="1500"/>
-    </append>
-	
-	<!-- Adds mod tags to clothing items -->
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorBandolier']/@installable_tags">clothing,armorChest</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLiner']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorCoolingMesh']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorDoubleStoragePocket']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorTripleStoragePocket']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorMuffledConnectors']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorAdvancedMuffledConnectors']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorImpactBracing']/@installable_tags">clothing,armorFeet</set>
-
 </configs>
