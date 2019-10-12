@@ -1,0 +1,9 @@
+<configs>
+
+	<!-- The Cardio perk now grants 2% movement speed at level 1, up to 10% at level 5, in addition to its existing effects -->
+	<append xpath="/progression/perks/perk[@name='perkRuleOneCardio']/effect_group" >
+		<passive_effect name="WalkSpeed" operation="perc_add" value="0.02,0.10" level="1,5" />
+		<passive_effect name="RunSpeed" operation="perc_add" value="0.02,0.10" level="1,5" />
+	</append>
+
+</configs>
