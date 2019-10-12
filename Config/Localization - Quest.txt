@@ -1,0 +1,5 @@
+﻿Key,Source,Context,Changes,English,French,German,Klingon,Spanish
+encumbranceTip_title,,Journal,New,Cucumbrance,,,,
+encumbranceTip,,Journal,New,"If you carry too many items in your backpack (inventory) you can become cucumbered which lowers your movement speed. Items in your hotbar and worn clothing do not count.\n
+Your inventory shows a number of unlocked and locked slots symbolic for how many items you can carry in your inventory without being cucumbered. It is not necessary to place items on specific slots. Only the total amount of items in your backpack matters.\n\nThe Pack Mule perk as well as certain mods or drugs unlock more inventory slots, allowing you to carry more without being cucumbered.
+",,,,
