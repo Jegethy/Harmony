@@ -48,28 +48,33 @@
 		<property name="Range" value="1.20"/>
 	</insertAfter>
 	<!-- Damage of all zombies increased. This is to balance the fact that their range has been drastically reduced. Dodge or die (or have armour). -->
-	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">19</set>
-	<set xpath="/items/item[@name='meleeHandZombie01']/effect_group[@name='meleeHandZombie01']/passive_effect[2]/@value">15</set>
+	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
+	<set xpath="/items/item[@name='meleeHandZombie01']/effect_group[@name='meleeHandZombie01']/passive_effect[2]/@value">16</set>
 	<set xpath="/items/item[@name='meleeHandZombie02Feral']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
-	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageEntity']/@value">1000</set> <!-- I don't know what this is, but it sounds like it should be strong -->
+	<set xpath="/items/item[@name='meleeHandZombieBehemoth']/property[@class='Action0']/property[@name='DamageEntity']/@value">1200</set> <!-- I don't know what this is, but it sounds like it should be strong -->
 	<set xpath="/items/item[@name='meleeHandZombieBurning']/property[@class='Action0']/property[@name='DamageEntity']/@value">28</set>
-	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
-	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningCrawler']/property[@class='Action0']/property[@name='DamageEntity']/@value">36</set>
+	<set xpath="/items/item[@name='meleeHandZombieBurningFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">42</set>
 	<set xpath="/items/item[@name='meleeHandZombieCop']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
-	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">48</set>
-	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">24</set>
+	<set xpath="/items/item[@name='meleeHandZombieCopFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">52</set>
+	<set xpath="/items/item[@name='meleeHandZombieFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
 	<set xpath="/items/item[@name='meleeHandZombieFootballPlayerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
-	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">28</set>
+	<set xpath="/items/item[@name='meleeHandZombieHazMatFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">32</set>
+	<set xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']/property[@name='DamageEntity']/@value">16</set>
 	<set xpath="/items/item[@name='meleeHandZombieStripperFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
 	<set xpath="/items/item[@name='meleeHandZombieStrong']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
-	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">48</set>
+	<set xpath="/items/item[@name='meleeHandZombieStrongFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">52</set>
 	<set xpath="/items/item[@name='meleeHandZombieWorkerFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
+	<set xpath="/items/item[@name='meleeHandZombieDemolition']/property[@class='Action0']/property[@name='DamageEntity']/@value">30</set>
 	<set xpath="/items/item[@name='meleeHandAnimalZombieDog']/property[@class='Action0']/property[@name='DamageEntity']/@value">24</set>
-	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">76</set>
+	<set xpath="/items/item[@name='meleeHandAnimalBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">100</set>
 	<set xpath="/items/item[@name='meleeHandAnimalZombieBear']/property[@class='Action0']/property[@name='DamageEntity']/@value">155</set>
-	<set xpath="/items/item[@name='meleeHandAnimalZombieBearFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">260</set>
+	<set xpath="/items/item[@name='meleeHandAnimalZombieBearFeral']/property[@class='Action0']/property[@name='DamageEntity']/@value">275</set>
 	<set xpath="/items/item[@name='meleeHandAnimalZombieVulture']/property[@class='Action0']/property[@name='DamageEntity']/@value">12</set>
 	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">34</set>
+	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='DamageEntity']/@value">40</set>
+	<set xpath="/items/item[@name='meleeHandAnimalCoyote']/property[@class='Action0']/property[@name='DamageEntity']/@value">24</set>
+	<set xpath="/items/item[@name='meleeHandBossGrace']/property[@class='Action0']/property[@name='DamageEntity']/@value">65</set>
 	<!-- Adds damage tags for zombies that don't have their own -->
 	<append xpath="/items/item[@name='meleeHandZombieWorker']/property[@class='Action0']">
 		<property name="DamageEntity" value="16"/>
@@ -77,10 +82,10 @@
 	<append xpath="/items/item[@name='meleeHandZombieFootballPlayer']/property[@class='Action0']">
 		<property name="DamageEntity" value="16"/>
 	</append>
-	<append xpath="/items/item[@name='meleeHandZombieStripper']/property[@class='Action0']">
+	<append xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']">
 		<property name="DamageEntity" value="16"/>
 	</append>
-	<append xpath="/items/item[@name='meleeHandZombieHazMat']/property[@class='Action0']">
+	<append xpath="/items/item[@name='meleeHandZombie02']/property[@class='Action0']">
 		<property name="DamageEntity" value="16"/>
 	</append>
 	<!-- Re-adding the default player damage 'hand' item -->
