@@ -112,12 +112,12 @@
 	<!-- Increases Sniper Rifle magazine to 24 rounds -->
 	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='gunMR10']/passive_effect[@name='MagazineSize']/@value">24</set>
 	<!-- Reduces Sledgehammer stamina usage -->
-	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[1]/passive_effect[10]/@value">18</set>
-	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[1]/passive_effect[10]/@value">20</set>
-	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/effect_group[1]/passive_effect[10]/@value">22</set>
-	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[2]/passive_effect[4]/@value">22</set>
-	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[2]/passive_effect[3]/@value">25</set>
-	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/effect_group[2]/passive_effect[3]/@value">28</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[@name='meleeToolSledgehammerStone']/passive_effect[@name='StaminaLoss']/@value">18</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[@name='meleeToolSledgehammerIron']/passive_effect[@name='StaminaLoss']/@value">20</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/effect_group[@name='meleeToolSledgehammerSteel']/passive_effect[@name='StaminaLoss']/@value">22</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss']/@value">22</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss']/@value">25</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/effect_group[@name='Power Attack']/passive_effect[@name='StaminaLoss']/@value">28</set>
 	<!-- Increased bullet damage -->
 	<append xpath="/items/item[starts-with(@name, 'ammo9mmBullet')]/effect_group[starts-with(@name, 'ammo9mmBullet')]">
 		<passive_effect name="DamageModifier" operation="perc_set" value="2" tags="EntityDamage"/>
@@ -180,15 +180,15 @@
 	<!-- <set xpath="/items/item/property[@name='Stacknumber' and not(@value='1')]/@value">200</set> -->
 	<!-- End of Stack Size adjustments -->
 	<!-- Adjusts the movement speed penalty of armour - A18 Updated-->
-	<set xpath="/items/item[contains(@name,'armorScrap')]/effect_group/passive_effect[6]/@value">-.02</set>
-	<set xpath="/items/item[contains(@name,'armorLeather')]/effect_group/passive_effect[5]/@value">-.02</set>
-	<set xpath="/items/item[contains(@name,'armorIron')]/effect_group/passive_effect[7]/@value">-.03</set>
-	<set xpath="/items/item[contains(@name,'armorMilitary')]/effect_group/passive_effect[5]/@value">-.02</set>
-	<set xpath="/items/item[contains(@name,'armorSteel')]/effect_group/passive_effect[6]/@value">-.03</set>
-	<set xpath="/items/item[@name='armorMiningHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[5]/@value">-.02</set>
-	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group[@name='steel']/passive_effect[6]/@value">-.03</set>
-	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[5]/@value">-.02</set>
-	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military']/passive_effect[5]/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorScrap')]/effect_group/passive_effect[@name='Mobility']/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorLeather')]/effect_group/passive_effect[@name='Mobility']/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorIron')]/effect_group/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[contains(@name,'armorMilitary')]/effect_group/passive_effect[@name='Mobility']/@value">-.02</set>
+	<set xpath="/items/item[contains(@name,'armorSteel')]/effect_group/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[@name='armorMiningHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.02</set>
+	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group[@name='steel']/passive_effect[@name='Mobility']/@value">-.03</set>
+	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.02</set>
+	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military']/passive_effect[@name='Mobility']/@value">-.02</set>
 	<!-- Speeds up forge smelting and increases maximum stack count to 75,000 (Default = 30,000) -->
 	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.05</set>
 	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
@@ -227,28 +227,31 @@
 	<append xpath="/items">
 		<item name="foodMedicalHoney">
 			<property name="HoldType" value="3"/>
-			<property name="DisplayType" value="water"/>
+			<property name="DisplayType" value="foodCureInfection"/>
 			<property name="CustomIcon" value="drinkJarGrainAlcohol"/> <property name="CustomIconTint" value="e3d54f"/>
-			<property name="Meshfile" value="Items/Food/bottled_waterPrefab"/>
-			<property name="DropMeshfile" value="Items/Misc/sack_droppedPrefab"/>
+			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mglass"/>
-			<property name="EconomicValue" value="320"/>
+			<property name="EconomicValue" value="160"/>
 			<property name="SellableToTrader" value="true"/>
 			<property name="name_key" value="foodMedicalHoney" />
 			<property name="description_key" value="foodMedicalHoneyDesc" />
+			<property name="Group" value="Science,CFChemicals,Medical"/>
 			<property name="Stacknumber" value="50"/> <!-- STK loot -->
 			<property class="Action0">
 				<property name="Class" value="Eat"/>
 				<property name="Delay" value="1.0"/>
+				<property name="Use_time" value="..."/>
 				<property name="Sound_start" value="player_drinking"/>
 				<property name="Create_item" value="drinkJarEmpty"/>
 			</property>
-			<property name="Group" value="Food/Cooking"/>
 			<effect_group tiered="false">
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="18"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="12"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$foodAmountAdd" operation="add" value="16"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="foodHealthAmount" operation="add" value="6"/>
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" target="self" buff="buffProcessConsumables"/>
-				<triggered_effect trigger="onSelfPrimaryActionEnd" action="RemoveBuff" target="self" buff="buffIllInfection0,buffIllInfection1,buffIllDysentery0,buffIllDysentery1"/>
+				<display_value name="dCureInfection" value=".10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffInfectionAddCurePerc" operation="add" value="10"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffInfectionAddCure"/>
 			</effect_group>
 		</item>
 	</append>

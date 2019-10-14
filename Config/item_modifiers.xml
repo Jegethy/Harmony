@@ -10,7 +10,8 @@
 		<item_modifier name="modLightweightMasterFitting" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
 			<property name="DisplayType" value="modArmorMobility"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value="modLightArmorMasterFittingsDesc"/>
+			<property name="name_key" value="modLightweightMasterFitting" />
+			<property name="description_key" value="modLightweightMasterFittingDesc" />
 			<property name="CustomIcon" value="modArmorPlatingBasic" />
 			<property name="CustomIconTint" value="171,171,255"/>
 			<property name="EconomicValue" value="385"/>
@@ -28,7 +29,8 @@
 		<item_modifier name="modReinforcedMasterFitting" installable_tags="heavyarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
 			<property name="DisplayType" value="modArmorMobility"/>
 			<property name="Stacknumber" value="1"/>
-			<property name="DescriptionKey" value="modHeavyArmorMasterFittingsDesc"/>
+			<property name="name_key" value="modReinforcedMasterFitting" />
+			<property name="description_key" value="modReinforcedMasterFittingDesc" />
 			<property name="CustomIcon" value="modArmorPlatingReinforced" />
 			<property name="CustomIconTint" value="171,171,255"/>
 			<property name="EconomicValue" value="542"/>
