@@ -182,7 +182,13 @@
 	<!-- Adds recipe for crafting acid from Bile Ducts -->	
 	<append xpath="/recipes">
 		<recipe name="resourceAcid" count="1" craft_area="chemistryStation">
-			<incredient name="drinkJarEmpty" count="1"/>
+			<incredient name="drinkJarBoiledWater" count="1"/>
+			<ingredient name="itemBileDuct" count="1"/>
+		</recipe>
+	</append>
+	<append xpath="/recipes">
+		<recipe name="resourceAcid" count="1" craft_area="chemistryStation">
+			<incredient name="drinkJarRiverWater" count="1"/>
 			<ingredient name="itemBileDuct" count="1"/>
 		</recipe>
 	</append>
