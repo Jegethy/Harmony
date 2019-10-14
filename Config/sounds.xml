@@ -1,6 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <config>
 
+	<!-- Removes power attack grunting -->
+	<remove xpath="/Sounds//SoundDataNode[@name='player1powerattack']" />
+	<remove xpath="/Sounds//SoundDataNode[@name='player2powerattack']" />
+
 	<!-- Removes the default surpressed sounds -->
 	<remove xpath="/Sounds//SoundDataNode[@name='pistol_s_fire']" />
 	<remove xpath="/Sounds//SoundDataNode[@name='mp5_s_fire']" />
