@@ -257,7 +257,7 @@
 	</append>
 	<!-- Adds the Skillbook item for quest rewards -->
 	<append xpath="/items">
-		<item name="skillbook">
+		<item name="itemSkillbook">
 			<property name="CreativeMode" value="Player"/>
 			<property name="HoldType" value="21"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
@@ -273,8 +273,8 @@
 			<property name="FuelValue" value="2"/>
 			<property name="Weight" value="2"/>
 			<property name="Group" value="Special Items"/>
-			<property name="name_key" value="Skill Point Book" />
-			<property name="desc_key" value="Awards 2 Skill Points for that quest you just completed. Good job!\n\n*Pats you on the head*" />
+			<property name="name_key" value="itemSkillbook" />
+			<property name="desc_key" value="itemSkillbookDesc" />
 			<property name="CustomIcon" value="challengeQuestMaster"/>
 			<property name="CustomIconTint" value="9f9fff"/>
 			<property name="Stacknumber" value="200"/>
@@ -283,10 +283,19 @@
 	<!-- Adds the Bile Duct item -->	
 	<append xpath="/items">
 		<item name="itemBileDuct">
-			<property name="Extends" value="resourceSteelPolish"/>
+			<property name="CreativeMode" value="Player"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="name_key" value="itemBileDuct" />
+			<property name="description_key" value="itemBileDuctDesc" />
 			<property name="CustomIcon" value="copBileDuct" />	
 			<property name="Material" value="MresourceClayLump"/>
-			<property name="CreativeMode" value="None"/>
+			<property name="EconomicValue" value="125"/>
+			<property name="Group" value="Resources"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="Stacknumber" value="200"/>
+			<property name="Weight" value="2"/>
 		</item>
 	</append>
 </configs>

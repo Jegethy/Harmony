@@ -12,21 +12,21 @@
 	
 	<!-- Adds Skillbook rewards from quests -->
 	<append xpath="/quests/quest/property[@name='completiontype'][@value='TurnIn']/../property[@name='category_key'][@value='quest']/..">
-		<reward type="Item" id="skillbook" value="1" />
+		<reward type="Item" id="itemSkillbook" value="1" />
 	</append>
 	<append xpath="/quests/quest/property[@name='completiontype'][@value='TurnIn']/../property[@name='category_key'][@value='challenge']/..">
-		<reward type="Item" id="skillbook" value="1" />
+		<reward type="Item" id="itemSkillbook" value="1" />
 	</append>
 	<append xpath="/quests">
 		<quest id="quest_SkillPointReward">
 		<property name="group_name_key" value="quest_SkillPointReward" />
-		<property name="name_key" value="Skill Reward" />
-		<property name="subtitle_key" value="Skill point added" />
-		<property name="description_key" value="Skill point added" />
+		<property name="name_key" value="Book of Skill Reward" />
+		<property name="subtitle_key" value="2 Skill Points" />
+		<property name="description_key" value="You've earned 2 Skill Points" />
 		<property name="icon" value="ui_game_symbol_map_bed" />
 		<property name="category_key" value="quest" />
 		<property name="difficulty" value="veryeasy"/>
-		<property name="offer_key" value="You have earned 2 additional skill points" />
+		<property name="offer_key" value="You have earned 2 additional skill points. Well done!\n\nDon't spend them all in one place!" />
 		<property name="shareable" value="false" />
 		<reward type="SkillPoints" value="2" />
 		</quest>
