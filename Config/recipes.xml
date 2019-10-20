@@ -217,4 +217,41 @@
 			<ingredient name="ammoArrowSteelAP" count="1"/>
 		</recipe>
     </append>
+	
+	<!-- Adds recipe to convert ammo into different ammo -->
+    <append xpath="/recipes">
+		<recipe name="ammo762mmBulletAP" count="1">
+			<ingredient name="ammo9mmBulletAP" count="2"/>
+		</recipe>
+		<recipe name="ammo762mmBulletHP" count="1">
+			<ingredient name="ammo9mmBulletHP" count="2"/>
+		</recipe>
+		<recipe name="ammo9mmBulletHP" count="2">
+			<ingredient name="ammo762mmBulletHP" count="1"/>
+		</recipe>
+        <recipe name="ammo9mmBulletAP" count="2">
+			<ingredient name="ammo762mmBulletAP" count="1"/>
+		</recipe>
+		<recipe name="ammo762mmBulletBall" count="1">
+			<ingredient name="ammo9mmBulletBall" count="2"/>
+		</recipe>
+		<recipe name="ammo9mmBulletBall" count="2">
+			<ingredient name="ammo762mmBulletBall" count="1"/>
+		</recipe>
+        <recipe name="ammoShotgunShell" count="1">
+			<ingredient name="ammoShotgunSlug" count="2"/>
+		</recipe>
+		 <recipe name="ammoShotgunShell" count="1">
+			<ingredient name="ammoShotgunBreachingSlug" count="4"/>
+		</recipe>
+        <recipe name="ammoShotgunSlug" count="1">
+			<ingredient name="ammoShotgunShell" count="2"/>
+		</recipe>
+        <recipe name="ammoShotgunBreachingSlug" count="1">
+			<ingredient name="ammoShotgunShell" count="4"/>
+		</recipe>
+        <recipe name="ammoShotgunBreachingSlug" count="1">
+			<ingredient name="ammoShotgunSlug" count="2"/>
+		</recipe>
+    </append>
 </configs>
