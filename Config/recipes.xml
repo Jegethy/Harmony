@@ -220,38 +220,38 @@
 	
 	<!-- Adds recipe to convert ammo into different ammo -->
     <append xpath="/recipes">
-		<recipe name="ammo762mmBulletAP" count="1">
+		<recipe name="ammo762mmBulletAP" count="1" craft_area="workbench">
 			<ingredient name="ammo9mmBulletAP" count="2"/>
 		</recipe>
-		<recipe name="ammo762mmBulletHP" count="1">
+		<recipe name="ammo762mmBulletHP" count="1" craft_area="workbench">
 			<ingredient name="ammo9mmBulletHP" count="2"/>
 		</recipe>
-		<recipe name="ammo9mmBulletHP" count="2">
+		<recipe name="ammo9mmBulletHP" count="2" craft_area="workbench">
 			<ingredient name="ammo762mmBulletHP" count="1"/>
 		</recipe>
-        <recipe name="ammo9mmBulletAP" count="2">
+        <recipe name="ammo9mmBulletAP" count="2" craft_area="workbench">
 			<ingredient name="ammo762mmBulletAP" count="1"/>
 		</recipe>
-		<recipe name="ammo762mmBulletBall" count="1">
+		<recipe name="ammo762mmBulletBall" count="1" craft_area="workbench">
 			<ingredient name="ammo9mmBulletBall" count="2"/>
 		</recipe>
-		<recipe name="ammo9mmBulletBall" count="2">
+		<recipe name="ammo9mmBulletBall" count="2" craft_area="workbench">
 			<ingredient name="ammo762mmBulletBall" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunShell" count="1">
+        <recipe name="ammoShotgunShell" count="1" craft_area="workbench">
 			<ingredient name="ammoShotgunSlug" count="2"/>
 		</recipe>
-		 <recipe name="ammoShotgunShell" count="1">
-			<ingredient name="ammoShotgunBreachingSlug" count="4"/>
+		 <recipe name="ammoShotgunShell" count="4" craft_area="workbench">
+			<ingredient name="ammoShotgunBreachingSlug" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunSlug" count="1">
-			<ingredient name="ammoShotgunShell" count="2"/>
+        <recipe name="ammoShotgunSlug" count="2" craft_area="workbench">
+			<ingredient name="ammoShotgunShell" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunBreachingSlug" count="1">
-			<ingredient name="ammoShotgunShell" count="4"/>
+        <recipe name="ammoShotgunBreachingSlug" count="4" craft_area="workbench">
+			<ingredient name="ammoShotgunShell" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunBreachingSlug" count="1">
-			<ingredient name="ammoShotgunSlug" count="2"/>
+        <recipe name="ammoShotgunBreachingSlug" count="2" craft_area="workbench">
+			<ingredient name="ammoShotgunSlug" count="1"/>
 		</recipe>
     </append>
 </configs>
