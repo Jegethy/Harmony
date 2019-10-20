@@ -1,9 +1,13 @@
 <config>
 	<!-- Removes the standard airdrop loot table to be added back later -->
 	<remove xpath="/lootcontainers/lootcontainer[@id='34']" />
-	<!-- Reduces the amount of feathers, and increases the amount of eggs, found in nests -->
-	<set xpath="/lootcontainers/lootcontainer[@id='25']/item[@name='resourceFeather']/@count">2,3</set>
-	<set xpath="/lootcontainers/lootcontainer[@id='25']/item[@name='foodEgg']/@prob">0.75</set>
+	<!-- Slightly increases the amount of feathers and eggs found in nests -->
+	<remove xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='foodEgg']" />
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']/@prob">1</set>
+	<set xpath="/lootcontainers/lootgroup[@name='groupBirdNest']/item[@name='resourceFeather']/@count">3,9</set>
+	<append xpath="/lootcontainers/lootgroup[@name='groupBirdNest']">
+		<item name="foodEgg" count="1,8" prob="0.75"/>
+	</append>
 	<!-- Reduces the amount of clean bottled water found in loot -->
 	<remove xpath="/lootcontainers/lootgroup[@name='cupboard']/item[@name='drinkJarBoiledWater']" />
 	<set xpath="/lootcontainers/lootcontainer[@id='36']/item[@name='drinkJarBoiledWater']/@count">1</set>
