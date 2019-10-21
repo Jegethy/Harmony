@@ -1,9 +1,75 @@
 <configs>
 
+	<!-- Adds custom sledgehammer book category -->
+	<append xpath="/progression/skills" >
+		<skill name="skillHammerTime" parent="attBooks" name_key="perkHammerTimeName" desc_key="perkHammerTimeDesc" long_desc_key="perkBookGroupLongDesc" icon="ui_game_symbol_sledge"><effect_group/></skill>
+	</append>
+	<!-- Adds custom sledgehammer book skills -->
+	<append xpath="/progression/perks" >
+		<perk name="perkHammerTimeDamage" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDamageDesc" long_desc_key="perkHammerTimeDamageLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+		<perk name="perkHammerTimeHarvest" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeHarvestDesc" long_desc_key="perkHammerTimeHarvestLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+		<perk name="perkHammerTimeDefense" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDefenseDesc" long_desc_key="perkHammerTimeDefenseLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+		<perk name="perkHammerTimeDoorKey" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDoorKeyDesc" long_desc_key="perkHammerTimeDoorKeyLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+		<perk name="perkHammerTimeProtect" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeProtectDesc" long_desc_key="perkHammerTimeProtectLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+		<perk name="perkHammerTimeSteroids" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeSteroidsDesc" long_desc_key="perkHammerTimeSteroidsLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+		<perk name="perkHammerTimeDrunk" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDrunkDesc" long_desc_key="perkHammerTimeDrunkLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+		<perk name="perkHammerTimeComplete" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeCompleteDesc" long_desc_key="perkHammerTimeCompleteLongDesc">
+			<effect_group>
+			</effect_group>
+		</perk>
+	</append>
+
 	<!-- The Cardio perk now grants 2% movement speed at level 1, up to 10% at level 5, in addition to its existing effects -->
 	<append xpath="/progression/perks/perk[@name='perkRuleOneCardio']/effect_group" >
 		<passive_effect name="WalkSpeed" operation="perc_add" value="0.02,0.10" level="1,5" />
 		<passive_effect name="RunSpeed" operation="perc_add" value="0.02,0.10" level="1,5" />
+	</append>
+
+	<!-- Flurry of Blows now increases attack speed of all melee weapons -->
+	<set xpath="/progression/perks/perk[@name='perkFlurryOfBlows']/effect_group/requirement[@name='HoldingItemHasTags']/@tags">melee,tool,weapon,meleeWeapon,blunt</set>			
+
+	<!-- Sexual Tyrannosaurus also now increases base stamina regeneration -->
+	<remove xpath="/progression/perks/perk[@name='perkSexualTrex']/effect_group/triggered_effect[@trigger='onSelfKilledOther']"/>
+	<append xpath="/progression/perks/perk[@name='perkSexualTrex']/effect_group" >
+		<passive_effect name="StaminaChangeOT" operation="base_add" level="1,5" value="0.6,3"/>
+	</append>
+	<append xpath="/progression/perks/perk[@name='perkSexualTrex']/effect_group" >
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="5">
+			<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="1"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="10">
+			<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="2"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="20">
+			<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="3"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="50">
+			<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="4"/>
+		</triggered_effect>
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="300">
+			<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="5"/>
+		</triggered_effect>
 	</append>
 
 </configs>
