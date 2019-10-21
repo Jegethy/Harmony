@@ -26,7 +26,7 @@
 			<effect_group>
 			</effect_group>
 		</perk>
-		<perk name="perkHammerTimeSteroids" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeSteroidsDesc" long_desc_key="perkHammerTimeSteroidsLongDesc">
+		<perk name="perkHammerTimeUnstoppable" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeUnstoppableDesc" long_desc_key="perkHammerTimeUnstoppableLongDesc">
 			<effect_group>
 			</effect_group>
 		</perk>
