@@ -197,12 +197,15 @@
 	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group[@name='steel']/passive_effect[@name='Mobility']/@value">-.03</set>
 	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.02</set>
 	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military']/passive_effect[@name='Mobility']/@value">-.02</set>
+	
 	<!-- Speeds up forge smelting and increases maximum stack count to 75,000 (Default = 30,000) -->
 	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.05</set>
 	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
 	<set xpath="/items/item[@name='unit_iron']/property[@name='Stacknumber']/@value">75000</set>
+	
 	<!-- Increases the Nailgun speed -->
 	<set xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.1</set>
+	
 	<!-- Reduces the amount of time it takes to scrap things -->
 	<append xpath="/items/item[@name='resourceYuccaFibers']">
 		<property name="CraftingIngredientTime" value="0.5"/>
@@ -231,6 +234,7 @@
 	<insertAfter  xpath="/items/item[@name='resourceBrokenGlass']/property[@name='EconomicBundleSize']">
 		<property name="CraftingIngredientTime" value="0.5"/>
 	</insertAfter>
+	
 	<!-- Adds medicinal honey item -->
 	<append xpath="/items">
 		<item name="foodMedicalHoney">
@@ -263,6 +267,7 @@
 			</effect_group>
 		</item>
 	</append>
+	
 	<!-- Adds the Skillbook item for quest rewards -->
 	<append xpath="/items">
 		<item name="itemSkillbook">
@@ -288,6 +293,7 @@
 			<property name="Stacknumber" value="200"/>
 		</item>
 	</append>
+	
 	<!-- Adds the Bile Duct item -->	
 	<append xpath="/items">
 		<item name="itemBileDuct">
@@ -304,6 +310,175 @@
 			<property name="SellableToTrader" value="true"/>
 			<property name="Stacknumber" value="200"/>
 			<property name="Weight" value="2"/>
+		</item>
+	</append>
+	
+	<!-- Adds sledgehammer skill books -->	
+	<append xpath="/items">
+		<item name="bookHammerTimeDamage">
+			<property name="Extends" value="bookFiremansAlmanacHeat"/>
+			<property name="CustomIcon" value="schematicMaster"/>
+			<property name="DescriptionKey" value="perkHammerTimeDamageLongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeDamage"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeDamage" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+		</item>
+		<item name="bookHammerTimeHarvest">
+			<property name="Extends" value="bookHammerTimeDamage"/>
+			<property name="DescriptionKey" value="perkHammerTimeHarvestLongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeHarvest"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeHarvest" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+		</item>
+		<item name="bookHammerTimeDefense">
+			<property name="Extends" value="bookHammerTimeDamage"/>
+			<property name="DescriptionKey" value="perkHammerTimeDefenseLongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeDefense"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeDefense" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+		</item>
+		<item name="bookHammerTimeDoorKey">
+			<property name="Extends" value="bookHammerTimeDamage"/>
+			<property name="DescriptionKey" value="perkHammerTimeDoorKeyLongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeDoorKey"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeDoorKey" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+		</item>
+		<item name="bookHammerTimeProtect">
+			<property name="Extends" value="bookHammerTimeDamage"/>
+			<property name="DescriptionKey" value="perkHammerTimeProtectLongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeProtect"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeProtect" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+		</item>
+		<item name="bookHammerTimeUnstoppable">
+			<property name="Extends" value="bookHammerTimeDamage"/>
+			<property name="DescriptionKey" value="perkHammerTimeUnstoppableLongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeUnstoppable"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeUnstoppable" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+		</item>
+		<item name="bookHammerTimeDrunk">
+			<property name="Extends" value="bookHammerTimeDamage"/>
+			<property name="DescriptionKey" value="perkHammerTimeDrunkLongDesc"/>
+			<property name="Unlocks" value="perkHammerTimeDrunk"/>
+			<effect_group tiered="false">
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeDrunk" level="-1"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="GiveExp" exp="50"/>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="SetProgressionLevel" progression_name="perkHammerTimeComplete" level="-1">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="PlaySound" sound="read_skillbook_final" play_in_head="true">
+					<requirement name="PerksUnlocked" skill_name="skillHammerTime" operation="GTE" value="7"/></triggered_effect>
+			</effect_group>
+		</item>
+	</append>
+	
+	<!-- Updates melee weapons and tools to be affected by the Flurry of Blows perk -->
+	<set xpath="/items/item[@name='meleeToolPickaxeIron']/property[@name='Tags']/@value">melee,grunting,medium,tool,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolFireaxeIron']/property[@name='Tags']/@value">axe,melee,grunting,medium,tool,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolClawHammer']/property[@name='Tags']/@value">melee,light,tool,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolStoneAxe']/property[@name='Tags']/@value">axe,melee,light,tool,attStrength,perkMiner69r,perkMotherLode,perkTheHuntsman,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolShovelStone']/property[@name='Tags']/@value">melee,grunting,medium,tool,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolShovelIron']/property[@name='Tags']/@value">melee,grunting,medium,tool,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolShovelSteel']/property[@name='Tags']/@value">melee,grunting,medium,tool,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolWrench']/property[@name='Tags']/@value">blunt,melee,grunting,light,tool,attPerception,perkSalvageOperations,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeThrownSpearStone']/property[@name='Tags']/@value">melee,grunting,medium,weapon,meleeWeapon,attPerception,perkJavelinMaster,canHaveCosmetic,perkFlurryOfBlows,thrownWeapon</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
+	<set xpath="/items/item[@name='meleeToolHoeIron']/property[@name='Tags']/@value">melee,medium,tool,attFortitude,perkLivingOffTheLand,canHaveCosmetic,perkFlurryOfBlows</set> 
+	
+	<!-- Adds the damage reduction modifcation from the Hammer Time perk -->	
+	<insertAfter xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[@name='meleeToolSledgehammerStone']/passive_effect[@name='DismemberChance']">
+		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
+			<requirement name="ProgressionLevel" progression_name="perkHammerTimeDefense" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[@name='meleeToolSledgehammerIron']/passive_effect[@name='DismemberChance']">
+		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
+			<requirement name="ProgressionLevel" progression_name="perkHammerTimeDefense" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+	<insertAfter xpath="/items/item[@name='meleeToolSledgehammerSteel']/effect_group[@name='meleeToolSledgehammerSteel']/passive_effect[@name='DismemberChance']">
+		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
+			<requirement name="ProgressionLevel" progression_name="perkHammerTimeDefense" operation="Equals" value="1"/>
+		</passive_effect>
+	</insertAfter>
+	
+	<!-- Adds new Mega Crush item -->
+	<remove xpath="/items/item[@name='drinkCanMegaCrush']"/>
+	<append xpath="/items">
+		<item name="drinkCanMegaCrush">
+		<property name="HoldType" value="3" />
+		<property name="DisplayType" value="waterMegaCrush" />
+		<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab" />
+		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+		<property name="Material" value="Mglass" />
+		<property name="Weight" value="10" />
+		<property name="Stacknumber" value="250" /><!-- STK drink -->
+		<property name="EconomicValue" value="48" />
+		<property name="UnlockedBy" value="perkHammerTimeProtect" />
+		<property class="Action0">
+			<property name="Class" value="Eat" />
+			<property name="Delay" value="1.0" />
+			<property name="Use_time" value="..." />
+			<property name="Sound_start" value="player_drinking" />
+			<property name="Create_item" value="drinkJarEmpty" />
+		</property>
+		<property name="Group" value="Food/Cooking,CFDrink/Cooking" />
+
+		<effect_group tiered="false">
+			<requirement name="NotHasBuff" buff="buffIsOnFire" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60" />
+				<display_value name="dStaminaRegen" value=".15" />
+				<display_value name="dRunSpeed" value=".5" />
+				<display_value name="dDuration" value="123" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="add" value="123" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$buffMegaCrushDuration" operation="set" value="363">
+					<requirement name="CVarCompare" cvar="$buffMegaCrushDuration" operation="GT" value="363" /></triggered_effect>
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrush" />
+			</effect_group>
+
+		<effect_group tiered="false">
+			<requirement name="HasBuff" buff="buffIsOnFire" />
+				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire" />
+		</effect_group>
 		</item>
 	</append>
 </configs>

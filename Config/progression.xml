@@ -8,34 +8,68 @@
 	<append xpath="/progression/perks" >
 		<perk name="perkHammerTimeDamage" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDamageDesc" long_desc_key="perkHammerTimeDamageLongDesc">
 			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+					<passive_effect name="EntityDamage" operation="perc_add" level="1" value="0.1"/>
+					<passive_effect name="AttacksPerMinute" operation="perc_add" level="1" value="0.1"/>
 			</effect_group>
 		</perk>
+		
 		<perk name="perkHammerTimeHarvest" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeHarvestDesc" long_desc_key="perkHammerTimeHarvestLongDesc">
 			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+					<passive_effect name="HarvestCount" operation="perc_add" level="1" value=".25" tags="oreWoodHarvest"/>
+					<passive_effect name="PlayerExpGain" operation="perc_add" level="1" value="-.4" tags="Harvesting"/>
 			</effect_group>
 		</perk>
+		
 		<perk name="perkHammerTimeDefense" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDefenseDesc" long_desc_key="perkHammerTimeDefenseLongDesc">
 			<effect_group>
+			<!-- effect is on sledgehammers, item.xml -->
 			</effect_group>
 		</perk>
+		
 		<perk name="perkHammerTimeDoorKey" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDoorKeyDesc" long_desc_key="perkHammerTimeDoorKeyLongDesc">
 			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+					<passive_effect name="BlockDamage" operation="perc_add" level="1" value="5.0" tags="door"/>
 			</effect_group>
 		</perk>
+		
 		<perk name="perkHammerTimeProtect" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeProtectDesc" long_desc_key="perkHammerTimeProtectLongDesc">
 			<effect_group>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drinkCanMegaCrush"/>
+				<passive_effect name="RecipeTagUnlocked" operation="base_set" level="1" value="1" tags="drugSteroids"/>	
 			</effect_group>
 		</perk>
+		
 		<perk name="perkHammerTimeUnstoppable" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeUnstoppableDesc" long_desc_key="perkHammerTimeUnstoppableLongDesc">
 			<effect_group>
+				<requirement name="HasBuff" buff="buffDrugSteroids"/>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeUnstoppable" operation="Equals" value="1"/>
+					<passive_effect name="HealthLoss" operation="perc_subtract" level="1" value=".50"/>
+					<passive_effect name="HealthChangeOT" operation="base_add" level="1" value=".233"/>
+					<passive_effect name="BuffResistance" operation="base_add" level="1" value="1" tags="buffInjuryStunned01,buffInjuryKnockdown01,buffInjuryStunned02,buffInfectionCatch,buffInfection01Main,buffInjuryBleeding,buffDrowning01,buffDrowning02,buffArmorShredding,buffLegSprained,buffLegBroken,buffArmSprained"/>
+					<passive_effect name="WalkSpeed" operation="perc_add" value="0.30" level="1" />
+					<passive_effect name="RunSpeed" operation="perc_add" value="0.30" level="1" />
 			</effect_group>
 		</perk>
+		
 		<perk name="perkHammerTimeDrunk" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeDrunkDesc" long_desc_key="perkHammerTimeDrunkLongDesc">
 			<effect_group>
+				<requirement name="HasBuff" buff="buffMegaCrush"/>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+				<requirement name="ProgressionLevel" progression_name="perkHammerTimeDrunk" operation="Equals" value="1"/>
+					<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Health" operation="add" value="25"/>
+					<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="25"/>
+					<triggered_effect trigger="onSelfKilledOther" action="AddBuff" buff="buffHammerTimeDrunk"/>				
 			</effect_group>
 		</perk>
+		
 		<perk name="perkHammerTimeComplete" parent="skillHammerTime" max_level="1" base_skill_point_cost="0" desc_key="perkHammerTimeCompleteDesc" long_desc_key="perkHammerTimeCompleteLongDesc">
 			<effect_group>
+				<requirement name="HoldingItemHasTags" tags="sledge"/>
+					<passive_effect name="LootDropProb" operation="perc_add" level="1" value=".2"/>
 			</effect_group>
 		</perk>
 	</append>
@@ -47,7 +81,7 @@
 	</append>
 
 	<!-- Flurry of Blows now increases attack speed of all melee weapons -->
-	<set xpath="/progression/perks/perk[@name='perkFlurryOfBlows']/effect_group/requirement[@name='HoldingItemHasTags']/@tags">melee,tool,weapon,meleeWeapon,blunt</set>			
+	<!-- perkFlurryOfBlows update moved to items.xml -->
 
 	<!-- Sexual Tyrannosaurus also now increases base stamina regeneration -->
 	<remove xpath="/progression/perks/perk[@name='perkSexualTrex']/effect_group/triggered_effect[@trigger='onSelfKilledOther']"/>
@@ -67,7 +101,7 @@
 		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="50">
 			<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="4"/>
 		</triggered_effect>
-		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="300">
+		<triggered_effect trigger="onSelfKilledOther" action="ModifyStats" stat="Stamina" operation="add" value="1000">
 			<requirement name="ProgressionLevel" progression_name="perkSexualTrex" operation="Equals" value="5"/>
 		</triggered_effect>
 	</append>
