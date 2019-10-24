@@ -58,5 +58,29 @@
 	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@type='Exp']/@value">12000</set>
 	<set xpath="/quests/quest[@id='tier6_hidden_cache']/reward[@type='Exp']/@value">14000</set>
 	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@type='Exp']/@value">14000</set> -->
+	
+	<append xpath="/quests" >
+			<quest id="quest_TraderAdvert">
+				<property name="group_name" value="Local Trader Advertisement" />
+				<property name="offer" value="Hankering for some new pants, need some gunpowder to fuel your slaughter, or just want a safe place to chill out during the day?\n\nCome and visit your local Trader!" />
+				<property name="name" value="Go To The Trader" />
+				<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitleNEW" />
+				<property name="description_key" value="quest_WhiteRiverCitizen1_descriptionNEW" />
+				<property name="icon" value="ui_game_symbol_map_trader" />
+				<property name="category_key" value="quest" />
+				<property name="difficulty" value="medium" />
+				<property name="shareable" value="true" />
+				<property name="repeatable" value="true" />
+	
+				<objective type="Goto" id="trader" value="5" phase="1" />
+				
+				<objective type="InteractWithNPC">
+					<property name="phase" value="2"/>
+				</objective>
+		
+				<reward type="Exp" value="10000" />
+				<reward type="SkillPoints" value="1" />
+	    </quest>
+	</append>
 
 </configs>
