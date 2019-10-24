@@ -3,8 +3,8 @@
 	<!-- Slightly increases the amount of items bought and sold by traders -->
 	<set xpath="/traders/trader_info[@id='1']/@min_inventory">60</set>
 	<set xpath="/traders/trader_info[@id='1']/@max_inventory">120</set>
-	<set xpath="/traders/trader_info[@id='1']/@min_items_swapped">40</set>
-	<set xpath="/traders/trader_info[@id='1']/@max_items_swapped">60</set>
+	<set xpath="/traders/trader_info[@id='1']/@min_items_swapped">60</set>
+	<set xpath="/traders/trader_info[@id='1']/@max_items_swapped">120</set>
 
 	<!-- Modifies the opening and closing times of the trader -->
 	<set xpath="/traders/trader_info[@id='1']/@open_time">4:30</set>
@@ -12,19 +12,5 @@
 
 	<!-- Modifies how often the trader's inventory will refresh -->
 	<set xpath="/traders/trader_info[@id='1']/@reset_interval">3</set>
-
-	<!-- Removes weapons, tools, and armour from traders 
-	<set xpath="/traders/trader_info[@id='1']/trader_items/item[@group='weaponsGunsCommon']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/trader_items/item[@group='tools']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='weaponsGunsCommon']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='weaponsGunsMixed']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='weaponsGunsMilitary']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='tools']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='rareTools']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='lightArmor']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='heavyArmor']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='militaryArmor']/@count">0</set>
-	<set xpath="/traders/trader_info[@id='1']/tier_items/item[@group='steelArmor']/@count">0</set>
-	-->
-
+	
 </configs>
