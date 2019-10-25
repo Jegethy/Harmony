@@ -68,6 +68,6 @@
 		<item name="itemTraderbook" count="1" prob="0.02"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
-		<item name="itemTraderbook" count="1" prob="0.12"/>
+		<item name="itemTraderbook" count="1" prob="0.07"/>
 	</append>
 </config>
