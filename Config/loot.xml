@@ -22,7 +22,9 @@
 	<!-- Adds new airdrop loot table -->
 	<append xpath="/lootcontainers">
 		<lootcontainer id="34" count="24" size="10,6" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
-			<item group="cannedfood" count="6,12" prob="2"/>
+			<item group="cannedfood" count="10,18" prob="1"/>
+			<item group="perkBooks" count="1,4" prob="0.1"/>
+			<item group="groupModAllScaled" count="1,4" prob="0.2"/>
 			<item group="groupAmmoAdvancedGunslinger" count="18,100" prob="0.8"/>
 			<item group="groupAmmoRegular" count="12,42" prob="0.4"/>
 			<item group="groupAmmoAdvanced" count="16,64" prob="0.6"/>
@@ -40,9 +42,8 @@
 			<item group="warmClothes" count="1,2" loot_prob_template="probTemplate1.0"/>
 			<item group="groupArmor_HeavyTPlus" count="1,3" loot_prob_template="probTemplate1.0"/>
 			<item group="groupArmor_LightTPlus" count="2,3" loot_prob_template="probTemplate0.75"/>
-			<item name="casinoCoin" count="1000,30000" prob="0.05"/>
-			<item name="oldCash" count="1000,30000" prob="0.05"/>
-			<item group="dyes" count="1,3" prob="0.3"/>
+			<item name="casinoCoin" count="100,30000" prob="0.15"/>
+			<item name="oldCash" count="100,30000" prob="0.15"/>
 		</lootcontainer>
 	</append>
 	<!-- Adds Bile Duct loot to cop zombies -->
