@@ -1,7 +1,7 @@
 <configs>
 	<!-- Adds recipe for modded customised fittings -->
 	<append xpath="/recipes">
-		<recipe name="modLightweightMasterFitting" count="1" craft_time="240">
+		<recipe name="modLightweightMasterFitting" count="1" craft_time="240" craft_area="workbench">
 			<ingredient name="modArmorCustomizedFittings" count="1"/>
 			<ingredient name="resourceLeather" count="84"/>
 			<ingredient name="resourceDuctTape" count="28"/>
@@ -9,7 +9,7 @@
 			<ingredient name="resourceForgedSteel" count="54"/>
 		</recipe>
 
-		<recipe name="modReinforcedMasterFitting" count="1" craft_time="240">
+		<recipe name="modReinforcedMasterFitting" count="1" craft_time="240" craft_area="workbench">
 			<ingredient name="modArmorCustomizedFittings" count="1"/>
 			<ingredient name="resourceLeather" count="84"/>
 			<ingredient name="resourceDuctTape" count="28"/>
