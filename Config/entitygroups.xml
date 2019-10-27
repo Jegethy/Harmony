@@ -1,9 +1,9 @@
 <Config>
 	<!-- Reduces the spawn rate of Vultures -->
-	<set xpath="/entitygroups/entitygroup/entity[@name='animalZombieVulture']/@prob">0.02</set>
+	<set xpath="/entitygroups/entitygroup/entity[@name='animalZombieVulture']/@prob">0.01</set>
 	<set xpath="/entitygroups/entitygroup/entity[@name='animalZombieVultureRadiated']/@prob">0.02</set>
 	<!-- Reduces the spawn count of "invisible" animals. The result should be overall more animal spawns -->
-	<set xpath="/entitygroups/entitygroup/entity[@name='invisibleAnimalEnemy']/@prob">2</set>
+	<set xpath="/entitygroups/entitygroup/entity[@name='invisibleAnimalEnemy']/@prob">3</set>
 	<set xpath="/entitygroups/entitygroup/entity[@name='invisibleAnimal']/@prob">2</set>
 	<!-- Replaces snakes with ... not snakes -->
 	<set xpath="/entitygroups/entitygroup[contains(@name, '')]/entity[contains(@name, 'Snake')]/@name">animalChicken</set>
