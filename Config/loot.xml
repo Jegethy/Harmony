@@ -24,6 +24,7 @@
 		<lootcontainer id="34" count="24" size="10,6" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
 			<item group="cannedfood" count="10,18" prob="1"/>
 			<item group="perkBooks" count="1,4" prob="0.1"/>
+			<item group="modArmorT3" count="1,4" prob="0.1"/>
 			<item group="groupModAllScaled" count="1,4" prob="0.2"/>
 			<item group="groupAmmoAdvancedGunslinger" count="18,100" prob="0.8"/>
 			<item group="groupAmmoRegular" count="12,42" prob="0.4"/>
@@ -66,9 +67,15 @@
 
 	<!-- Adds trader advert item -->
 	<append xpath="/lootcontainers/lootgroup[@name='junk']" >
-		<item name="itemTraderbook" count="1" prob="0.02"/>
+		<item name="itemTraderbook" count="1" prob="0.01"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
-		<item name="itemTraderbook" count="1" prob="0.06"/>
+		<item name="itemTraderbook" count="1" prob="0.02"/>
+	</append>
+	
+	<!-- Adds custom fittings mod to loot drop table -->
+	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']" >
+		<item name="modLightweightMasterFitting" count="1" prob="0.10"/>
+		<item name="modReinforcedMasterFitting" count="1" prob="0.10"/>
 	</append>
 </config>
