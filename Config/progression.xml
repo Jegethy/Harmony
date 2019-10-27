@@ -81,6 +81,7 @@
 	</append>
 
 	<!-- Flurry of Blows now increases attack speed of all melee weapons -->
+	
 	<!-- perkFlurryOfBlows update moved to items.xml -->
 
 	<!-- Sexual Tyrannosaurus also now increases base stamina regeneration -->
