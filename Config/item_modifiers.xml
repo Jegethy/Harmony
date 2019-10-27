@@ -62,7 +62,7 @@
 
 	<!-- Makes dyes sellable to vendors -->
     <append xpath="/item_modifiers/item_modifier[contains(@name, 'modDye')]">
-        <property name="EconomicValue" value="1500"/>
+        <property name="EconomicValue" value="750"/>
     </append>
 	
 	<!-- Adds mod tags to clothing items -->
