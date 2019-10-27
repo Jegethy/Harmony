@@ -4,6 +4,9 @@
 	<!-- Removes power attack grunting -->
 	<remove xpath="/Sounds//SoundDataNode[@name='player1powerattack']" />
 	<remove xpath="/Sounds//SoundDataNode[@name='player2powerattack']" />
+	
+	<!-- Removes neon sign buzzing -->
+	<remove xpath="/Sounds//SoundDataNode[@name='NeonSignLP']" />
 
 	<!-- Removes the default surpressed sounds -->
 	<remove xpath="/Sounds//SoundDataNode[@name='pistol_s_fire']" />
