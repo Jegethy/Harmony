@@ -189,5 +189,10 @@
 	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">15</set>
 	<set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">1</set>
 	<set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">2</set>
+	
+	<!-- Increases the drop rate of loot bags -->
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Radiated'))]/property[contains(@name, 'LootDropProb')]/@value">0.20</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.12</set>
+	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.05</set>
 
 </configs>
