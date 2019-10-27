@@ -44,7 +44,7 @@
 
 	<!-- Fixes Slow Spawning During Blood Moon -->
 	<append xpath='/gamestages/spawner[@name="BloodMoonHorde"]/gamestage[ @stage &gt;23]' >
-		<spawn group="ZombiesNight" num="100" maxAlive="8"/>
+		<spawn group="ZombiesNight" num="100" maxAlive="12"/>
 	</append>
 
 </config>
