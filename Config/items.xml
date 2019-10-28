@@ -491,7 +491,7 @@
 			<property name="Material" value="Mmetal"/>
 			<property name="UnlockedBy" value="perkMasterCrafter"/>
 			<property name="Stacknumber" value="1000"/>
-			<property name="EconomicValue" value="750"/>
+			<property name="EconomicValue" value="50"/>
 			<property name="Weight" value="1"/>
 			<property name="Group" value="Resources"/>
 			<property name="CustomIcon" value="itemCraftingTemplate"/>
@@ -499,8 +499,8 @@
 		</item>
 	</append>
 	
-	<!-- Updates melee weapons and tools to be affected by the Flurry of Blows perk -->
-	<set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">7500</set>
-	<set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusBlocks']/@value">8</set>
+	<!-- Dynamite now goes boom boom a little more boomy -->
+	<set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">10000</set>
+	<set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusBlocks']/@value">10</set>
 
 </configs>
