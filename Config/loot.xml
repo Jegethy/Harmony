@@ -95,4 +95,65 @@
 	<set xpath="/lootcontainers/lootcontainer[@id='92']/item[@name='workbenchSchematic']/@prob">.05</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='93']/item[@name='cementMixerSchematic']/@prob">.05</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='94']/item[@name='chemistryStationSchematic']/@prob">.05</set>
+	
+	<!-- Reduces the drop rate of lockpicks -->
+	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='resourceLockPick']/@count">1</set>
+	<set xpath="/lootcontainers/lootgroup[@name='workingStiffs']/item[@name='resourceLockPick']/@count">1,2</set>
+	<set xpath="/lootcontainers/lootgroup[@name='banditsGeneral']/item[@name='resourceLockPick']/@count">2,3</set>
+	
+	<!-- Adds parts template to loot -->
+	<append xpath="/lootcontainers/lootgroup[@name='weaponParts']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='workingStiffs']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='tools']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='rareTools']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupModAllScaled']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLoot']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupSafeLoot']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='shamwaySafe']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='brewerySafe']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedWeaponChest']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
+		<item name="itemPartsTemplateMaster" count="2,8" prob=".08" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT3_Heavy']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2_Heavy']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT1_Heavy']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT3_Light']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2_Light']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT1_Light']">
+		<item name="itemPartsTemplateMaster" count="2,8" />
+	</append>
 </config>

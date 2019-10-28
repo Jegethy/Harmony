@@ -1,6 +1,7 @@
 <config>
 	<!-- Triples the fuel capacity of generators -->
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='MaxFuel']/@value">3000</set>
+
 	<!-- Makes "bed" items pickup-able -->
 	<append xpath="/blocks/block[contains(@name, 'bed')]">
 		<property name="CanPickup" value="true"/>

@@ -264,4 +264,143 @@
 			<ingredient name="drinkCanEmpty" count="1"/>
 		</recipe>
 	</append>
+
+	<!-- Adds recipes for crafting 'parts' -->	
+	<append xpath="/recipes">
+		<recipe name="gunBowWoodenParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="gunPistolParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceGunPowder" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="gunDoubleBarrelShotgunParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceGunPowder" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="gunHuntingRifleParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceGunPowder" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="gunAk47Parts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceGunPowder" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="gunRocketLauncherParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceGunPowder" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="gunJunkTurretParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceGunPowder" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="meleeStunBatonParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="meleeKnucklesSteelParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="meleeToolChainsawParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="meleeToolKnifeMacheteParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="meleeThrownSpearSteelParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="meleeClubBaseballBatParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="meleeToolSledgehammerSteelParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="meleeToolAllSteelParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+
+		<recipe name="armorMilitarySetParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+		
+		<recipe name="armorSteelSetParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceLeather" count="16"/>
+			<ingredient name="resourceDuctTape" count="12"/>
+			<ingredient name="resourceMechanicalParts" count="16"/>
+			<ingredient name="resourceForgedSteel" count="8"/>
+		</recipe>
+	</append>
 </configs>

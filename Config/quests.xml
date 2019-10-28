@@ -1,14 +1,30 @@
 <configs>
 
 	<!-- Adds skill point rewards to the starter quests -->
-    <append xpath="/quests/quest[@id='quest_BasicSurvival1']"><reward type="SkillPoints" value="1" /></append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival2']"><reward type="SkillPoints" value="1" /></append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival3']"><reward type="SkillPoints" value="1" /></append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival4']"><reward type="SkillPoints" value="1" /></append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival5']"><reward type="SkillPoints" value="1" /></append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival6']"><reward type="SkillPoints" value="1" /></append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival7']"><reward type="SkillPoints" value="2" /></append>
-    <append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']"><reward type="SkillPoints" value="5" /></append>
+    <append xpath="/quests/quest[@id='quest_BasicSurvival1']">
+		<reward type="SkillPoints" value="1" />
+	</append>
+    <append xpath="/quests/quest[@id='quest_BasicSurvival2']">
+		<reward type="SkillPoints" value="1" />
+	</append>
+    <append xpath="/quests/quest[@id='quest_BasicSurvival3']">
+		<reward type="SkillPoints" value="1" />
+	</append>
+    <append xpath="/quests/quest[@id='quest_BasicSurvival4']">
+		<reward type="SkillPoints" value="1" />
+	</append>
+    <append xpath="/quests/quest[@id='quest_BasicSurvival5']">
+		<reward type="SkillPoints" value="1" />
+	</append>
+    <append xpath="/quests/quest[@id='quest_BasicSurvival6']">
+		<reward type="SkillPoints" value="1" />
+	</append>
+    <append xpath="/quests/quest[@id='quest_BasicSurvival7']">
+		<reward type="SkillPoints" value="2" />
+	</append>
+    <append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
+		<reward type="SkillPoints" value="5" />
+	</append>
 	
 	<!-- Adds Skillbook rewards from quests -->
 	<append xpath="/quests/quest/property[@name='completiontype'][@value='TurnIn']/../property[@name='category_key'][@value='quest']/..">

@@ -44,7 +44,7 @@
 			</effect_group>
 		</item_modifier>
 	</append>
-
+	
 	<!-- Adding the craftable mod item -->
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGunMagazineExtender" installable_tags="magazine,shotgun" modifier_tags="magazine" type="attachment">
