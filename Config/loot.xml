@@ -79,8 +79,8 @@
 	
 	<!-- Adds custom fittings mod to loot drop table -->
 	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']" >
-		<item name="modLightweightMasterFitting" count="1" prob="0.10"/>
-		<item name="modReinforcedMasterFitting" count="1" prob="0.10"/>
+		<item name="modLightweightMasterFitting" count="1" prob="0.2"/>
+		<item name="modReinforcedMasterFitting" count="1" prob="0.2"/>
 	</append>
 
 	<!-- Removes blood draw kit from Rare Medicine loot group -->
