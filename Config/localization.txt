@@ -118,4 +118,4 @@ perkLockPickingRank3LongDesc,progression,Perk,New,You are now a professional thi
 perkLockPickingRank4Desc,progression,Perk,New,Lock Smith,,,,,
 perkLockPickingRank4LongDesc,progression,Perk,New,You are now a lock smith and few locks will keep you out. You can pick locks 100% faster and have a 80% lower chance to break lockpicks.,,,,,
 perkLockPickingRank5Desc,progression,Perk,New,Safe Cracker,,,,,
-perkLockPickingRank5LongDesc,progression,Perk,New,You are now a world class safe cracker. Pick locks 150% faster and your lockpick will never break.,,,,,
+perkLockPickingRank5LongDesc,progression,Perk,New,You are now a world class safe cracker. You can pick locks 150% faster and your lockpick will never break.,,,,,
