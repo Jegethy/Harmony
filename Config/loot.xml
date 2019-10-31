@@ -24,8 +24,8 @@
 		<lootcontainer id="34" count="24" size="10,12" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
 			<item group="cannedfood" count="20,60" prob="1"/>
 			<item group="seeds" count="12,24" prob="0.8"/>
-			<item group="perkBooks" count="2,5" prob="0.2"/>
-			<item group="modArmorT3" count="2,5" prob="0.1"/>
+			<item group="perkBooks" count="4,7" prob="0.4"/>
+			<item group="modArmorT3" count="2,5" prob="0.2"/>
 			<item group="groupModAllScaled" count="2,5" prob="0.2"/>
 			<item group="treasureAmmo" count="10,200" prob="1"/>
 			<item group="rareOres" count="6,18" prob="0.2"/>
