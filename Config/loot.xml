@@ -128,7 +128,7 @@
 		<item name="itemPartsTemplateMaster" count="1,3" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
-		<item name="itemPartsTemplateMaster" count="1,3" prob=".08" />
+		<item name="itemPartsTemplateMaster" count="1,3" prob=".06" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']">
 		<item name="itemPartsTemplateMaster" count="1,3" />
