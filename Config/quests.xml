@@ -58,23 +58,18 @@
 	<set xpath="/quests/quest[@id='tier2_fetch_clear']/reward[@type='Exp']/@value">7500</set>
 	<set xpath="/quests/quest[@id='tier3_clear']/reward[@type='Exp']/@value">10000</set>
 	<set xpath="/quests/quest[@id='tier3_fetch']/reward[@type='Exp']/@value">10000</set>
-	<set xpath="/quests/quest[@id='tier3_buried_supplies']/reward[@type='Exp']/@value">10000</set>
 	<set xpath="/quests/quest[@id='tier3_fetch_clear']/reward[@type='Exp']/@value">10000</set>
 	<set xpath="/quests/quest[@id='tier4_clear']/reward[@type='Exp']/@value">12500</set>
 	<set xpath="/quests/quest[@id='tier4_fetch']/reward[@type='Exp']/@value">12500</set>
-	<set xpath="/quests/quest[@id='tier4_buried_supplies']/reward[@type='Exp']/@value">12500</set>
 	<set xpath="/quests/quest[@id='tier4_fetch_clear']/reward[@type='Exp']/@value">12500</set>
-	<set xpath="/quests/quest[@id='tier4_hidden_clear']/reward[@type='Exp']/@value">12500</set>
 	<set xpath="/quests/quest[@id='tier5_clear']/reward[@type='Exp']/@value">18750</set>
 	<set xpath="/quests/quest[@id='tier5_fetch']/reward[@type='Exp']/@value">18750</set>
-	<set xpath="/quests/quest[@id='tier5_buried_supplies']/reward[@type='Exp']/@value">18750</set>
 	<set xpath="/quests/quest[@id='tier5_fetch_clear']/reward[@type='Exp']/@value">18750</set>
-	<set xpath="/quests/quest[@id='tier5_hidden_clear']/reward[@type='Exp']/@value">18750</set>
 	<set xpath="/quests/quest[@id='tier6_clear']/reward[@type='Exp']/@value">25000</set>
 	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@type='Exp']/@value">25000</set>
-	<set xpath="/quests/quest[@id='tier6_buried_supplies']/reward[@type='Exp']/@value">25000</set>
 	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@type='Exp']/@value">25000</set>
 	
+	<!-- Adds trader advert quest item -->
 	<append xpath="/quests" >
 			<quest id="quest_TraderAdvert">
 				<property name="group_name" value="Local Trader Advertisement" />
