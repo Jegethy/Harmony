@@ -6,6 +6,11 @@
 	<append xpath="/blocks/block[contains(@name, 'bed')]">
 		<property name="CanPickup" value="true"/>
 	</append>
+	
+	<!-- Concrete dries faster -->	
+	<set xpath="/blocks/block[@name='pouredConcreteMaster']/property[@name='UpgradeRated.Rate']/@value">2</set>
+	<set xpath="/blocks/block[@name='pouredRConcreteMaster']/property[@name='UpgradeRated.Rate']/@value">3</set>	
+
 	<!-- Adds new lighting items -->
 	<append xpath="/blocks">
 		<block name="Jeg's Porch Light 01">

@@ -194,5 +194,20 @@
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Radiated'))]/property[contains(@name, 'LootDropProb')]/@value">0.20</set>
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.12</set>
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.05</set>
+	
+	<!-- Increases the despawn time of zombies and makes them harvestable -->
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">300</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='DeadBodyHitPoints']/@value">500</set>
+
+	<append xpath="/entity_classes/entity_class[contains(@name, 'zombie')]">
+		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
+		<drop event="Harvest" name="foodRottingFlesh" tag="butcherHarvest" count="2,3"/> 
+		<drop event="Harvest" name="resourceAnimalFat" tag="butcherHarvest" count="1,2"/>
+		<drop event="Harvest" name="resourceBone" tag="butcherHarvest" count="2"/>
+		<drop event="Harvest" name="resourceBone" tag="allToolsHarvest" count="2"/>
+		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="1,2"/>
+		<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
+		<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	</append>
 
 </configs>

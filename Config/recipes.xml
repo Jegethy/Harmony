@@ -403,4 +403,33 @@
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
 	</append>
+	
+	<!-- Makes paint craftable from dyes -->
+	<append xpath="/recipes">	
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyeRed" count="1"/>
+		</recipe>
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyeGreen" count="1"/>
+		</recipe>
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyeBlue" count="1"/>
+		</recipe>
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyeBrown" count="1"/>
+		</recipe>
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyeBlack" count="1"/>
+		</recipe>
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyePink" count="1"/>
+		</recipe>
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyePurple" count="1"/>
+		</recipe>
+		<recipe name="resourcePaint" count="15" craft_time="1">
+			<ingredient name="modDyeYellow" count="1"/>
+		</recipe>
+	</append>
+	
 </configs>

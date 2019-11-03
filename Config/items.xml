@@ -510,6 +510,10 @@
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.122,.122']/@value">.122</set>
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.08,.08']/@value">.08</set>
 	
+	<!-- Clothing items now provide the same thermal resistance -->
+	<set xpath="/items/item/effect_group/passive_effect[@name='HypothermalResist']/@value">20</set>
+	<set xpath="/items/item/effect_group/passive_effect[@name='HyperthermalResist']/@value">20</set>
+	
 	<!-- Removes RNG from steel and military armour and adds a hidden hot and cold resist stat -->
 	<remove xpath="/items/item/effect_group/passive_effect[@name='PhysicalDamageResist'][@value='11.8,16']"/>
 	<append xpath="/items/item[starts-with(@name, 'armorSteel') and not(contains(@name, 'Master'))]/effect_group">
