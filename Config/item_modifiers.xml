@@ -5,6 +5,9 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
 	<!-- Remove crosshair from laser sight mod -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
+	<!-- Gun and Helm Flashlights no longer carry a light value -->
+	<set xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/property[@name='LightValue']/@value">0</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/property[@name='LightValue']/@value">0</set>
 	<!-- Adding the modded customised fittings items -->	
 	<append xpath="/item_modifiers">
 		<item_modifier name="modLightweightMasterFitting" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
@@ -75,5 +78,24 @@
     <set xpath="/item_modifiers/item_modifier[@name='modArmorMuffledConnectors']/@installable_tags">clothing,armor</set>
     <set xpath="/item_modifiers/item_modifier[@name='modArmorAdvancedMuffledConnectors']/@installable_tags">clothing,armor</set>
     <set xpath="/item_modifiers/item_modifier[@name='modArmorImpactBracing']/@installable_tags">clothing,armorFeet</set>
+	
+    <append xpath="/item_modifiers">
+		<item_modifier name="modArmorInvisible" installable_tags="armor" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="DisplayType" value="clothing"/>
+			<item_property_overrides name="*">
+				<property name="UMA.Mesh" value=""/>
+				<property name="UMA.Overlay0" value=""/>
+			</item_property_overrides>
 
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="8"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="8"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+    </append>
 </configs>
