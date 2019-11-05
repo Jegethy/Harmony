@@ -8,6 +8,8 @@
 	<!-- Gun and Helm Flashlights no longer carry a light value -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/property[@name='LightValue']/@value">0</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/property[@name='LightValue']/@value">0</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@installable_tags">head,armor,armorHead</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/@blocked_tags">armorChest,armorHands,armorLegs,armorFeet</set>
 	<!-- Adding the modded customised fittings items -->	
 	<append xpath="/item_modifiers">
 		<item_modifier name="modLightweightMasterFitting" installable_tags="lightarmor" blocked_tags="padded" modifier_tags="movement" type="attachment" rarity="0.5">
