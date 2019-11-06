@@ -171,4 +171,36 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='124']">
 		<item name="resourcePaint" count="5,20" prob="0.1" />
 	</append>
+	
+	<!-- Adds advanced wrench to loot -->	
+	<append xpath="/lootcontainers/lootgroup[@name='tools']">
+		<item name="itemAdvWrench" count="1" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='workingStiffs']">
+		<item name="itemAdvWrench" count="1" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupQuestTools']">
+		<item name="itemAdvWrench" count="1" />
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='8']">
+		<item name="itemAdvWrench" count="1" />
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='88']">
+		<item name="itemAdvWrench" count="1" />
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='124']">
+		<item name="itemAdvWrench" count="1" />
+	</append>
+	
+	<!-- Adds advanced turret to loot -->	
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_TurretsSyndrome']">
+		<item name="gunAdvJunkTurret" count="1" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeapons_TurretsSyndrome']">
+		<item name="gunAdvJunkTurret" count="1" />
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='groupWeapons_TurretsSyndromeTPlus']">
+		<item name="gunAdvJunkTurret" count="1" />
+	</append>
+
 </config>

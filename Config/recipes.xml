@@ -1,7 +1,7 @@
 <configs>
 	<!-- Adds recipe for modded customised fittings -->
 	<append xpath="/recipes">
-		<recipe name="modLightweightMasterFitting" count="1" craft_time="240" craft_area="workbench">
+		<recipe name="modLightweightMasterFitting" count="1" craft_time="90" craft_area="workbench">
 			<ingredient name="modArmorCustomizedFittings" count="1"/>
 			<ingredient name="resourceLeather" count="84"/>
 			<ingredient name="resourceDuctTape" count="28"/>
@@ -9,7 +9,7 @@
 			<ingredient name="resourceForgedSteel" count="54"/>
 		</recipe>
 
-		<recipe name="modReinforcedMasterFitting" count="1" craft_time="240" craft_area="workbench">
+		<recipe name="modReinforcedMasterFitting" count="1" craft_time="90" craft_area="workbench">
 			<ingredient name="modArmorCustomizedFittings" count="1"/>
 			<ingredient name="resourceLeather" count="84"/>
 			<ingredient name="resourceDuctTape" count="28"/>
@@ -178,7 +178,7 @@
 			<ingredient name="resourceBrokenGlass" count="10"/>
 		</recipe>
 	</append>
-	
+
 	<!-- Adds recipe for crafting acid from Bile Ducts -->	
 	<append xpath="/recipes">
 		<recipe name="resourceAcid" count="1" craft_area="chemistryStation">
@@ -194,7 +194,7 @@
 	</append>
 
 	<!-- Adds arrow and bolt crafting recipes -->
-    <append xpath="/recipes">
+	<append xpath="/recipes">
 		<recipe name="ammoArrowStone" count="1">
 			<ingredient name="ammoCrossbowBoltStone" count="1"/>
 		</recipe>
@@ -204,7 +204,7 @@
 		<recipe name="ammoArrowSteelAP" count="1">
 			<ingredient name="ammoCrossbowBoltSteelAP" count="1"/>
 		</recipe>
-        <recipe name="ammoArrowSteelAP" count="1">
+		<recipe name="ammoArrowSteelAP" count="1">
 			<ingredient name="ammoArrowIron" count="3"/>
 		</recipe>
 		<recipe name="ammoCrossbowBoltStone" count="1">
@@ -213,13 +213,13 @@
 		<recipe name="ammoCrossbowBoltIron" count="1">
 			<ingredient name="ammoArrowIron" count="1"/>
 		</recipe>
-        <recipe name="ammoCrossbowBoltSteelAP" count="1">
+		<recipe name="ammoCrossbowBoltSteelAP" count="1">
 			<ingredient name="ammoArrowSteelAP" count="1"/>
 		</recipe>
-    </append>
-	
+	</append>
+
 	<!-- Adds recipe to convert ammo into different ammo -->
-    <append xpath="/recipes">
+	<append xpath="/recipes">
 		<recipe name="ammo762mmBulletAP" count="1" craft_area="workbench">
 			<ingredient name="ammo9mmBulletAP" count="2"/>
 		</recipe>
@@ -229,7 +229,7 @@
 		<recipe name="ammo9mmBulletHP" count="2" craft_area="workbench">
 			<ingredient name="ammo762mmBulletHP" count="1"/>
 		</recipe>
-        <recipe name="ammo9mmBulletAP" count="2" craft_area="workbench">
+		<recipe name="ammo9mmBulletAP" count="2" craft_area="workbench">
 			<ingredient name="ammo762mmBulletAP" count="1"/>
 		</recipe>
 		<recipe name="ammo762mmBulletBall" count="1" craft_area="workbench">
@@ -238,23 +238,23 @@
 		<recipe name="ammo9mmBulletBall" count="2" craft_area="workbench">
 			<ingredient name="ammo762mmBulletBall" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunShell" count="1" craft_area="workbench">
+		<recipe name="ammoShotgunShell" count="1" craft_area="workbench">
 			<ingredient name="ammoShotgunSlug" count="2"/>
 		</recipe>
-		 <recipe name="ammoShotgunShell" count="4" craft_area="workbench">
+		<recipe name="ammoShotgunShell" count="4" craft_area="workbench">
 			<ingredient name="ammoShotgunBreachingSlug" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunSlug" count="2" craft_area="workbench">
+		<recipe name="ammoShotgunSlug" count="2" craft_area="workbench">
 			<ingredient name="ammoShotgunShell" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunBreachingSlug" count="4" craft_area="workbench">
+		<recipe name="ammoShotgunBreachingSlug" count="4" craft_area="workbench">
 			<ingredient name="ammoShotgunShell" count="1"/>
 		</recipe>
-        <recipe name="ammoShotgunBreachingSlug" count="2" craft_area="workbench">
+		<recipe name="ammoShotgunBreachingSlug" count="2" craft_area="workbench">
 			<ingredient name="ammoShotgunSlug" count="1"/>
 		</recipe>
-    </append>
-	
+	</append>
+
 	<!-- Adds recipe for crafting Megacrush -->	
 	<append xpath="/recipes">
 		<recipe name="drinkCanMegaCrush" count="1" tags="learnable,perkHammerTimeProtect">
@@ -282,7 +282,7 @@
 			<ingredient name="resourceGunPowder" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="gunDoubleBarrelShotgunParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -298,7 +298,7 @@
 			<ingredient name="resourceGunPowder" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="gunAk47Parts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -314,7 +314,7 @@
 			<ingredient name="resourceGunPowder" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="gunJunkTurretParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -330,7 +330,7 @@
 			<ingredient name="resourceMechanicalParts" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="meleeKnucklesSteelParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -346,7 +346,7 @@
 			<ingredient name="resourceMechanicalParts" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="meleeToolKnifeMacheteParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -362,7 +362,7 @@
 			<ingredient name="resourceMechanicalParts" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="meleeClubBaseballBatParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -378,7 +378,7 @@
 			<ingredient name="resourceMechanicalParts" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="meleeToolAllSteelParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -394,7 +394,7 @@
 			<ingredient name="resourceMechanicalParts" count="16"/>
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
-		
+
 		<recipe name="armorSteelSetParts" count="1" craft_time="5" craft_area="workbench" tags="learnable,perkMasterCrafter">
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceLeather" count="16"/>
@@ -403,7 +403,7 @@
 			<ingredient name="resourceForgedSteel" count="8"/>
 		</recipe>
 	</append>
-	
+
 	<!-- Makes paint craftable from dyes -->
 	<append xpath="/recipes">	
 		<recipe name="resourcePaint" count="15" craft_time="1">
@@ -431,7 +431,7 @@
 			<ingredient name="modDyeYellow" count="1"/>
 		</recipe>
 	</append>
-	
+
 	<append xpath="/recipes">	
 		<recipe name="modArmorInvisible" count="1" craft_time="10">
 			<ingredient name="itemPartsTemplateMaster" count="3"/>
@@ -439,6 +439,52 @@
 			<ingredient name="resourceDuctTape" count="3"/>
 			<ingredient name="drinkJarGrainAlcohol" count="2"/>
 		</recipe>
+		<recipe name="modArmorInvisibleGoth" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="drinkJarGrainAlcohol" count="2"/>
+		</recipe>
+		<recipe name="modArmorInvisibleWorn" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="drinkJarGrainAlcohol" count="2"/>
+		</recipe>
+		<recipe name="modArmorInvisibleRunning" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="drinkJarGrainAlcohol" count="2"/>
+		</recipe>
+		<recipe name="modArmorInvisibleCowboy" count="1" craft_time="10">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceLeather" count="3"/>
+			<ingredient name="resourceDuctTape" count="3"/>
+			<ingredient name="drinkJarGrainAlcohol" count="2"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">	
+		<recipe name="itemAdvWrench" craft_area="workbench" count="1" tags="learnable,perkMasterCrafter" craft_time="90">
+			<ingredient name="resourceForgedSteel" count="100"/>
+			<ingredient name="resourceMechanicalParts" count="25"/>
+			<ingredient name="resourceDuctTape" count="15"/>
+			<ingredient name="resourceScrapPolymers" count="15"/>
+			<ingredient name="resourceSpring" count="4"/>
+		</recipe>
 	</append>
 	
+	<append xpath="/recipes">
+		<recipe name="gunAdvJunkTurret" count="1" craft_area="workbench" tags="learnable,perkTurrets">
+			<ingredient name="gunJunkTurretParts" count="8"/>
+			<ingredient name="resourceForgedIron" count="80"/>
+			<ingredient name="resourceDuctTape" count="20"/>
+			<ingredient name="resourceScrapPolymers" count="20"/>
+			<ingredient name="resourceSpring" count="20"/>
+			<effect_group>
+				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunJunkTurretParts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
+			</effect_group>
+		</recipe>
+	</append>
 </configs>

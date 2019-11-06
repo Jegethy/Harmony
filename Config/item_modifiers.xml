@@ -99,5 +99,77 @@
 				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
 			</effect_group>
 		</item_modifier>
+		
+		<item_modifier name="modArmorInvisibleGoth" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="DisplayType" value="clothing"/>
+			<item_property_overrides name="*">
+				<property name="UMA.Mesh" value="goth_boots"/>
+				<property name="UMA.Overlay0" value="goth_boots"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="8"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="8"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modArmorInvisibleCowboy" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="DisplayType" value="clothing"/>
+			<item_property_overrides name="*">
+				<property name="UMA.Mesh" value="boot02"/>
+				<property name="UMA.Overlay0" value="boot02"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="8"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="8"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modArmorInvisibleRunning" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="DisplayType" value="clothing"/>
+			<item_property_overrides name="*">
+				<property name="UMA.Mesh" value="running_shoes"/>
+				<property name="UMA.Overlay0" value="running_shoes"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="8"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="8"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
+		
+		<item_modifier name="modArmorInvisibleWorn" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="DisplayType" value="clothing"/>
+			<item_property_overrides name="*">
+				<property name="UMA.Mesh" value="worn_boots"/>
+				<property name="UMA.Overlay0" value="worn_boots"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="8"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="8"/>
+				<passive_effect name="PhysicalDamageResist" operation="base_add" value="2"/>
+			</effect_group>
+		</item_modifier>
     </append>
 </configs>

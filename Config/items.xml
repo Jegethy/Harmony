@@ -6,7 +6,7 @@
 	<append xpath="/items/item/effect_group">
 		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
 	</append>
-	
+
 	<!-- Modifies the damage and range of zombie attacks -->
 	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Delay']/@value">1</set>
 	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='Range']/@value">1.10</set>
@@ -18,9 +18,9 @@
 	<set xpath="/items/item[@name='meleeHandAnimalWolf']/property[@class='Action0']/property[@name='Range']/@value">1.2</set>
 	<set xpath="/items/item[@name='meleeHandAnimalDireWolf']/property[@class='Action0']/property[@name='Range']/@value">1.4</set>
 	<set xpath="/items/item[@name='meleeHandBossGrace']/property[@class='Action0']/property[@name='Range']/@value">1.9</set>
-	
+
 	<insertAfter xpath="/items/item[@name='meleeHandZombie02']/property[@class='Action0']/property[@name='Buff']">
-	<property name="Range" value="1.00"/>
+		<property name="Range" value="1.00"/>
 	</insertAfter>
 
 	<!-- Updates the player "hand" item to restore its modded A17 range -->
@@ -28,7 +28,7 @@
 		<property name="Range" value="1.80"/>
 		<property name="Delay" value=".8"/>
 	</insertAfter>
-	
+
 	<!-- Damage of all zombies increased. This is to balance the fact that their range has been drastically reduced. Dodge or die (or have armour). -->
 	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
 	<set xpath="/items/item[@name='meleeHandZombie01']/effect_group[@name='meleeHandZombie01']/passive_effect[2]/@value">16</set>
@@ -170,15 +170,15 @@
 	<set xpath="/items/item[@name='armorSwatHelmet']/effect_group[@name='steel']/passive_effect[@name='Mobility']/@value">-.03</set>
 	<set xpath="/items/item[@name='armorFootballHelmet']/effect_group[@name='leather w scrap AR']/passive_effect[@name='Mobility']/@value">-.02</set>
 	<set xpath="/items/item[@name='armorFootballHelmetZU']/effect_group[@name='military']/passive_effect[@name='Mobility']/@value">-.02</set>
-	
+
 	<!-- Speeds up forge smelting and increases maximum stack count to 75,000 (Default = 30,000) -->
 	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.05</set>
 	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
 	<set xpath="/items/item[@name='unit_iron']/property[@name='Stacknumber']/@value">75000</set>
-	
+
 	<!-- Increases the Nailgun speed -->
-	<set xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.1</set>
-	
+	<set xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.25</set>
+
 	<!-- Reduces the amount of time it takes to scrap things -->
 	<append xpath="/items/item[@name='resourceYuccaFibers']">
 		<property name="CraftingIngredientTime" value="0.5"/>
@@ -207,7 +207,7 @@
 	<insertAfter  xpath="/items/item[@name='resourceBrokenGlass']/property[@name='EconomicBundleSize']">
 		<property name="CraftingIngredientTime" value="0.5"/>
 	</insertAfter>
-	
+
 	<!-- Adds medicinal honey item -->
 	<append xpath="/items">
 		<item name="foodMedicalHoney">
@@ -240,7 +240,7 @@
 			</effect_group>
 		</item>
 	</append>
-	
+
 	<!-- Adds the Skillbook item for quest rewards -->
 	<append xpath="/items">
 		<item name="itemSkillbook">
@@ -266,7 +266,7 @@
 			<property name="Stacknumber" value="200"/>
 		</item>
 	</append>
-	
+
 	<!-- Adds new trader quest item -->
 	<append xpath="/items" >
 		<item name="itemTraderbook">
@@ -291,7 +291,7 @@
 			<property name="Stacknumber" value="200"/>
 		</item>
 	</append>
-	
+
 	<!-- Adds the Bile Duct item -->	
 	<append xpath="/items">
 		<item name="itemBileDuct">
@@ -310,7 +310,7 @@
 			<property name="Weight" value="2"/>
 		</item>
 	</append>
-	
+
 	<!-- Adds sledgehammer skill books -->	
 	<append xpath="/items">
 		<item name="bookHammerTimeDamage">
@@ -406,7 +406,7 @@
 			</effect_group>
 		</item>
 	</append>
-	
+
 	<!-- Updates melee weapons and tools to be affected by the Flurry of Blows perk -->
 	<set xpath="/items/item[@name='meleeToolPickaxeIron']/property[@name='Tags']/@value">melee,grunting,medium,tool,attStrength,perkMiner69r,perkMotherLode,miningTool,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeToolFireaxeIron']/property[@name='Tags']/@value">axe,melee,grunting,medium,tool,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic,perkFlurryOfBlows</set>
@@ -421,7 +421,7 @@
 	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeToolSledgehammerSteel']/property[@name='Tags']/@value">blunt,melee,grunting,heavy,sledge,weapon,meleeWeapon,attStrength,perkSkullCrusher,canHaveCosmetic,perkFlurryOfBlows</set>
 	<set xpath="/items/item[@name='meleeToolHoeIron']/property[@name='Tags']/@value">melee,medium,tool,attFortitude,perkLivingOffTheLand,canHaveCosmetic,perkFlurryOfBlows</set> 
-	
+
 	<!-- Adds the damage reduction modifcation from the Hammer Time perk -->	
 	<insertAfter xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[@name='meleeToolSledgehammerStone']/passive_effect[@name='DismemberChance']">
 		<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
@@ -438,31 +438,31 @@
 			<requirement name="ProgressionLevel" progression_name="perkHammerTimeDefense" operation="Equals" value="1"/>
 		</passive_effect>
 	</insertAfter>
-	
+
 	<!-- Adds new Mega Crush item -->
 	<remove xpath="/items/item[@name='drinkCanMegaCrush']"/>
 	<append xpath="/items">
 		<item name="drinkCanMegaCrush">
-		<property name="HoldType" value="3" />
-		<property name="DisplayType" value="waterMegaCrush" />
-		<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab" />
-		<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
-		<property name="Material" value="Mglass" />
-		<property name="Weight" value="10" />
-		<property name="Stacknumber" value="250" /><!-- STK drink -->
-		<property name="EconomicValue" value="48" />
-		<property name="UnlockedBy" value="perkHammerTimeProtect" />
-		<property class="Action0">
-			<property name="Class" value="Eat" />
-			<property name="Delay" value="1.0" />
-			<property name="Use_time" value="..." />
-			<property name="Sound_start" value="player_drinking" />
-			<property name="Create_item" value="drinkJarEmpty" />
-		</property>
-		<property name="Group" value="Food/Cooking,CFDrink/Cooking" />
+			<property name="HoldType" value="3" />
+			<property name="DisplayType" value="waterMegaCrush" />
+			<property name="Meshfile" value="#Other/Items?Food/bottled_waterPrefab.prefab" />
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab" />
+			<property name="Material" value="Mglass" />
+			<property name="Weight" value="10" />
+			<property name="Stacknumber" value="250" /><!-- STK drink -->
+			<property name="EconomicValue" value="48" />
+			<property name="UnlockedBy" value="perkHammerTimeProtect" />
+			<property class="Action0">
+				<property name="Class" value="Eat" />
+				<property name="Delay" value="1.0" />
+				<property name="Use_time" value="..." />
+				<property name="Sound_start" value="player_drinking" />
+				<property name="Create_item" value="drinkJarEmpty" />
+			</property>
+			<property name="Group" value="Food/Cooking,CFDrink/Cooking" />
 
-		<effect_group tiered="false">
-			<requirement name="NotHasBuff" buff="buffIsOnFire" />
+			<effect_group tiered="false">
+				<requirement name="NotHasBuff" buff="buffIsOnFire" />
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="ModifyCVar" cvar="$waterAmountAdd" operation="add" value="60" />
 				<display_value name="dStaminaRegen" value=".15" />
 				<display_value name="dRunSpeed" value=".5" />
@@ -473,13 +473,13 @@
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffProcessConsumables,buffMegaCrush" />
 			</effect_group>
 
-		<effect_group tiered="false">
-			<requirement name="HasBuff" buff="buffIsOnFire" />
+			<effect_group tiered="false">
+				<requirement name="HasBuff" buff="buffIsOnFire" />
 				<triggered_effect trigger="onSelfPrimaryActionEnd" action="AddBuff" buff="buffExtinguishFire" />
-		</effect_group>
+			</effect_group>
 		</item>
 	</append>
-	
+
 	<!-- Parts Template -->	
 	<append xpath="/items">
 		<item name="itemPartsTemplateMaster">
@@ -498,22 +498,22 @@
 			<property name="DescriptionKey" value="itemPartsTemplateMasterDesc" />
 		</item>
 	</append>
-	
+
 	<!-- Dynamite now goes boom boom a little more boomy -->
 	<set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">10000</set>
 	<set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusBlocks']/@value">10</set>
-	
+
 	<!-- Removes RNG from weapons and tools -->
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.2,.2']/@value">.2</set>
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.15,.15']/@value">.15</set>
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.05,.05']/@value">.05</set>
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.122,.122']/@value">.122</set>
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.08,.08']/@value">.08</set>
-	
+
 	<!-- Clothing items now provide the same thermal resistance -->
 	<set xpath="/items/item/effect_group/passive_effect[@name='HypothermalResist']/@value">20</set>
 	<set xpath="/items/item/effect_group/passive_effect[@name='HyperthermalResist']/@value">20</set>
-	
+
 	<!-- Removes RNG from steel and military armour and adds a hidden hot and cold resist stat -->
 	<remove xpath="/items/item/effect_group/passive_effect[@name='PhysicalDamageResist'][@value='11.8,16']"/>
 	<append xpath="/items/item[starts-with(@name, 'armorSteel') and not(contains(@name, 'Master'))]/effect_group">
@@ -530,6 +530,157 @@
 	</append>
 
 	<!-- Modifies tier bonus damage for weapons and tools -->
-	<set xpath="/items/item/effect_group/passive_effect[@value='.1,.5']/@value">.2,1</set>	
-	
+	<set xpath="/items/item/effect_group/passive_effect[@value='.1,.5']/@value">.2,1</set>
+
+	<!-- Advanced Junk Turret -->
+	<append xpath="/items">
+		<item name="gunAdvJunkTurret"> <!-- T2 turrets -->
+			<property name="Tags" value="turret,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic"/>
+			<property name="CustomIcon" value="gunJunkTurret"/>
+			<property name="DescriptionKey" value="gunAdvJunkTurretDesc" />
+			<property name="DisplayType" value="rangedTurret"/>
+			<property name="HoldType" value="67"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/JunkTurret/junkTurret_Prefab.prefab"/>
+			<property name="HandMeshfile" value="#Other/Items?Weapons/Ranged/JunkTurret/junkTurretHeld_Prefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Material" value="MJunkTurretParts"/> <property name="Weight" value="4"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="weapon_jam"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="EconomicValue" value="500"/>
+			<property name="SellableToTrader" value="true"/>
+			<property name="RequiredPower" value="15"/>
+			<property name="UnlockedBy" value="perkTurrets,gunJunkTurretSchematic"/>
+			<property name="ShowQuality" value="true"/>
+
+			<property class="Action0">
+				<property name="Class" value="Ranged"/>
+				<property name="Delay" value=".6"/> <!-- obsolete if rounds per minute exists -->
+				<!-- <property name="Range" value="40"/> -->
+				<property name="Magazine_items" value="ammo9mmBulletBall,ammo9mmBulletHP,ammo9mmBulletAP"/>
+				<property name="Reload_time" value="2.5"/>
+				<property name="Sound_start" value="junkturret_fire"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value="dryfire"/>
+				<property name="Sound_reload" value="m60_reload"/>
+				<property name="Particles_muzzle_fire" value="nozzleflash_shotgun"/>
+				<property name="Particles_muzzle_smoke" value="nozzlesmokeuzi"/>
+				<!-- <property name="DamageBonus.head" value="3"/>
+		<property name="DamageBonus.wood" value="2.5"/>
+		<property name="DamageBonus.earth" value=".2"/> -->
+				<property name="ScopeOffset" value="0,0,0"/>
+				<property name="SideOffset" value="0,0,0"/>
+				<property name="BarrelOffset" value="0,0,0"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<property class="Action1">
+				<property name="Class" value="SpawnTurret"/>
+				<property name="Turret" value="turretJunk"/>
+			</property>
+			<effect_group name="gunJunkTurret">
+				<passive_effect name="MaxRange" operation="base_set" value="100"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/>
+				<passive_effect name="BlockRange" operation="base_set" value="7"/>
+
+				<passive_effect name="EntityDamage" operation="base_set" value="25,50" tier="1,6"/>
+				<passive_effect name="EntityDamage" operation="perc_add" value=".1,.5" tier="2,6"/> <!-- tier bonus -->
+
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/>
+
+				<passive_effect name="RoundsPerMinute" operation="base_set" value="120"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="1"/>
+
+
+				<!-- was
+		<passive_effect name="MagazineSize" operation="base_set" value="50"/>
+		<passive_effect name="MagazineSize" operation="base_add" value="2,10" tier="2,6"/>
+-->
+
+				<passive_effect name="MagazineSize" operation="base_set" value="250,500,750,1000,1250,1500" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ReloadSpeedMultiplier" operation="base_set" value="1"/>
+
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="2"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="2"/>
+				<passive_effect name="SpreadMultiplierAiming" operation="perc_add" value="-.13"/>
+				<passive_effect name="SpreadMultiplierCrouching" operation="perc_add" value="-.05"/>
+				<passive_effect name="SpreadMultiplierWalking" operation="perc_add" value=".15"/>
+				<passive_effect name="SpreadMultiplierRunning" operation="perc_add" value=".1"/>
+
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="1"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="1"/>
+
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="-1"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="1"/>
+
+				<passive_effect name="IncrementalSpreadMultiplier" operation="base_set" value="0"/>
+				<passive_effect name="WeaponHandling" operation="base_set" value="1"/>
+
+				<passive_effect name="JunkTurretActiveRange" operation="base_set" value="30"/>
+
+				<passive_effect name="DegradationMax" operation="base_set" value="250,600" tier="1,6" tags="perkTurrets"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="0.35" tags="perkTurrets"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+			</effect_group>
+		</item>
+	</append>
+
+	<append xpath="/items">
+		<item name="itemAdvWrench">
+			<property name="Tags" value="blunt,melee,light,tool,attPerception,perkMasterCrafter,perkSalvageOperations,canHaveCosmetic"/>
+			<property name="DisplayType" value="meleeRepairTool"/>
+			<property name="HoldType" value="29"/>
+			<property name="Meshfile" value="#Other/Items?Tools/wrenchPrefab.prefab"/>
+			<property name="CustomIcon" value="itemAdvWrench"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="SoundJammed" value="ItemNeedsRepair"/>
+			<property name="SoundDestroy" value="metaldestroy1"/>
+			<property name="ShowQuality" value="true"/>
+			<property name="EconomicValue" value="450"/>
+			<property class="Action0">
+				<property name="Class" value="DynamicMelee"/>
+				<property name="Sound_start" value="swoosh"/>
+				<property name="ToolCategory.harvestingTools" value=".5" param1="1"/>
+				<property name="ToolCategory.Disassemble" value="1" param1="1"/>
+				<property name="Sound_harvesting" value="wrench_harvest" param1="metal"/>
+				<property name="Particle_harvesting" value="true" param1="metal"/>
+			</property>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="Repair"/>
+				<property name="Delay" value="1"/> <!-- Repair actions still need the delay amount -->
+				<property name="Repair_amount" value="650"/>
+				<property name="Upgrade_hit_offset" value="-2"/>
+				<property name="Sound_start" value="repair_block"/>
+				<property name="Allowed_upgrade_items" value="resourceWood,resourceClayLump,resourceSnowBall,resourceScrapIron,resourceForgedIron,resourceForgedSteel,resourceConcreteMix,resourceCobblestones,resourceYuccaFibers"/>
+			</property>
+			<effect_group name="Base Effects">
+				<passive_effect name="MaxRange" operation="base_set" value="2.4"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="12,24,36,48,60,72" tier="1,2,3,4,5,6"/> <!-- meleeToolWrench -->
+				<passive_effect name="BlockDamage" operation="base_set" value="50,60,70,80,90,100" tier="1,2,3,4,5,6"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.9" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.5" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/> <!-- A16 1.1 -->
+				<passive_effect name="HarvestCount" operation="base_set" value="3" tags="salvageHarvest"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="2.0" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1000,1500" tier="1,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,6" tier="1,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".50" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
+			</effect_group>
+			<property name="Group" value="Tools/Traps"/>
+			<property name="ActionSkillGroup" value="Construction Tools"/>
+			<property name="CraftingSkillGroup" value="craftSkillTools"/>
+			<property name="RepairExpMultiplier" value="5.5"/>
+		</item>
+	</append>
+
 </configs>
