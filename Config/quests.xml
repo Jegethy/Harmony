@@ -47,6 +47,21 @@
 		<reward type="SkillPoints" value="2" />
 		</quest>
 	</append>
+	<append xpath="/quests">
+		<quest id="quest_SkillPointReward100">
+		<property name="group_name_key" value="quest_SkillPointReward100" />
+		<property name="name_key" value="Admin: Book of Skill Reward" />
+		<property name="subtitle_key" value="100 Skill Points" />
+		<property name="description_key" value="You've earned 100 Skill Points" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="offer_key" value="You've been granted an additional 100 skill points by an Administrator!\n\nIt's impossible to spend them all in one place!" />
+		<property name="shareable" value="false" />
+		<reward type="SkillPoints" value="100" />
+		</quest>
+	</append>
+
 
 	<!-- Increases the experience granted by completing quests -->
 	<set xpath="/quests/quest[@id='tier1_clear']/reward[@type='Exp']/@value">5000</set>
