@@ -708,4 +708,6 @@
 		</item>
 	</append>
 
+	<set xpath="/items/item[contains(@name, 'ammo') and not (contains(@name, 'BreachingSlug'))]/effect_group[contains(@name, 'ammo')]/passive_effect[@name='BlockDamage']/@value">0</set>
+
 </configs>

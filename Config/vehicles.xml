@@ -7,11 +7,11 @@
 	<!-- Motorcycle			9,14	-->
 	<!-- Truck				9,13	-->
 	<!-- The latter value is maximum speed a vehicle can reach in metres per second. -->
-	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">14,19</set>
+	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@name='velocityMax']/@value">15,19</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleBicycle']/property[@name='velocityMax']/@value">6,11</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@name='velocityMax']/@value">9,12</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleMotorcycle']/property[@name='velocityMax']/@value">12,16</set>
-	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">11,15</set>
+	<set xpath="/vehicles/vehicle[@name='vehicle4x4Truck']/property[@name='velocityMax']/@value">12,16</set>
 	<!-- Increases the fuel tank capacity of vehicles -->
 	<set xpath="/vehicles/vehicle[@name='vehicleGyrocopter']/property[@class='fuelTank']/property[@name='capacity']/@value">110</set>
 	<set xpath="/vehicles/vehicle[@name='vehicleMinibike']/property[@class='fuelTank']/property[@name='capacity']/@value">60</set>

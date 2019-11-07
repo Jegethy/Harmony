@@ -195,9 +195,9 @@
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.12</set>
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.05</set>
 	
-	<!-- Increases the despawn time of zombies and makes them harvestable -->
+	<!-- Increases the despawn time of zombies and makes them harvestable 
 	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">300</set>
-	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='DeadBodyHitPoints']/@value">500</set>
+	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='DeadBodyHitPoints']/@value">500</set> -->
 
 	<append xpath="/entity_classes/entity_class[contains(@name, 'zombie')]">
 		<drop event="Harvest" name="foodRawMeat" count="0" tool_category="Butcher"/>
