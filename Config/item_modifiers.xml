@@ -96,7 +96,6 @@
 			<effect_group tiered="false">
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
 			</effect_group>
 		</item_modifier>
 		
@@ -114,7 +113,6 @@
 			<effect_group tiered="false">
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
 			</effect_group>
 		</item_modifier>
 		
@@ -132,7 +130,6 @@
 			<effect_group tiered="false">
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
 			</effect_group>
 		</item_modifier>
 		
@@ -152,7 +149,6 @@
 			<effect_group tiered="false">
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
 			</effect_group>
 		</item_modifier>
 		
@@ -172,7 +168,6 @@
 			<effect_group tiered="false">
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
-				<passive_effect name="PhysicalDamageResist" operation="base_add" value="1"/>
 			</effect_group>
 		</item_modifier>
     </append>
