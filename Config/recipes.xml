@@ -475,6 +475,13 @@
 		</recipe>
 	</append>
 	
+	<append xpath="/recipes">	
+		<recipe name="itemLearningbook" count="1" always_unlocked="true" craft_time="15">
+			<ingredient name="resourceLeather" count="2"/>
+			<ingredient name="resourceTornPage" count="8"/>
+		</recipe>
+	</append>
+
 	<append xpath="/recipes">
 		<recipe name="gunAdvJunkTurret" count="1" craft_area="workbench" tags="learnable,perkTurrets">
 			<ingredient name="gunJunkTurretParts" count="8"/>
@@ -485,6 +492,11 @@
 			<effect_group>
 				<passive_effect name="CraftingIngredientCount" level="2,6" operation="perc_add" value=".5,2.5" tags="gunJunkTurretParts,resourceForgedIron,resourceDuctTape,resourceScrapPolymers,resourceSpring"/>
 			</effect_group>
+		</recipe>
+	</append>
+	<append xpath="/recipes">
+		<recipe name="resourceTornPage" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true">
+			<wildcard_forge_category />
 		</recipe>
 	</append>
 </configs>

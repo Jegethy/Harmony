@@ -61,6 +61,22 @@
 		<reward type="SkillPoints" value="100" />
 		</quest>
 	</append>
+	
+	<!-- Adds learning book rewards from quests -->
+	<append xpath="/quests">
+		<quest id="quest_LearningBookReward">
+		<property name="group_name_key" value="quest_LearningBookReward" />
+		<property name="name_key" value="Mysterious Tome" />
+		<property name="subtitle_key" value="Bonus Experience" />
+		<property name="description_key" value="You've earned 25,000 Experience" />
+		<property name="icon" value="ui_game_symbol_map_bed" />
+		<property name="category_key" value="quest" />
+		<property name="difficulty" value="veryeasy"/>
+		<property name="offer_key" value="You've read a mysterious tome which has granted you 25,000 experience!" />
+		<property name="shareable" value="false" />
+		<reward type="Exp" value="25000" />
+		</quest>
+	</append>
 
 
 	<!-- Increases the experience granted by completing quests -->
