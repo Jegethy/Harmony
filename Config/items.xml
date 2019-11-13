@@ -550,8 +550,8 @@
 	</append>
 
 	<!-- Dynamite now goes boom boom a little more boomy -->
-	<set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">10000</set>
-	<set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExDamageBlock']/@value">10000</set>
+	<set xpath="/items/item[@name='thrownDynamite']/effect_group/passive_effect[@name='BlockDamage']/@value">15000</set>
+	<set xpath="/items/item[@name='thrownDynamite']/effect_group/display_value[@name='dExDamageBlock']/@value">15000</set>
 	<set xpath="/items/item[@name='thrownDynamite']/property[@name='Explosion.RadiusBlocks']/@value">10</set>
 
 	<!-- Removes RNG from weapons and tools -->

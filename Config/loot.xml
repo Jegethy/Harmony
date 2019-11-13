@@ -21,34 +21,32 @@
 	</append>
 	<!-- Adds new airdrop loot table -->
 	<append xpath="/lootcontainers">
-		<lootcontainer id="34" count="24" size="10,12" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
-			<item group="cannedfood" count="20,60" prob="1"/>
-			<item group="seeds" count="12,24" prob="0.8"/>
-			<item group="perkBooks" count="4,7" prob="0.4"/>
+		<lootcontainer id="34" count="18" size="10,12" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="cannedfood" count="4,16" prob="1"/>
+			<item group="seeds" count="4,12" prob="0.8"/>
+			<item group="perkBooks" count="2,4" prob="0.4"/>
 			<item group="modArmorT3" count="2,5" prob="0.2"/>
 			<item group="groupModAllScaled" count="2,5" prob="0.2"/>
-			<item group="treasureAmmo" count="10,200" prob="1"/>
-			<item group="rareOres" count="6,18" prob="0.2"/>
+			<item group="treasureAmmo" count="10,50" prob="1"/>
+			<item group="rareOres" count="6,12" prob="0.2"/>
 			<item group="electricalDevices" count="1,3" prob="0.2"/>
-			<item name="ammoGasCan" count="100,2000" prob="0.5"/>
-			<item name="resourceCoal" count="100,500" prob="0.5"/>
-			<item name="resourceGunPowder" count="100,500" prob="0.5"/>
-			<item name="resourcePotassiumNitratePowder" count="100,500" prob="0.5"/>
+			<item name="ammoGasCan" count="20,100" prob="0.5"/>
+			<item name="resourceCoal" count="20,100" prob="0.5"/>
+			<item name="resourceGunPowder" count="20,100" prob="0.5"/>
+			<item name="resourcePotassiumNitratePowder" count="20,100" prob="0.5"/>
 			<item name="resourceGlue" count="10,50" prob="0.5"/>
-			<item name="resourceOilShale" count="50,250" prob="0.5"/>
-			<item name="medicalFirstAidKit" count="16,32" prob="2"/>
-			<item group="rareMedicine" count="16,64" prob="0.2"/>
-			<item group="labEquipment" count="16,64" prob="0.2"/>
-			<item group="groupBirdNest" count="16,64" prob="0.2"/>				
-			<item group="beverages" count="16,64" prob="0.2"/>	
-			<item group="survivalMedical" count="16,64" prob="0.2"/>	
+			<item name="resourceOilShale" count="20,100" prob="0.5"/>
+			<item name="medicalFirstAidKit" count="2,8" prob="1"/>
+			<item group="rareMedicine" count="4,32" prob="0.2"/>
+			<item group="labEquipment" count="4,32" prob="0.2"/>
+			<item group="groupBirdNest" count="4,32" prob="0.2"/>				
+			<item group="beverages" count="4,32" prob="0.2"/>	
+			<item group="survivalMedical" count="4,32" prob="0.2"/>	
 			<item group="vehicleParts" count="1,3" prob="0.06"/>	
 			<item group="rareBooks" count="1,3" prob="0.2"/>
 			<item group="commonBooks" count="2,6" prob="0.2"/>
 			<item group="groupArmor_HeavyTPlus" count="1,3" prob="0.2"/>
 			<item group="groupArmor_LightTPlus" count="1,3" prob="0.2"/>
-			<item name="casinoCoin" count="100,30000" prob="0.15"/>
-			<item name="oldCash" count="100,30000" prob="0.15"/>
 		</lootcontainer>
 	</append>
 	<!-- Adds Bile Duct loot to cop zombies -->
