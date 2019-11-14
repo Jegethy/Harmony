@@ -96,58 +96,58 @@
 	
 	<!-- Adds parts template to loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='weaponParts']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='workingStiffs']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".12" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='tools']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".12" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='rareTools']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".12" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupModAllScaled']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupHeroChestLoot']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupSafeLoot']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='shamwaySafe']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='brewerySafe']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupBuriedWeaponChest']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".14" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='workbenchLoot']">
-		<item name="itemPartsTemplateMaster" count="1,3" prob=".06" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".15" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT3_Heavy']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".13" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2_Heavy']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".11" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT1_Heavy']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT3_Light']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".13" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2_Light']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".11" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT1_Light']">
-		<item name="itemPartsTemplateMaster" count="1,3" />
+		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	
 	<!-- Adds paint back to loot -->	

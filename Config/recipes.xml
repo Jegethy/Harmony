@@ -474,7 +474,7 @@
 			<ingredient name="resourceSpring" count="4"/>
 		</recipe>
 	</append>
-	
+
 	<append xpath="/recipes">	
 		<recipe name="itemLearningbook" count="1" always_unlocked="true" craft_time="15">
 			<ingredient name="resourceLeather" count="2"/>
@@ -499,4 +499,6 @@
 			<wildcard_forge_category />
 		</recipe>
 	</append>
+
+	
 </configs>
