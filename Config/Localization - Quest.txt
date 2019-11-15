@@ -10,5 +10,5 @@ itemTraderbookDesc,items,Item,EnChanged,Hankering for some new pants, need some 
 quest_MysticalTome_supplies,,Quest Info,New,The Mystical Tome,,,,
 quest_MysticalTome_offer,,Quest Info,New,"You hold in your hand a book that has been reassembled from the torn pages of skill books. You're not entirely sure why, or how, but you sense that there may be hidden treasure nearby. Don't forget your shovel, and bear in mind that you may attract some unwanted attention digging up long-forgotten treasures...",,,,
 quest_MysticalTome_subtitle,,Quest Info,New,"The Mystical Tome",,,,
-quest_MysticalTome_description,,Quest Info,New,"You must find the hidden treasure, loot its contents, and report your success to the nearest trader... assuming you do succeed.",,,,
+quest_MysticalTome_description,,Quest Info,New,"Upon reading the book you get an overwhelming sense of nearby long lost treasures.\n\nHunt down the location, dig up the treasure, and loot its contents. Beware of enemies who may want to take what is now yours...",,,,
 quest_MysticalTome_completion,,Quest Info,New,"Well, shit. I never knew these supplies were missing, and here you are, returning them without me even having to ask... This deserves a special reward, so here ya go, take your pick of the skill books I have in stock today.",,,,

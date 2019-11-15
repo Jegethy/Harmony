@@ -21,21 +21,21 @@
 	</append>
 	<!-- Adds new airdrop loot table -->
 	<append xpath="/lootcontainers">
-		<lootcontainer id="34" count="18" size="10,12" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+		<lootcontainer id="34" count="16" size="10,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
 			<item group="cannedfood" count="4,16" prob="1"/>
 			<item group="seeds" count="4,12" prob="0.8"/>
 			<item group="perkBooks" count="2,4" prob="0.4"/>
 			<item group="modArmorT3" count="2,5" prob="0.2"/>
 			<item group="groupModAllScaled" count="2,5" prob="0.2"/>
-			<item group="treasureAmmo" count="10,50" prob="1"/>
+			<item group="treasureAmmo" count="10,30" prob="1"/>
 			<item group="rareOres" count="6,12" prob="0.2"/>
 			<item group="electricalDevices" count="1,3" prob="0.2"/>
-			<item name="ammoGasCan" count="20,100" prob="0.5"/>
-			<item name="resourceCoal" count="20,100" prob="0.5"/>
-			<item name="resourceGunPowder" count="20,100" prob="0.5"/>
-			<item name="resourcePotassiumNitratePowder" count="20,100" prob="0.5"/>
-			<item name="resourceGlue" count="10,50" prob="0.5"/>
-			<item name="resourceOilShale" count="20,100" prob="0.5"/>
+			<item name="ammoGasCan" count="20,55" prob="0.5"/>
+			<item name="resourceCoal" count="20,55" prob="0.5"/>
+			<item name="resourceGunPowder" count="20,55" prob="0.5"/>
+			<item name="resourcePotassiumNitratePowder" count="20,55" prob="0.5"/>
+			<item name="resourceGlue" count="10,35" prob="0.5"/>
+			<item name="resourceOilShale" count="20,55" prob="0.5"/>
 			<item name="medicalFirstAidKit" count="2,8" prob="1"/>
 			<item group="rareMedicine" count="4,32" prob="0.2"/>
 			<item group="labEquipment" count="4,32" prob="0.2"/>
@@ -69,10 +69,24 @@
 
 	<!-- Adds trader advert item -->
 	<append xpath="/lootcontainers/lootgroup[@name='junk']" >
-		<item name="itemTraderbook" count="1" prob="0.01"/>
+		<item name="itemTraderbook" count="1" prob="0.05"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
-		<item name="itemTraderbook" count="1" prob="0.02"/>
+		<item name="itemTraderbook" count="1" prob="0.05"/>
+	</append>
+	
+	<!-- Adds torn pages to loot -->
+	<append xpath="/lootcontainers/lootgroup[@name='junk']" >
+		<item name="resourceTornPage" count="1" prob="0.02"/>
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
+		<item name="resourceTornPage" count="1" prob="0.02"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='junk']" >
+		<item name="itemLearningbook" count="1" prob="0.01"/>
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
+		<item name="itemLearningbook" count="1" prob="0.01"/>
 	</append>
 
 	<!-- Adds custom fittings mod to loot drop table -->
@@ -81,16 +95,13 @@
 		<item name="modReinforcedMasterFitting" count="1" prob="0.2"/>
 	</append>
 
-	<!-- Removes blood draw kit from Rare Medicine loot group -->
-	<remove xpath="/lootcontainers/lootgroup[@name='rareMedicine']/item[@name='medicalBloodDrawKit']" />
-
 	<!-- Reduces the drop rate of crafting bench schematics -->
 	<set xpath="/lootcontainers/lootcontainer[@id='92']/item[@name='workbenchSchematic']/@prob">.08</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='93']/item[@name='cementMixerSchematic']/@prob">.08</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='94']/item[@name='chemistryStationSchematic']/@prob">.08</set>
 
 	<!-- Reduces the drop rate of lockpicks -->
-	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='resourceLockPick']/@count">1</set>
+	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='resourceLockPick']/@count">1,2</set>
 	<set xpath="/lootcontainers/lootgroup[@name='workingStiffs']/item[@name='resourceLockPick']/@count">1,2</set>
 	<set xpath="/lootcontainers/lootgroup[@name='banditsGeneral']/item[@name='resourceLockPick']/@count">2,3</set>
 
@@ -105,7 +116,7 @@
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".12" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='rareTools']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".12" />
+		<item name="itemPartsTemplateMaster" count="2,4" prob=".12" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupModAllScaled']">
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
@@ -129,10 +140,10 @@
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".15" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='schematicsModsRare']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
+		<item name="itemPartsTemplateMaster" count="2,4" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT3_Heavy']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".13" />
+		<item name="itemPartsTemplateMaster" count="2,4" prob=".13" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2_Heavy']">
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".11" />
@@ -141,7 +152,7 @@
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT3_Light']">
-		<item name="itemPartsTemplateMaster" count="1,2" prob=".13" />
+		<item name="itemPartsTemplateMaster" count="2,4" prob=".13" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT2_Light']">
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".11" />
@@ -172,33 +183,33 @@
 
 	<!-- Adds advanced wrench to loot -->	
 	<append xpath="/lootcontainers/lootgroup[@name='tools']">
-		<item name="itemAdvWrench" count="1" />
+		<item name="itemAdvWrench" count="1" prob="0.25" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='workingStiffs']">
-		<item name="itemAdvWrench" count="1" />
+		<item name="itemAdvWrench" count="1" prob="0.25" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupQuestTools']">
-		<item name="itemAdvWrench" count="1" />
+		<item name="itemAdvWrench" count="1" prob="0.25" />
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='8']">
-		<item name="itemAdvWrench" count="1" />
+		<item name="itemAdvWrench" count="1" prob="0.25" />
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='88']">
-		<item name="itemAdvWrench" count="1" />
+		<item name="itemAdvWrench" count="1" prob="0.25" />
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='124']">
-		<item name="itemAdvWrench" count="1" />
+		<item name="itemAdvWrench" count="1" prob="0.25" />
 	</append>
 
 	<!-- Adds advanced turret to loot -->	
 	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_TurretsSyndrome']">
-		<item name="gunAdvJunkTurret" count="1" />
+		<item name="gunAdvJunkTurret" count="1" prob="0.25" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupWeapons_TurretsSyndrome']">
-		<item name="gunAdvJunkTurret" count="1" />
+		<item name="gunAdvJunkTurret" count="1" prob="0.25" />
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupWeapons_TurretsSyndromeTPlus']">
-		<item name="gunAdvJunkTurret" count="1" />
+		<item name="gunAdvJunkTurret" count="1" prob="0.25" />
 	</append>
 
 	<!-- Removes empty jars from loot -->

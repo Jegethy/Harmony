@@ -216,6 +216,10 @@
 		<recipe name="ammoCrossbowBoltSteelAP" count="1">
 			<ingredient name="ammoArrowSteelAP" count="1"/>
 		</recipe>
+		<recipe name="ammoCrossbowBoltSteelAP" count="1">
+			<ingredient name="ammoCrossbowBoltIron" count="3"/>
+		</recipe>
+
 	</append>
 
 	<!-- Adds recipe to convert ammo into different ammo -->
@@ -434,31 +438,31 @@
 
 	<append xpath="/recipes">	
 		<recipe name="modArmorInvisible" count="1" craft_time="10">
-			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
 			<ingredient name="resourceLeather" count="3"/>
 			<ingredient name="resourceDuctTape" count="3"/>
 			<ingredient name="drinkJarGrainAlcohol" count="2"/>
 		</recipe>
 		<recipe name="modArmorInvisibleGoth" count="1" craft_time="10">
-			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
 			<ingredient name="resourceLeather" count="3"/>
 			<ingredient name="resourceDuctTape" count="3"/>
 			<ingredient name="drinkJarGrainAlcohol" count="2"/>
 		</recipe>
 		<recipe name="modArmorInvisibleWorn" count="1" craft_time="10">
-			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
 			<ingredient name="resourceLeather" count="3"/>
 			<ingredient name="resourceDuctTape" count="3"/>
 			<ingredient name="drinkJarGrainAlcohol" count="2"/>
 		</recipe>
 		<recipe name="modArmorInvisibleRunning" count="1" craft_time="10">
-			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
 			<ingredient name="resourceLeather" count="3"/>
 			<ingredient name="resourceDuctTape" count="3"/>
 			<ingredient name="drinkJarGrainAlcohol" count="2"/>
 		</recipe>
 		<recipe name="modArmorInvisibleCowboy" count="1" craft_time="10">
-			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="itemPartsTemplateMaster" count="2"/>
 			<ingredient name="resourceLeather" count="3"/>
 			<ingredient name="resourceDuctTape" count="3"/>
 			<ingredient name="drinkJarGrainAlcohol" count="2"/>
@@ -478,7 +482,7 @@
 	<append xpath="/recipes">	
 		<recipe name="itemLearningbook" count="1" always_unlocked="true" craft_time="15">
 			<ingredient name="resourceLeather" count="2"/>
-			<ingredient name="resourceTornPage" count="8"/>
+			<ingredient name="resourceTornPage" count="12"/>
 		</recipe>
 	</append>
 
@@ -494,6 +498,7 @@
 			</effect_group>
 		</recipe>
 	</append>
+	
 	<append xpath="/recipes">
 		<recipe name="resourceTornPage" count="1" tooltip="ttScrapMetalBrass" always_unlocked="true">
 			<wildcard_forge_category />
