@@ -49,7 +49,7 @@
 			</effect_group>
 		</item_modifier>
 	</append>
-	
+
 	<!-- Adding the craftable mod item -->
 	<append xpath="/item_modifiers">
 		<item_modifier name="modGunMagazineExtender" installable_tags="magazine,shotgun" modifier_tags="magazine" type="attachment">
@@ -66,22 +66,22 @@
 	</append>
 
 	<!-- Makes dyes sellable to vendors -->
-    <append xpath="/item_modifiers/item_modifier[contains(@name, 'modDye')]">
-        <property name="EconomicValue" value="750"/>
-    </append>
-	
+	<append xpath="/item_modifiers/item_modifier[contains(@name, 'modDye')]">
+		<property name="EconomicValue" value="750"/>
+	</append>
+
 	<!-- Adds mod tags to clothing items -->
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorBandolier']/@installable_tags">clothing,armorChest</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLiner']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorCoolingMesh']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorDoubleStoragePocket']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorTripleStoragePocket']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorMuffledConnectors']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorAdvancedMuffledConnectors']/@installable_tags">clothing,armor</set>
-    <set xpath="/item_modifiers/item_modifier[@name='modArmorImpactBracing']/@installable_tags">clothing,armorFeet</set>
-	
-    <append xpath="/item_modifiers">
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorBandolier']/@installable_tags">clothing,armorChest</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorInsulatedLiner']/@installable_tags">clothing,armor</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorCoolingMesh']/@installable_tags">clothing,armor</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorStoragePocket']/@installable_tags">clothing,armor</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorDoubleStoragePocket']/@installable_tags">clothing,armor</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorTripleStoragePocket']/@installable_tags">clothing,armor</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorMuffledConnectors']/@installable_tags">clothing,armor</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorAdvancedMuffledConnectors']/@installable_tags">clothing,armor</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modArmorImpactBracing']/@installable_tags">clothing,armorFeet</set>
+
+	<append xpath="/item_modifiers">
 		<item_modifier name="modArmorInvisible" installable_tags="armor" blocked_tags="clothing" modifier_tags="rare" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
@@ -98,7 +98,7 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
-		
+
 		<item_modifier name="modArmorInvisibleGoth" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
@@ -115,7 +115,7 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
-		
+
 		<item_modifier name="modArmorInvisibleCowboy" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
@@ -132,7 +132,7 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
-		
+
 		<item_modifier name="modArmorInvisibleRunning" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
@@ -151,7 +151,26 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
-		
+
+		<item_modifier name="modArmorInvisibleDress" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
+			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EconomicValue" value="440"/>
+			<property name="DisplayType" value="clothing"/>
+			<item_property_overrides name="*">
+				<property name="UMA.Mesh" value="clothes_dress_shoes"/>
+				<property name="UMA.Overlay0" value="clothes_dress_shoes"/>
+				<property name="Layer" value="0"/>
+				<property name="UISlot" value="Footwear"/>
+			</item_property_overrides>
+
+			<effect_group tiered="false">
+				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
+			</effect_group>
+		</item_modifier>
+
 		<item_modifier name="modArmorInvisibleWorn" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
@@ -170,5 +189,36 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
-    </append>
+	</append>
+
+	<append xpath="/item_modifiers">
+		<item_modifier name="modHeadgearEffects" installable_tags="moddedHead" type="attachment" rarity="0.5">
+			<property name="DisplayType" value="clothing"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="name_key" value="modLightweightMasterFitting" />
+			<property name="description_key" value="modLightweightMasterFittingDesc" />
+			<property name="CustomIcon" value="modArmorPlatingBasic" />
+			<property name="CustomIconTint" value="171,171,255"/>
+			<property name="EconomicValue" value="385"/>
+
+			<effect_group tiered="false">
+			
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>
+				<passive_effect name="AttributeLevel" operation="base_add" value="1" tags="attIntellect"/>
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="20"/>
+				<passive_effect name="TreasureRadius" operation="base_add" value="-1"/>
+				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+				<display_value name="dTreasureRadius" value="-1"/>
+				<display_value name="dCraftingTime" value="-.1"/>
+				<display_value name="dPlayerExpGain" value=".1"/>
+
+			</effect_group>
+		</item_modifier>
+	</append>
+
 </configs>

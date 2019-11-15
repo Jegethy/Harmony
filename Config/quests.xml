@@ -1,31 +1,31 @@
 <configs>
 
 	<!-- Adds skill point rewards to the starter quests -->
-    <append xpath="/quests/quest[@id='quest_BasicSurvival1']">
+	<append xpath="/quests/quest[@id='quest_BasicSurvival1']">
 		<reward type="SkillPoints" value="1" />
 	</append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival2']">
+	<append xpath="/quests/quest[@id='quest_BasicSurvival2']">
 		<reward type="SkillPoints" value="1" />
 	</append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival3']">
+	<append xpath="/quests/quest[@id='quest_BasicSurvival3']">
 		<reward type="SkillPoints" value="1" />
 	</append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival4']">
+	<append xpath="/quests/quest[@id='quest_BasicSurvival4']">
 		<reward type="SkillPoints" value="1" />
 	</append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival5']">
+	<append xpath="/quests/quest[@id='quest_BasicSurvival5']">
 		<reward type="SkillPoints" value="1" />
 	</append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival6']">
+	<append xpath="/quests/quest[@id='quest_BasicSurvival6']">
 		<reward type="SkillPoints" value="1" />
 	</append>
-    <append xpath="/quests/quest[@id='quest_BasicSurvival7']">
+	<append xpath="/quests/quest[@id='quest_BasicSurvival7']">
 		<reward type="SkillPoints" value="2" />
 	</append>
-    <append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
+	<append xpath="/quests/quest[@id='quest_whiteRiverCitizen1']">
 		<reward type="SkillPoints" value="5" />
 	</append>
-	
+
 	<!-- Adds Skillbook rewards from quests -->
 	<append xpath="/quests/quest/property[@name='completiontype'][@value='TurnIn']/../property[@name='category_key'][@value='quest']/..">
 		<reward type="Item" id="itemSkillbook" value="1" />
@@ -35,46 +35,46 @@
 	</append>
 	<append xpath="/quests">
 		<quest id="quest_SkillPointReward">
-		<property name="group_name_key" value="quest_SkillPointReward" />
-		<property name="name_key" value="Book of Skill Reward" />
-		<property name="subtitle_key" value="2 Skill Points" />
-		<property name="description_key" value="You've earned 2 Skill Points" />
-		<property name="icon" value="ui_game_symbol_map_bed" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy"/>
-		<property name="offer_key" value="You have earned 2 additional skill points. Well done!\n\nDon't spend them all in one place!" />
-		<property name="shareable" value="false" />
-		<reward type="SkillPoints" value="2" />
+			<property name="group_name_key" value="quest_SkillPointReward" />
+			<property name="name_key" value="Book of Skill Reward" />
+			<property name="subtitle_key" value="2 Skill Points" />
+			<property name="description_key" value="You've earned 2 Skill Points" />
+			<property name="icon" value="ui_game_symbol_map_bed" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="veryeasy"/>
+			<property name="offer_key" value="You have earned 2 additional skill points. Well done!\n\nDon't spend them all in one place!" />
+			<property name="shareable" value="false" />
+			<reward type="SkillPoints" value="2" />
 		</quest>
 	</append>
 	<append xpath="/quests">
 		<quest id="quest_SkillPointReward100">
-		<property name="group_name_key" value="quest_SkillPointReward100" />
-		<property name="name_key" value="Admin: Book of Skill Reward" />
-		<property name="subtitle_key" value="100 Skill Points" />
-		<property name="description_key" value="You've earned 100 Skill Points" />
-		<property name="icon" value="ui_game_symbol_map_bed" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy"/>
-		<property name="offer_key" value="You've been granted an additional 100 skill points by an Administrator!\n\nIt's impossible to spend them all in one place!" />
-		<property name="shareable" value="false" />
-		<reward type="SkillPoints" value="100" />
+			<property name="group_name_key" value="quest_SkillPointReward100" />
+			<property name="name_key" value="Admin: Book of Skill Reward" />
+			<property name="subtitle_key" value="100 Skill Points" />
+			<property name="description_key" value="You've earned 100 Skill Points" />
+			<property name="icon" value="ui_game_symbol_map_bed" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="veryeasy"/>
+			<property name="offer_key" value="You've been granted an additional 100 skill points by an Administrator!\n\nIt's impossible to spend them all in one place!" />
+			<property name="shareable" value="false" />
+			<reward type="SkillPoints" value="100" />
 		</quest>
 	</append>
-	
+
 	<!-- Adds learning book rewards from quests -->
 	<append xpath="/quests">
 		<quest id="quest_LearningBookReward">
-		<property name="group_name_key" value="quest_LearningBookReward" />
-		<property name="name_key" value="Mysterious Tome" />
-		<property name="subtitle_key" value="Bonus Experience" />
-		<property name="description_key" value="You've earned 25,000 Experience" />
-		<property name="icon" value="ui_game_symbol_map_bed" />
-		<property name="category_key" value="quest" />
-		<property name="difficulty" value="veryeasy"/>
-		<property name="offer_key" value="You've read a mysterious tome which has granted you 25,000 experience!" />
-		<property name="shareable" value="false" />
-		<reward type="Exp" value="25000" />
+			<property name="group_name_key" value="quest_LearningBookReward" />
+			<property name="name_key" value="Mysterious Tome" />
+			<property name="subtitle_key" value="Bonus Experience" />
+			<property name="description_key" value="You've earned 25,000 Experience" />
+			<property name="icon" value="ui_game_symbol_map_bed" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="veryeasy"/>
+			<property name="offer_key" value="You've read a mysterious tome which has granted you 25,000 experience!" />
+			<property name="shareable" value="false" />
+			<reward type="Exp" value="25000" />
 		</quest>
 	</append>
 
@@ -99,30 +99,80 @@
 	<set xpath="/quests/quest[@id='tier6_clear']/reward[@type='Exp']/@value">25000</set>
 	<set xpath="/quests/quest[@id='tier6_fetch']/reward[@type='Exp']/@value">25000</set>
 	<set xpath="/quests/quest[@id='tier6_fetch_clear']/reward[@type='Exp']/@value">25000</set>
-	
+
 	<!-- Adds trader advert quest item -->
 	<append xpath="/quests" >
-			<quest id="quest_TraderAdvert">
-				<property name="group_name" value="Local Trader Advertisement" />
-				<property name="offer" value="Hankering for some new pants, need some gunpowder to fuel your slaughter, or just want a safe place to chill out during the day?\n\nCome and visit your local Trader!" />
-				<property name="name" value="Go To The Trader" />
-				<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitleNEW" />
-				<property name="description_key" value="quest_WhiteRiverCitizen1_descriptionNEW" />
-				<property name="icon" value="ui_game_symbol_map_trader" />
-				<property name="category_key" value="quest" />
-				<property name="difficulty" value="medium" />
-				<property name="shareable" value="true" />
-				<property name="repeatable" value="true" />
-	
-				<objective type="Goto" id="trader" value="5" phase="1" />
-				
-				<objective type="InteractWithNPC">
-					<property name="phase" value="2"/>
-				</objective>
-		
-				<reward type="Exp" value="75000" />
-				<reward type="SkillPoints" value="1" />
-	    </quest>
+		<quest id="quest_TraderAdvert">
+			<property name="group_name" value="Local Trader Advertisement" />
+			<property name="offer" value="Hankering for some new pants, need some gunpowder to fuel your slaughter, or just want a safe place to chill out during the day?\n\nCome and visit your local Trader!" />
+			<property name="name" value="Go To The Trader" />
+			<property name="subtitle_key" value="quest_WhiteRiverCitizen1_subtitleNEW" />
+			<property name="description_key" value="quest_WhiteRiverCitizen1_descriptionNEW" />
+			<property name="icon" value="ui_game_symbol_map_trader" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="medium" />
+			<property name="shareable" value="true" />
+			<property name="repeatable" value="true" />
+
+			<objective type="Goto" id="trader" value="5" phase="1" />
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="2"/>
+			</objective>
+
+			<reward type="Exp" value="75000" />
+			<reward type="SkillPoints" value="1" />
+		</quest>
+	</append>
+
+	<append xpath="/quests/quest_items" >
+		<quest_item id="3" name="Long-Forgotten Supplies" icon="questJegSupplies" icon_color="255,255,255"/>
+	</append>
+
+	<append xpath="/quests" >
+		<quest id="quest_MysticalTome">
+			<property name="group_name" value="Mystical Tome" />
+			<property name="name_key" value="quest_MysticalTome_supplies"/>
+			<property name="subtitle_key" value="quest_MysticalTome_subtitle"/>
+			<property name="description_key" value="quest_MysticalTome_description" />
+			<property name="icon" value="ui_game_symbol_map_trader" />
+			<property name="category_key" value="quest" />
+			<property name="difficulty" value="insane" />
+			<property name="shareable" value="true" />
+			<property name="repeatable" value="true" />
+			<property name="statement_key" value="quest_MysticalTome_statement"/>
+			<property name="response_key" value="quest_MysticalTome_response"/>
+			<property name="completiontype" value="TurnIn"/>
+			<property name="completion_key" value="quest_MysticalTome_completion"/>
+			<property name="offer_key" value="quest_MysticalTome_offer"/>
+
+			<objective type="TreasureChest" phase="1">
+				<property name="block" value="treasureChestJeg"/>
+				<property name="distance" value="100-500"/>
+				<property name="container_type" value="Supplies"/>
+			</objective>
+
+			<objective type="FetchFromTreasure" phase="1">
+				<property name="block" value="treasureChestJeg"/>
+				<property name="quest_item_ID" value="3"/>
+				<property name="item_count" value="1"/>
+			</objective>
+
+			<action type="SpawnEnemy" id="zombieWightFeral,zombieWightRadiated,zombieBehemoth,zombieBoe,zombieBoeFeral,zombieBoeRadiated,zombieFootballPlayer,zombieFemaleFat,zombieFemaleFatFeral,zombieFemaleFatRadiated,zombieJoe,zombieJoeFeral,zombieJoeRadiated,zombieMoe,zombieMoeFeral,zombieMoeRadiated,zombieArlene,zombieArleneFeral,zombieArleneRadiated,zombieLab,zombieLabFeral,zombieLabRadiated,legendaryZombieLab,zombieScreamer,zombieScreamerFeral,zombieScreamerRadiated,zombieDarlene,zombieDarleneFeral,zombieDarleneRadiated,zombieMarlene,zombieMarleneFeral,zombieMarleneRadiated,zombieYo,zombieYoFeral,zombieYoRadiated,zombieSteve,zombieSteveFeral,zombieSteveRadiated,zombieSteveCrawler,zombieSteveCrawlerFeral,zombieBusinessMan,zombieBusinessManFeral,legendaryZombieBusinessMan,zombieSnow,zombieSnowFeral,zombieSpider,zombieSpiderFeral,zombieSpiderRadiated,zombieBurnt,zombieNurse,zombieNurseFeral,zombieFatHawaiian,zombieFatHawaiianFeral,zombieFatCop,zombieFatCopFeral,zombieFatCopRadiated,zombieMaleHazmat,zombieUtilityWorker,zombieUtilityWorkerFeral,legendaryZombieUtilityWorker,zombieSoldier,zombieSoldierFeral,zombieSoldierRadiated,zombieSkateboarder,zombieSkateboarderFeral,zombieSkateboarderRadiated,zombieCheerleader,zombieCheerleaderFeral,zombieCheerleaderRadiated,zombieOldTimer,zombieOldTimerFeral,zombieOldTimerRadiated,zombieBiker,zombieBikerFeral,zombieBikerRadiated,legendaryZombieBiker,zombieFarmer,zombieFarmerFeral,zombieStripper,zombieStripperFeral,zombieUMATemplateMale,zombieUMATemplateFemale,zombieMiner,animalZombieBear,animalDireWolf,animalZombieDog" value="18-24" phase="2"/>
+
+			<objective type="Goto" id="trader" value="5" phase="2" />
+
+			<objective type="InteractWithNPC">
+				<property name="phase" value="3"/>
+			</objective>
+
+			<reward type="Exp" value="25000" />
+			<reward type="SkillPoints" value="1" />
+			<reward type="Item" id="casinoCoin" value="2500"/>
+			<reward type="LootItem" id="perkBooks" ischosen="true" value="12"/>
+			<reward type="LootItem" id="perkBooks" ischosen="true" value="15"/>
+			
+		</quest>
 	</append>
 
 </configs>

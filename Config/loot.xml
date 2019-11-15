@@ -55,16 +55,16 @@
 			<item name="itemBileDuct" count="1" prob="1"/>
 		</lootcontainer>	
 	</append>
-	
+
 	<!-- Adds Bile Duct loot to cop zombies -->
 	<insertAfter xpath="/lootcontainers/lootgroup[@name='perkBooks']/item[@name='bookWasteTreasuresWater']">
-	<item name="bookHammerTimeDamage"/>
-	<item name="bookHammerTimeHarvest"/>
-	<item name="bookHammerTimeDefense"/>
-	<item name="bookHammerTimeDoorKey"/>
-	<item name="bookHammerTimeProtect"/>
-	<item name="bookHammerTimeUnstoppable"/>
-	<item name="bookHammerTimeDrunk"/>
+		<item name="bookHammerTimeDamage"/>
+		<item name="bookHammerTimeHarvest"/>
+		<item name="bookHammerTimeDefense"/>
+		<item name="bookHammerTimeDoorKey"/>
+		<item name="bookHammerTimeProtect"/>
+		<item name="bookHammerTimeUnstoppable"/>
+		<item name="bookHammerTimeDrunk"/>
 	</insertAfter>
 
 	<!-- Adds trader advert item -->
@@ -74,7 +74,7 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
 		<item name="itemTraderbook" count="1" prob="0.02"/>
 	</append>
-	
+
 	<!-- Adds custom fittings mod to loot drop table -->
 	<append xpath="/lootcontainers/lootgroup[@name='modArmorT3']" >
 		<item name="modLightweightMasterFitting" count="1" prob="0.2"/>
@@ -83,17 +83,17 @@
 
 	<!-- Removes blood draw kit from Rare Medicine loot group -->
 	<remove xpath="/lootcontainers/lootgroup[@name='rareMedicine']/item[@name='medicalBloodDrawKit']" />
-	
+
 	<!-- Reduces the drop rate of crafting bench schematics -->
-	<set xpath="/lootcontainers/lootcontainer[@id='92']/item[@name='workbenchSchematic']/@prob">.05</set>
-	<set xpath="/lootcontainers/lootcontainer[@id='93']/item[@name='cementMixerSchematic']/@prob">.05</set>
-	<set xpath="/lootcontainers/lootcontainer[@id='94']/item[@name='chemistryStationSchematic']/@prob">.05</set>
-	
+	<set xpath="/lootcontainers/lootcontainer[@id='92']/item[@name='workbenchSchematic']/@prob">.08</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='93']/item[@name='cementMixerSchematic']/@prob">.08</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='94']/item[@name='chemistryStationSchematic']/@prob">.08</set>
+
 	<!-- Reduces the drop rate of lockpicks -->
 	<set xpath="/lootcontainers/lootgroup[@name='junk']/item[@name='resourceLockPick']/@count">1</set>
 	<set xpath="/lootcontainers/lootgroup[@name='workingStiffs']/item[@name='resourceLockPick']/@count">1,2</set>
 	<set xpath="/lootcontainers/lootgroup[@name='banditsGeneral']/item[@name='resourceLockPick']/@count">2,3</set>
-	
+
 	<!-- Adds parts template to loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='weaponParts']">
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
@@ -149,7 +149,7 @@
 	<append xpath="/lootcontainers/lootgroup[@name='groupArmorT1_Light']">
 		<item name="itemPartsTemplateMaster" count="1,2" prob=".09" />
 	</append>
-	
+
 	<!-- Adds paint back to loot -->	
 	<append xpath="/lootcontainers/lootgroup[@name='workingStiffs']">
 		<item name="resourcePaint" count="5,20" prob="0.1" />
@@ -169,7 +169,7 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='124']">
 		<item name="resourcePaint" count="5,20" prob="0.1" />
 	</append>
-	
+
 	<!-- Adds advanced wrench to loot -->	
 	<append xpath="/lootcontainers/lootgroup[@name='tools']">
 		<item name="itemAdvWrench" count="1" />
@@ -189,7 +189,7 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='124']">
 		<item name="itemAdvWrench" count="1" />
 	</append>
-	
+
 	<!-- Adds advanced turret to loot -->	
 	<append xpath="/lootcontainers/lootgroup[@name='groupWeaponsT2_TurretsSyndrome']">
 		<item name="gunAdvJunkTurret" count="1" />
@@ -199,6 +199,23 @@
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='groupWeapons_TurretsSyndromeTPlus']">
 		<item name="gunAdvJunkTurret" count="1" />
+	</append>
+
+	<!-- Removes empty jars from loot -->
+	<remove xpath="/lootcontainers/lootgroup[@name='beverages']/item[@name='drinkJarEmpty']" />
+	<append xpath="/lootcontainers/lootgroup[@name='beverages']">
+		<item name="drinkJarCoffee" count="1,2"/>
+		<item name="drinkJarGoldenRodTea" count="1,2"/>
+		<item name="drinkJarRedTea" count="1,2"/>
+		<item name="drinkJarYuccaJuice" count="1,2"/>
+		<item name="foodMedicalHoney" count="1,2" prob="0.2" />
+	</append>
+
+	<append xpath="/lootcontainers">
+		<lootcontainer id="999" count="1,2" size="8,9" destroy_on_close="true" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template">
+			<item group="perkBooks" count="1,4"/>
+			<item name="itemSkillbook" count="2" prob="0.2"/>
+		</lootcontainer>
 	</append>
 
 </config>

@@ -145,3 +145,4 @@ itemAdvWrenchDesc,items,Tool,KgNone,"Great for disassembling mechanical devices 
 ammoJunkTurretDesc,items,Ammo,New,Ammunition for a Junk Turret\n\nNot compatible with Advanced Junk Turret.,,,,,
 gunAdvJunkTurret,items,GunJT,New,Advanced Junk Turret,,,,,
 gunAdvJunkTurretDesc,items,GunJT,New,This contraption can be fired and reloaded like a gun. It uses 9MM for ammunition.\nYou can also deploy it on the ground using the Secondary action.\nRepair with a Repair Kit.\nMuch more deadly than a normal Junk Turret.,,,,,
+treasureChestJeg,blocks,Container,KgNone,Long-Forgotten Treasure,Coffre au trésor,Schatztruhe,,Cofre del tesoro,
