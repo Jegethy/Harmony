@@ -17,7 +17,7 @@
 	<set xpath="/items/item[@name='apparelCigarette']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
 	<set xpath="/items/item[@name='apparelFacialPiercings']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
 	<set xpath="/items/item[@name='apparelBandana']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	
+
 	<!-- Face items now an additional tag -->
 	<set xpath="/items/item[@name='apparelShades']/property[@name='Tags']/@value">moddedHead,head,clothing,canHaveCosmetic</set>
 	<set xpath="/items/item[@name='apparelNightvisionGoggles']/property[@name='Tags']/@value">moddedHead,head,clothing,canHaveCosmetic</set>
@@ -773,10 +773,74 @@
 			<property name="CustomIcon" value="resourceTornPage"/>
 		</item>
 	</append>
-	
+
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='Material']/@value">resourceTornPage</set>
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='Weight']/@value">1</set>
-	
+
 	<set xpath="/items/item[@name='resourceIronFragment']/property[@name='Weight']/@value">15</set>
+
+	<append xpath="/items">	
+		<item name="thrownAmmoMolotovDynamite"> <!-- T1 demolitions -->
+			<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="DisplayType" value="ammoGrenadeFire"/>
+			<property name="Class" value="ItemClassTimeBomb"/>
+			<property name="HoldType" value="54"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/Molotov/molotovPrefab.prefab"/>
+			<property name="DropScale" value="2.1"/>
+			<property name="Material" value="Morganic"/>
+			<property name="ThrowableDecoy" value="true"/>
+			<property name="Weight" value="0"/>
+			<property name="FuelValue" value="60"/>
+			<property name="Stacknumber" value="20"/>
+			<property name="LightValue" value=".35"/>
+			<property name="LightSource" value="lightSource"/>
+			<property name="ActivateObject" value="lightSource"/>
+			<property name="AlwaysActive" value="true"/>
+			<property name="Explosion.ParticleIndex" value="10"/>
+			<property name="Explosion.RadiusBlocks" value="1"/>
+			<property name="Explosion.RadiusEntities" value="1"/>
+			<property name="Explosion.BlastPower" value="35"/>
+			<property name="Explosion.DamageBonus.stone" value=".1"/>
+			<property name="Explosion.DamageBonus.metal" value="0"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/>
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="Explosion.DamageBonus.wood" value="6"/>
+			<property name="FuseTime" value="20000"/> <!-- theoretically redundant but I don't want to experiment on this -->
+			<property name="ExplodeOnHit" value="true"/>
+			<property name="StickPercent" value=".5"/>
+			<property name="EconomicValue" value="41"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+				<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Explosion.ParticleIndex" value="7"/>
+				<property name="Throw_strength_default" value="20"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<!-- <property class="Action1">
+		<property name="Class" value="Activate"/>
+		<property name="Delay" value="1"/>
+	</property> -->
+
+			<effect_group tiered="false">
+				<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="positionAOE" range="7.5" cvar="buffBurningMolotovDuration" operation="set" value="90">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="Equals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onProjectileImpact" action="ModifyCVar" target="positionAOE" range="7.5" cvar="buffBurningMolotovDuration" operation="set" value="90">
+					<requirement name="ProgressionLevel" progression_name="perkFiremansAlmanacMolotov" operation="NotEquals" value="0"/></triggered_effect>
+				<triggered_effect trigger="onProjectileImpact" action="AddBuff" target="positionAOE" range="7.5" buff="buffBurningMolotov"/>
+
+				<passive_effect name="BlockDamage" operation="base_set" value="15000"/><display_value name="dExDamageBlock" value="15000"/>
+				<display_value name="dExDamageFire" value="2500"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="5000"/><display_value name="dExDamageEntity" value="5000"/>
+				<display_value name="dExRadius" value="6"/>
+				<display_value name="dDuration" value="32"/>
+			</effect_group>
+		</item>
+	</append>
 
 </configs>
