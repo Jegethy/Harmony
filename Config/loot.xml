@@ -1,4 +1,14 @@
 <config>
+	<!--
+	<set xpath="/lootcontainers/lootgroup/item[@name='apparelShades']/@name">apparelShadesNew</set>
+	<set xpath="/lootcontainers/lootgroup/item[@name='apparelNerdGlasses']/@name">apparelNerdGlassesNew</set>
+	<set xpath="/lootcontainers/lootgroup/item[@name='apparelSkiGoggles']/@name">apparelSkiGogglesNew</set>
+	<set xpath="/lootcontainers/lootgroup/item[@name='apparelAviatorGoggles']/@name">apparelAviatorGogglesNew</set>
+	<set xpath="/lootcontainers/lootgroup/item[@name='apparelCigar']/@name">apparelCigarNew</set>
+	<set xpath="/lootcontainers/lootgroup/item[@name='apparelFacialPiercings']/@name">apparelFacialPiercingsNew</set>
+	<set xpath="/lootcontainers/lootcontainer/item[@name='apparelCigar']/@name">apparelCigarNew</set>
+	-->
+	
 	<!-- Removes the standard airdrop loot table to be added back later -->
 	<remove xpath="/lootcontainers/lootcontainer[@id='34']" />
 	<!-- Slightly increases the amount of feathers and eggs found in nests -->

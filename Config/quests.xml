@@ -68,13 +68,13 @@
 			<property name="group_name_key" value="quest_LearningBookReward" />
 			<property name="name_key" value="Mysterious Tome" />
 			<property name="subtitle_key" value="Bonus Experience" />
-			<property name="description_key" value="You've earned 25,000 Experience" />
+			<property name="description_key" value="You've earned 500,000 Experience" />
 			<property name="icon" value="ui_game_symbol_map_bed" />
 			<property name="category_key" value="quest" />
 			<property name="difficulty" value="veryeasy"/>
-			<property name="offer_key" value="You've read a mysterious tome which has granted you 25,000 experience!" />
-			<property name="shareable" value="false" />
-			<reward type="Exp" value="25000" />
+			<property name="offer_key" value="You've read a mysterious tome which has granted you 500,000 experience!" />
+			<property name="shareable" value="true" />
+			<reward type="Exp" value="500000" />
 		</quest>
 	</append>
 
@@ -166,9 +166,9 @@
 				<property name="phase" value="3"/>
 			</objective>
 
-			<reward type="Exp" value="25000" />
-			<reward type="SkillPoints" value="1" />
-			<reward type="Item" id="casinoCoin" value="2500"/>
+			<reward type="Exp" value="500000" />
+			<reward type="SkillPoints" value="10" />
+			<reward type="Item" id="casinoCoin" value="5000"/>
 			<reward type="LootItem" id="perkBooks" ischosen="true" value="12"/>
 			<reward type="LootItem" id="perkBooks" ischosen="true" value="15"/>
 			

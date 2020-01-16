@@ -1,0 +1,16 @@
+<config>
+
+	<remove xpath="/ui_display_info/item_display/item_display_info[@display_type='clothingShades']"/>
+
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="clothingShades" display_group="groupAttire">
+			<display_entry name="dTreasureRadius" title_key="statTreasureRadius" display_leading_plus="true" negative_preferred="true"/>
+			<display_entry name="LootGamestage" title_key="statLootGamestage" display_leading_plus="true"/>
+			<display_entry name="dBartering" title_key="statBarteringSellBuy" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dRunSpeed" title_key="statRunSpeed" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dPlayerExpGain" title_key="statShowPlayerExpGain" display_type="Percent" display_leading_plus="true"/>
+			<display_entry name="dCraftingTime" title_key="statCraftingTime" display_type="Percent" display_leading_plus="true" negative_preferred="true"/>			
+		</item_display_info>
+	</append>
+
+</config>

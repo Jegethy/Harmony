@@ -1,6 +1,16 @@
 <?xml version="1.0" encoding="UTF-8" ?>
 <configs>
 
+	<remove xpath="/items/item[@name='coolLootShadesAdmin']"/>
+	<remove xpath="/items/item[@name='apparelAviatorGoggles']"/>
+	<remove xpath="/items/item[@name='apparelSkiGoggles']"/>
+	<remove xpath="/items/item[@name='apparelNerdGlasses']"/>
+	<remove xpath="/items/item[@name='apparelShades']"/>
+	<remove xpath="/items/item[@name='apparelCigar']"/>
+	<remove xpath="/items/item[@name='apparelCigarette']"/>
+	<remove xpath="/items/item[@name='apparelFacialPiercings']"/>
+	<remove xpath="/items/item[@name='apparelCoatJacketLetterZU']"/>
+
 	<!-- Adjusts the amount of mod slots on an item so that it is equal to its quality -->
 	<remove xpath="/items/item/effect_group/passive_effect[@name='ModSlots'][@value='1,1,2,2,3,4']"/>
 	<append xpath="/items/item/effect_group">
@@ -8,21 +18,7 @@
 	</append>
 
 	<!-- Face items now have 1 mod slot -->
-	<set xpath="/items/item[@name='apparelShades']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	<set xpath="/items/item[@name='apparelAviatorGoggles']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	<set xpath="/items/item[@name='apparelSkiGoggles']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	<set xpath="/items/item[@name='apparelNerdGlasses']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	<set xpath="/items/item[@name='apparelNightvisionGoggles']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	<set xpath="/items/item[@name='apparelCigar']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	<set xpath="/items/item[@name='apparelCigarette']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-	<set xpath="/items/item[@name='apparelFacialPiercings']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
 	<set xpath="/items/item[@name='apparelBandana']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
-
-	<!-- Face items now an additional tag -->
-	<set xpath="/items/item[@name='apparelShades']/property[@name='Tags']/@value">moddedHead,head,clothing,canHaveCosmetic</set>
-	<set xpath="/items/item[@name='apparelNightvisionGoggles']/property[@name='Tags']/@value">moddedHead,head,clothing,canHaveCosmetic</set>
-	<set xpath="/items/item[@name='apparelCigar']/property[@name='Tags']/@value">moddedHead,head</set>
-	<set xpath="/items/item[@name='apparelFacialPiercings']/property[@name='Tags']/@value">moddedHead,head,clothing,canHaveCosmetic</set>
 	<set xpath="/items/item[@name='apparelBandana']/property[@name='Tags']/@value">moddedHead,head,clothing,canHaveCosmetic</set>
 
 	<!-- Modifies the damage and range of zombie attacks -->
@@ -739,7 +735,7 @@
 				<passive_effect name="DamageModifier" operation="perc_add" value="-.3" tags="stone"/>
 				<passive_effect name="DamageModifier" operation="perc_add" value="0" tags="metal"/>
 				<passive_effect name="AttacksPerMinute" operation="base_set" value="85"/> <!-- A16 1.1 -->
-				<passive_effect name="HarvestCount" operation="base_set" value="3" tags="salvageHarvest"/>
+				<passive_effect name="HarvestCount" operation="base_set" value="2" tags="salvageHarvest"/>
 				<passive_effect name="StaminaLoss" operation="base_set" value="2.0" tags="primary"/>
 				<passive_effect name="DegradationMax" operation="base_set" value="1000,1500" tier="1,6"/>
 				<passive_effect name="ModSlots" operation="base_set" value="1,6" tier="1,6"/>
@@ -783,6 +779,8 @@
 		<item name="thrownAmmoMolotovDynamite"> <!-- T1 demolitions -->
 			<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
 			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="CustomIcon" value="itemFirebomb"/>
+			<property name="DescriptionKey" value="thrownAmmoMolotovDynamiteDesc" />
 			<property name="DisplayType" value="ammoGrenadeFire"/>
 			<property name="Class" value="ItemClassTimeBomb"/>
 			<property name="HoldType" value="54"/>
@@ -843,4 +841,245 @@
 		</item>
 	</append>
 
+	<!-- Adds updated facial items -->
+	<append xpath="/items">	
+		<item name="apparelShades"> <!-- item name directly referenced in the code -->
+			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="CustomIcon" value="apparelShades"/>
+			<property name="DescriptionKey" value="apparelShadesDesc" />
+			<property name="DisplayType" value="clothingShades"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="Encumbrance" value="0"/>
+			<property name="Weight" value="5"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="EquipSlot" value="Eyes"/>
+			<property name="Group" value="Clothing"/>
+			<property class="UMA">
+				<property name="Mesh" value="gear_shades"/>
+				<property name="Overlay0" value="gear_shades"/>
+				<property name="Layer" value="1"/>
+				<property name="UISlot" value="Eyewear"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="20"/>
+				<passive_effect name="TreasureRadius" operation="base_add" value="-1"/>
+				<display_value name="dTreasureRadius" value="-1"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+				<display_value name="dCraftingTime" value="-.1"/>
+				<display_value name="dPlayerExpGain" value=".1"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+				<display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+				<display_value name="dBartering" value=".1"/>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>	
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>		
+			</effect_group>
+		</item>
+
+		<item name="apparelAviatorGoggles">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="apparelAviatorGogglesDesc" />
+			<property name="CustomIcon" value="apparelAviatorGoggles"/>
+			<property name="Material" value="Mleather"/>
+			<property name="DisplayType" value="clothingShades"/>
+			<property name="EconomicValue" value="1000"/>
+			<property class="UMA">
+				<property name="Mesh" value="aviator_goggles"/>
+				<property name="Overlay0" value="aviator_goggles"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="20"/>
+				<passive_effect name="TreasureRadius" operation="base_add" value="-1"/>
+				<display_value name="dTreasureRadius" value="-1"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+				<display_value name="dCraftingTime" value="-.1"/>
+				<display_value name="dPlayerExpGain" value=".1"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+				<display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+				<display_value name="dBartering" value=".1"/>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>	
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>		
+			</effect_group>
+		</item>
+
+		<item name="apparelSkiGoggles">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="apparelSkiGogglesDesc" />
+			<property name="CustomIcon" value="apparelSkiGoggles"/>
+			<property name="Material" value="MresourceScrapPolymers"/>
+			<property name="DisplayType" value="clothingShades"/>
+			<property name="EconomicValue" value="1000"/>
+			<property class="UMA">
+				<property name="Mesh" value="gear_goggles"/>
+				<property name="Overlay0" value="gear_goggles"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="20"/>
+				<passive_effect name="TreasureRadius" operation="base_add" value="-1"/>
+				<display_value name="dTreasureRadius" value="-1"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+				<display_value name="dCraftingTime" value="-.1"/>
+				<display_value name="dPlayerExpGain" value=".1"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+				<display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+				<display_value name="dBartering" value=".1"/>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>	
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>		
+			</effect_group>
+		</item>
+
+		<item name="apparelNerdGlasses">
+			<property name="Extends" value="apparelShades"/>
+			<property name="DescriptionKey" value="apparelNerdGlassesDesc" />
+			<property name="CustomIcon" value="apparelNerdGlasses"/>
+			<property name="DisplayType" value="clothingShades"/>
+			<property class="UMA">
+				<property name="Mesh" value="specs"/>
+				<property name="Overlay0" value="specs"/>
+			</property>
+			<property name="EconomicValue" value="1000"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="LootGamestage" operation="base_add" value="20"/>
+				<passive_effect name="TreasureRadius" operation="base_add" value="-1"/>
+				<display_value name="dTreasureRadius" value="-1"/>
+				<passive_effect name="CraftingTime" operation="perc_add" value="-.1"/>
+				<passive_effect name="PlayerExpGain" operation="perc_add" value=".1"/>
+				<display_value name="dCraftingTime" value="-.1"/>
+				<display_value name="dPlayerExpGain" value=".1"/>
+				<passive_effect name="RunSpeed" operation="perc_add" value=".1"/>
+				<display_value name="dRunSpeed" value=".1"/>
+				<passive_effect name="BarteringBuying" operation="base_add" value=".1"/>
+				<passive_effect name="BarteringSelling" operation="base_add" value=".1"/>
+				<display_value name="dBartering" value=".1"/>
+				<passive_effect name="AttributeLevel" tags="attPerception" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attStrength" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attAgility" operation="base_add" value="1"/>	
+				<passive_effect name="AttributeLevel" tags="attIntellect" operation="base_add" value="1"/>		
+				<passive_effect name="AttributeLevel" tags="attFortitude" operation="base_add" value="1"/>		
+			</effect_group>
+		</item>
+
+		<item name="apparelCigar">
+			<property name="Tags" value="moddedHead,head"/>
+			<property name="DescriptionKey" value="apparelCigarDesc" />
+			<property name="CustomIcon" value="apparelCigar"/>
+			<property name="DisplayType" value="clothingShades"/>
+			<property name="UnlockedBy" value="perkUrbanCombatControlledBreathing"/>
+			<property name="Material" value="Mplants"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="FuelValue" value="3"/>
+			<property name="EconomicValue" value="150"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Group" value="Clothing"/>
+			<property name="EquipSlot" value="Face"/>
+			<property class="UMA">
+				<property name="Mesh" value="gear_cigar"/>
+				<property name="Overlay0" value="gear_cigar"/>
+				<property name="Layer" value="1"/>
+				<property name="UISlot" value="Face"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>		
+			</effect_group>
+		</item>
+
+		<item name="apparelCigarette">
+			<property name="Extends" value="apparelCigar"/>
+			<property name="DescriptionKey" value="apparelCigaretteDesc" />
+			<property name="CustomIcon" value="apparelCigarette"/>
+			<property name="Tags" value="head"/>
+			<property class="UMA">
+				<property name="Mesh" value="cigarette"/>
+				<property name="Overlay0" value="cigarette"/>
+			</property>
+			<property name="CreativeMode" value="Dev"/>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>	
+			</effect_group>
+		</item>
+
+		<item name="apparelFacialPiercings">
+			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
+			<property name="DisplayType" value="clothingShades"/>
+			<property name="DescriptionKey" value="apparelFacialPiercingsDesc" />
+			<property name="CustomIcon" value="apparelFacialPiercings"/>
+			<property name="Stacknumber" value="1"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="DegradationBreaksAfter" value="false"/>
+			<property name="Encumbrance" value=".1"/>
+			<property name="Weight" value="1"/>
+			<property name="EconomicValue" value="150"/>
+			<property name="HoldType" value="45"/>
+			<property name="Meshfile" value="#Other/Items?Misc/sackPrefab.prefab"/>
+			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
+			<property name="Group" value="Clothing"/>
+			<property name="EquipSlot" value="Face"/>
+			<property class="UMA">
+				<property name="Mesh" value="piercings"/>
+				<property name="Overlay0" value="piercings"/>
+				<property name="Layer" value="1"/>
+				<property name="UISlot" value="Face"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>		
+			</effect_group>
+		</item>
+
+		<item name="apparelCoatJacketLetterZU"> <!-- collegeJacket -->
+			<property name="Extends" value="apparelCoatJacketGeneric"/>
+			<property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
+			<property name="DisplayType" value="clothingJacketLetter"/>
+			<property name="UnlockedBy" value="perkBatterUpGear"/>
+			<property class="UMA">
+				<property name="Mesh" value="letter_jacket"/>
+				<property name="Overlay0" value="letter_jacket"/>
+				<property name="Overlay0Tint" value="100,100,100,255"/>
+				<property name="Overlay1" value="letter_jacket_arms"/>
+				<property name="Overlay1Tint" value="243,241,238,255"/>
+				<property name="Overlay2" value="letterjacket_tshirt_overlay"/>
+				<property name="Overlay2Tint" value="250,245,250,255"/>
+				<property name="Overlay3" value="letterjacket_letter_overlay"/>
+				<property name="Layer" value="3"/>
+				<property name="Mask0" value="chest" param1="base"/>
+			</property>
+			<effect_group tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="1"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="100" tags="EconomicValue"/>
+				<passive_effect name="HypothermalResist" operation="base_add" value="11.7,15.5"/>
+				<passive_effect name="HyperthermalResist" operation="base_add" value="1.5,2.5"/>
+				<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
+					<requirement name="ProgressionLevel" progression_name="perkBatterUpGear" operation="Equals" value="1"/>
+				</passive_effect>
+			</effect_group>
+		</item>
+	</append>
 </configs>

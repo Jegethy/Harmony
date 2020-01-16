@@ -12,5 +12,14 @@
 
 	<!-- Modifies how often the trader's inventory will refresh -->
 	<set xpath="/traders/trader_info[@id='1']/@reset_interval">3</set>
-	
+
+	<!-- Updates the trader with modified face items 
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelShades']/@name">apparelShadesNew</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelNerdGlasses']/@name">apparelNerdGlassesNew</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelSkiGoggles']/@name">apparelSkiGogglesNew</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelAviatorGoggles']/@name">apparelAviatorGogglesNew</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelCigar']/@name">apparelCigarNew</set>
+	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelFacialPiercings']/@name">apparelFacialPiercingsNew</set>
+	-->
+
 </configs>
