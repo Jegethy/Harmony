@@ -10,6 +10,8 @@
 	<remove xpath="/items/item[@name='apparelCigarette']"/>
 	<remove xpath="/items/item[@name='apparelFacialPiercings']"/>
 	<remove xpath="/items/item[@name='apparelCoatJacketLetterZU']"/>
+	
+	<set xpath="/items/item[@name='schematicMaster']/property[@name='EconomicValue']/@value">500</set>
 
 	<!-- Adjusts the amount of mod slots on an item so that it is equal to its quality -->
 	<remove xpath="/items/item/effect_group/passive_effect[@name='ModSlots'][@value='1,1,2,2,3,4']"/>
@@ -989,7 +991,6 @@
 			<property name="Tags" value="moddedHead,head"/>
 			<property name="DescriptionKey" value="apparelCigarDesc" />
 			<property name="CustomIcon" value="apparelCigar"/>
-			<property name="DisplayType" value="clothingShades"/>
 			<property name="UnlockedBy" value="perkUrbanCombatControlledBreathing"/>
 			<property name="Material" value="Mplants"/>
 			<property name="Stacknumber" value="1"/>
@@ -1029,7 +1030,6 @@
 
 		<item name="apparelFacialPiercings">
 			<property name="Tags" value="moddedHead,head,clothing,canHaveCosmetic"/>
-			<property name="DisplayType" value="clothingShades"/>
 			<property name="DescriptionKey" value="apparelFacialPiercingsDesc" />
 			<property name="CustomIcon" value="apparelFacialPiercings"/>
 			<property name="Stacknumber" value="1"/>
@@ -1057,7 +1057,7 @@
 		<item name="apparelCoatJacketLetterZU"> <!-- collegeJacket -->
 			<property name="Extends" value="apparelCoatJacketGeneric"/>
 			<property name="DescriptionKey" value="apparelCoatJacketLetterZUDesc"/>
-			<property name="DisplayType" value="clothingJacketLetter"/>
+			<property name="DisplayType" value="clothing"/>
 			<property name="UnlockedBy" value="perkBatterUpGear"/>
 			<property class="UMA">
 				<property name="Mesh" value="letter_jacket"/>

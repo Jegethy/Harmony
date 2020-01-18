@@ -13,13 +13,23 @@
 	<!-- Modifies how often the trader's inventory will refresh -->
 	<set xpath="/traders/trader_info[@id='1']/@reset_interval">3</set>
 
-	<!-- Updates the trader with modified face items 
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelShades']/@name">apparelShadesNew</set>
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelNerdGlasses']/@name">apparelNerdGlassesNew</set>
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelSkiGoggles']/@name">apparelSkiGogglesNew</set>
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelAviatorGoggles']/@name">apparelAviatorGogglesNew</set>
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelCigar']/@name">apparelCigarNew</set>
-	<set xpath="/traders/trader_item_groups/trader_item_group/item[@name='apparelFacialPiercings']/@name">apparelFacialPiercingsNew</set>
-	-->
+	<!-- Updates the trader with modified face items -->
+
+	<remove xpath="/traders/trader_info[@id='3']" />
+
+	<append xpath="/traders">
+		<trader_info id="3" full_reset="true" reset_interval="1" override_buy_markup="35.0" override_sell_markup="1.0" allow_sell="true" player_owned="false" min_inventory="5" max_inventory="10" min_items_swapped="24" max_items_swapped="48">
+			<trader_items count="8">
+				<item group="books" />
+				<item name="bookHammerTimeDamage" count="1" prob="0.01"/>
+				<item name="bookHammerTimeHarvest" count="1" prob="0.01"/>
+				<item name="bookHammerTimeDefense" count="1" prob="0.01"/>
+				<item name="bookHammerTimeDoorKey" count="1" prob="0.01"/>
+				<item name="bookHammerTimeProtect" count="1" prob="0.01"/>
+				<item name="bookHammerTimeUnstoppable" count="1" prob="0.01"/>
+				<item name="bookHammerTimeDrunk" count="1" prob="0.01"/>
+			</trader_items>
+		</trader_info>	
+	</append>
 
 </configs>

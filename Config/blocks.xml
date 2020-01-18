@@ -1,4 +1,5 @@
 <config>
+
 	<!-- Triples the fuel capacity of generators -->
 	<set xpath="/blocks/block[@name='generatorbank']/property[@name='MaxFuel']/@value">3000</set>
 
@@ -6,6 +7,14 @@
 	<append xpath="/blocks/block[contains(@name, 'bed')]">
 		<property name="CanPickup" value="true"/>
 	</append>
+
+	<remove xpath="/blocks/block[@name='cntVendingMachine']/property[@name='Buff']" />
+	<remove xpath="/blocks/block[@name='cntVendingMachine']/drop[@event='Destroy']" />
+	<set xpath="/blocks/block[@name='cntVendingMachine']/property[@name='EconomicValue']/@value">75000</set>
+	
+	<insertAfter xpath="/blocks/block[@name='cntVendingMachine']/property[@name='FilterTags']">
+		<drop event="Destroy" name="cntVendingMachine" count="1"/>
+	</insertAfter>
 
 	<!-- Concrete dries faster -->	
 	<set xpath="/blocks/block[@name='pouredConcreteMaster']/property[@name='UpgradeRated.Rate']/@value">2</set>
@@ -333,4 +342,5 @@
 			<property name="FilterTags" value="floot"/>
 		</block>
 	</append>
+
 </config>

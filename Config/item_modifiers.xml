@@ -82,7 +82,7 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorImpactBracing']/@installable_tags">clothing,armorFeet</set>
 
 	<append xpath="/item_modifiers">
-		<item_modifier name="modArmorInvisible" installable_tags="armor" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+		<item_modifier name="modArmorInvisible" installable_tags="armor" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -99,7 +99,7 @@
 			</effect_group>
 		</item_modifier>
 		
-		<item_modifier name="modArmorInvisibleFace" installable_tags="moddedHead" modifier_tags="rare" type="attachment">
+		<item_modifier name="modArmorInvisibleFace" installable_tags="moddedHead" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -116,7 +116,7 @@
 			</effect_group>
 		</item_modifier>
 		
-		<item_modifier name="modArmorInvisibleGoth" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+		<item_modifier name="modArmorInvisibleGoth" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -133,7 +133,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleCowboy" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+		<item_modifier name="modArmorInvisibleCowboy" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -150,7 +150,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleRunning" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+		<item_modifier name="modArmorInvisibleRunning" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -169,7 +169,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleDress" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+		<item_modifier name="modArmorInvisibleDress" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -188,7 +188,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleWorn" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="rare" type="attachment">
+		<item_modifier name="modArmorInvisibleWorn" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
