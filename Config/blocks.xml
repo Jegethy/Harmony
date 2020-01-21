@@ -10,7 +10,8 @@
 
 	<remove xpath="/blocks/block[@name='cntVendingMachine']/property[@name='Buff']" />
 	<remove xpath="/blocks/block[@name='cntVendingMachine']/drop[@event='Destroy']" />
-	<set xpath="/blocks/block[@name='cntVendingMachine']/property[@name='EconomicValue']/@value">75000</set>
+	<set xpath="/blocks/block[@name='cntVendingMachine']/property[@name='EconomicValue']/@value">33300</set>
+	<set xpath="/blocks/block[@name='cntVendingMachine']/property[@name='Stacknumber']/@value">1</set>
 	
 	<insertAfter xpath="/blocks/block[@name='cntVendingMachine']/property[@name='FilterTags']">
 		<drop event="Destroy" name="cntVendingMachine" count="1"/>
