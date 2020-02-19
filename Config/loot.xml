@@ -1,14 +1,5 @@
 <config>
-	<!--
-	<set xpath="/lootcontainers/lootgroup/item[@name='apparelShades']/@name">apparelShadesNew</set>
-	<set xpath="/lootcontainers/lootgroup/item[@name='apparelNerdGlasses']/@name">apparelNerdGlassesNew</set>
-	<set xpath="/lootcontainers/lootgroup/item[@name='apparelSkiGoggles']/@name">apparelSkiGogglesNew</set>
-	<set xpath="/lootcontainers/lootgroup/item[@name='apparelAviatorGoggles']/@name">apparelAviatorGogglesNew</set>
-	<set xpath="/lootcontainers/lootgroup/item[@name='apparelCigar']/@name">apparelCigarNew</set>
-	<set xpath="/lootcontainers/lootgroup/item[@name='apparelFacialPiercings']/@name">apparelFacialPiercingsNew</set>
-	<set xpath="/lootcontainers/lootcontainer/item[@name='apparelCigar']/@name">apparelCigarNew</set>
-	-->
-	
+
 	<!-- Removes the standard airdrop loot table to be added back later -->
 	<remove xpath="/lootcontainers/lootcontainer[@id='34']" />
 	<!-- Slightly increases the amount of feathers and eggs found in nests -->
@@ -232,11 +223,17 @@
 		<item name="foodMedicalHoney" count="1,2" prob="0.2" />
 	</append>
 
+	<!-- Adds quest loot for Mysterious Tome quest -->
 	<append xpath="/lootcontainers">
 		<lootcontainer id="999" count="1,2" size="8,9" destroy_on_close="true" sound_open="UseActions/open_chest" sound_close="UseActions/close_chest" loot_quality_template="qualPlus1Template">
 			<item group="perkBooks" count="1,4"/>
 			<item name="itemSkillbook" count="2" prob="0.2"/>
 		</lootcontainer>
 	</append>
+
+	<!-- Increases the loot gain from zombie bag drops -->	
+	<set xpath="/lootcontainers/lootcontainer[@id='70']/@count">3,5</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='71']/@count">4,6</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='73']/@count">5,7</set>
 
 </config>
