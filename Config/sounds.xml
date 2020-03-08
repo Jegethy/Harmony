@@ -17,10 +17,26 @@
 	<remove xpath="/Sounds//SoundDataNode[@name='ak47_s_fire']" />
 
 	<append xpath="/Sounds">
+		<SoundDataNode name="motorbike_horn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+		<Noise ID="4" noise="60" time="3" heat_map_strength="0.2" heat_map_time="90"/>
+		<AudioClip ClipName="#@modfolder:Resources/HornSounds.unity3d?motorbike_horn1"/>
+		<AudioClip ClipName="#@modfolder:Resources/HornSounds.unity3d?motorbike_horn2"/>
+		<AudioClip ClipName="#@modfolder:Resources/HornSounds.unity3d?motorbike_horn3"/>
+		<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxEntities name="6"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+
+		<SoundDataNode name="4x4truck_horn"> <AudioSource name="Sounds/AudioSource_SmallHorn"/>
+		<Noise ID="4" noise="60" time="3" heat_map_strength="0.2" heat_map_time="90"/>
+		<AudioClip ClipName="#@modfolder:Resources/HornSounds.unity3d?4x4truck_horn1"/>
+		<AudioClip ClipName="#@modfolder:Resources/HornSounds.unity3d?4x4truck_horn2"/>
+		<AudioClip ClipName="#@modfolder:Resources/HornSounds.unity3d?4x4truck_horn3"/>
+		<LocalCrouchVolumeScale value="1.0"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="3"/> <MaxEntities name="6"/> <MaxRepeatRate value="0.01"/> </SoundDataNode>
+	</append>
+
+	<append xpath="/Sounds">
 		<!-- Adding the updated sounds -->
 		<!-- Pistol -->	
 		<SoundDataNode name="pistol_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="7" time="2" muffled_when_crouched="0.4" heat_map_strength="0.2" heat_map_time="90"/>
+			<Noise ID="0" noise="5" time="2" muffled_when_crouched="0.4" heat_map_strength="0.2" heat_map_time="90"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/Pistol/pistol_s_fire1"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/Pistol/pistol_s_fire2"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/Pistol/pistol_s_fire3"/>
@@ -28,7 +44,7 @@
 			<LocalCrouchVolumeScale value="0.5"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 		<!-- MP5 -->	
 		<SoundDataNode name="mp5_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.4" heat_map_strength="0.2" heat_map_time="90"/>
+			<Noise ID="0" noise="6" time="2" muffled_when_crouched="0.4" heat_map_strength="0.2" heat_map_time="90"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/mp5/mp5_s_fire1"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/mp5/mp5_s_fire2"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/mp5/mp5_s_fire3"/>
@@ -36,7 +52,7 @@
 			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/></SoundDataNode>
 		<!-- Shotgun -->	
 		<SoundDataNode name="pump_shotgun_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="9" time="2" muffled_when_crouched="0.4" heat_map_strength="0.4" heat_map_time="90"/>
+			<Noise ID="0" noise="7" time="2" muffled_when_crouched="0.4" heat_map_strength="0.4" heat_map_time="90"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire1"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire2"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/pumpshotgun/pump_shotgun_s_fire3"/>
@@ -44,7 +60,7 @@
 			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 		<!-- Hunting Rifle -->	
 		<SoundDataNode name="hunting_rifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="11" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
+			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire1"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire2"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/hunting_rifle/hunting_rifle_s_fire3"/>
@@ -52,7 +68,7 @@
 			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="30"/> <MaxVoicesPerEntity value="10"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 		<!-- Sniper -->	
 		<SoundDataNode name="sniperrifle_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="11" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
+			<Noise ID="0" noise="8" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire1"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire2"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/sniperrifle/sniperrifle_s_fire3"/>
@@ -60,7 +76,7 @@
 			<LocalCrouchVolumeScale value="1"/> <CrouchNoiseScale value="1"/> <NoiseScale value="1"/> <MaxVoices value="20"/> <MaxVoicesPerEntity value="6"/> <MaxRepeatRate value="0.001"/> </SoundDataNode>
 		<!-- AK47 -->	
 		<SoundDataNode name="ak47_s_fire"> <AudioSource name="Sounds/AudioSource_WeaponFire"/> <NetworkAudioSource name="Sounds/AudioSource_WeaponFire_Network"/>
-			<Noise ID="0" noise="9" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
+			<Noise ID="0" noise="7" time="2" muffled_when_crouched="0.4" heat_map_strength="0.3" heat_map_time="90"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire1"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire2"/>
 			<AudioClip ClipName="Sounds/Weapons/Ranged/AK47/ak47_s_fire3"/>

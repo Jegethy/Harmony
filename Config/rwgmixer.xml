@@ -13,6 +13,7 @@
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='settlement_trader_04']/@min_repeat_distance">300</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup']/prefab[@name='settlement_trader_05']/@min_repeat_distance">300</set>
 	
+	<!--
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup8k']/prefab[@name='settlement_trader_01']/@max_count">2,3</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup8k']/prefab[@name='settlement_trader_02']/@max_count">2,3</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup8k']/prefab[@name='settlement_trader_03']/@max_count">2,3</set>
@@ -24,5 +25,6 @@
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup8k']/prefab[@name='settlement_trader_03']/@min_repeat_distance">300</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup8k']/prefab[@name='settlement_trader_04']/@min_repeat_distance">300</set>
 	<set xpath="/rwgmixer/prefab_rules/prefab_rule[@name='wildernessGroup8k']/prefab[@name='settlement_trader_05']/@min_repeat_distance">300</set>
+	-->
 
 </configs>

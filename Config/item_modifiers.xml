@@ -5,6 +5,9 @@
 	<set xpath="/item_modifiers/item_modifier[@name='modGunReflexSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
 	<!-- Remove crosshair from laser sight mod -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunLaserSight']/item_property_overrides/property[@name='CrosshairOnAim']/@value">false</set>
+	<!-- Remove penalty from silencers -->
+	<set xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/effect_group/passive_effect[@name='DamageFalloffRange']/@value">0</set>
+	<set xpath="/item_modifiers/item_modifier[@name='modGunSoundSuppressorSilencer']/effect_group/passive_effect[@name='MaxRange']/@value">0</set>
 	<!-- Gun and Helm Flashlights no longer carry a light value -->
 	<set xpath="/item_modifiers/item_modifier[@name='modGunFlashlight']/property[@name='LightValue']/@value">0</set>
 	<set xpath="/item_modifiers/item_modifier[@name='modArmorHelmetLight']/property[@name='LightValue']/@value">0</set>
@@ -98,7 +101,7 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
-		
+
 		<item_modifier name="modArmorInvisibleFace" installable_tags="moddedHead" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
@@ -115,8 +118,8 @@
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
 		</item_modifier>
-		
-		<item_modifier name="modArmorInvisibleGoth" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
+
+		<item_modifier name="modArmorInvisibleGoth" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -133,7 +136,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleCowboy" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
+		<item_modifier name="modArmorInvisibleCowboy" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -150,7 +153,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleRunning" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
+		<item_modifier name="modArmorInvisibleRunning" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -169,7 +172,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleDress" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
+		<item_modifier name="modArmorInvisibleDress" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -188,7 +191,7 @@
 			</effect_group>
 		</item_modifier>
 
-		<item_modifier name="modArmorInvisibleWorn" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="dye" type="attachment" cosmetic_install_chance="0.07">
+		<item_modifier name="modArmorInvisibleWorn" installable_tags="armorFeet" blocked_tags="clothing" modifier_tags="durability" type="attachment">
 			<property name="CustomIcon" value="modDyeWhite"/> <property name="CustomIconTint" value="238,238,238"/>
 			<property name="Stacknumber" value="1"/> <property name="Group" value="Mods"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
@@ -205,6 +208,29 @@
 				<passive_effect name="HypothermalResist" operation="base_add" value="5"/>
 				<passive_effect name="HyperthermalResist" operation="base_add" value="5"/>
 			</effect_group>
+		</item_modifier>
+	</append>
+
+	<append xpath="/item_modifiers">
+		<item_modifier name="modAugerDiamondTip" installable_tags="augerMod1" modifier_tags="shafttip" type="attachment" rarity="0.5">
+			<property name="CustomIcon" value="AugerBladeMod"/>
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="BlockDamage" operation="perc_add" value=".5"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="wood"/>	
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="modAugerTurbo" installable_tags="augerMod2" modifier_tags="shaft" type="attachment" rarity="0.5">
+			<property name="CustomIcon" value="AugerTurboMod"/>
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="MaxRange" operation="perc_add" value=".5"/>
+				<passive_effect name="BlockRange" operation="perc_add" value=".5"/>
+				<passive_effect name="MagazineSize" operation="perc_add" value=".5"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
 		</item_modifier>
 	</append>
 

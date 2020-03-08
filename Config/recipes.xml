@@ -1,5 +1,5 @@
 <configs>
-<!--
+	<!--
 	<remove xpath="/recipes/recipe[@name='apparelCigar']"/>
 	<append xpath="/recipes">
 		<recipe name="apparelCigarNew" count="1" tags="learnable">
@@ -10,19 +10,19 @@
 	<!-- Adds recipe for modded customised fittings -->
 	<append xpath="/recipes">
 		<recipe name="modLightweightMasterFitting" count="1" craft_time="90" craft_area="workbench">
-			<ingredient name="modArmorCustomizedFittings" count="1"/>
-			<ingredient name="resourceLeather" count="84"/>
-			<ingredient name="resourceDuctTape" count="28"/>
-			<ingredient name="resourceMechanicalParts" count="36"/>
-			<ingredient name="resourceForgedSteel" count="54"/>
+			<ingredient name="itemPartsTemplateMaster" count="5"/>
+			<ingredient name="resourceLeather" count="50"/>
+			<ingredient name="resourceDuctTape" count="18"/>
+			<ingredient name="resourceForgedIron" count="30"/>
+			<ingredient name="resourceForgedSteel" count="30"/>
 		</recipe>
 
 		<recipe name="modReinforcedMasterFitting" count="1" craft_time="90" craft_area="workbench">
-			<ingredient name="modArmorCustomizedFittings" count="1"/>
-			<ingredient name="resourceLeather" count="84"/>
-			<ingredient name="resourceDuctTape" count="28"/>
-			<ingredient name="resourceMechanicalParts" count="36"/>
-			<ingredient name="resourceForgedSteel" count="54"/>
+			<ingredient name="itemPartsTemplateMaster" count="5"/>
+			<ingredient name="resourceLeather" count="50"/>
+			<ingredient name="resourceDuctTape" count="18"/>
+			<ingredient name="resourceForgedIron" count="30"/>
+			<ingredient name="resourceForgedSteel" count="30"/>
 		</recipe>
 	</append>
 	<!-- Adding crafting recipe for medicinal honey -->
@@ -519,5 +519,22 @@
 		</recipe>
 	</append>
 
+	<append xpath="/recipes">
+		<recipe name="modAugerDiamondTip" counts="1" craft_area="workbench" tags="learnable">
+			<ingredient name="modAugerDiamondTipSchematic" count="1"/>
+			<ingredient name="itemPartsTemplateMaster" count="5"/>
+			<ingredient name="resourceGunPowder" count="15"/>
+			<ingredient name="resourceSpring" count="10"/>
+			<ingredient name="resourceForgedSteel" count="15"/>		
+		</recipe>
+
+		<recipe name="modAugerTurbo" counts="1" craft_area="workbench" tags="learnable">
+			<ingredient name="modAugerTurboSchematic" count="1"/>
+			<ingredient name="smallEngine" count="3"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+			<ingredient name="resourceScrapPolymers" count="25"/>
+			<ingredient name="resourceForgedSteel" count="15"/>		
+		</recipe>
+	</append>
 
 </configs>

@@ -75,7 +75,7 @@
 	<append xpath="/lootcontainers/lootcontainer[@id='14']" >
 		<item name="itemTraderbook" count="1" prob="0.05"/>
 	</append>
-	
+
 	<!-- Adds torn pages to loot -->
 	<append xpath="/lootcontainers/lootgroup[@name='junk']" >
 		<item name="resourceTornPage" count="1" prob="0.02"/>
@@ -235,5 +235,39 @@
 	<set xpath="/lootcontainers/lootcontainer[@id='70']/@count">3,5</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='71']/@count">4,6</set>
 	<set xpath="/lootcontainers/lootcontainer[@id='73']/@count">5,7</set>
+
+	<!-- Adds Auger mods to loot -->
+	<append xpath="lootcontainers/lootgroup[@name='tools']">
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append>
+	<append xpath="lootcontainers/lootgroup[@name='rareTools']">
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append>
+	<append xpath="lootcontainers/lootgroup[@name='questTools']">
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append>
+	<append xpath="lootcontainers/lootgroup[@name='workingStiffs']">
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT2']">	
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append>
+	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT3']">
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append>
+	<append xpath="/lootcontainers/lootcontainer[@id='22']">
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append> 
+	<append xpath="/lootcontainers/lootcontainer[@id='92']">
+		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
+		<item name="modAugerTurbo" count="1" prob="0.01"/>
+	</append>
 
 </config>

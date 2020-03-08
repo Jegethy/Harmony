@@ -10,13 +10,52 @@
 	<remove xpath="/items/item[@name='apparelCigarette']"/>
 	<remove xpath="/items/item[@name='apparelFacialPiercings']"/>
 	<remove xpath="/items/item[@name='apparelCoatJacketLetterZU']"/>
-	
+
 	<set xpath="/items/item[@name='schematicMaster']/property[@name='EconomicValue']/@value">500</set>
-	
+
 	<!-- Adjusts the amount of mod slots on an item so that it is equal to its quality -->
 	<remove xpath="/items/item/effect_group/passive_effect[@name='ModSlots'][@value='1,1,2,2,3,4']"/>
-	<append xpath="/items/item/effect_group">
+	<append xpath="/items/item[not (contains(@name, 'meleeToolAuger'))]/effect_group">
 		<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
+	</append>
+	<append xpath="/items/item[@name='meleeToolAuger']/effect_group">
+		<passive_effect name="ModSlots" operation="base_set" value="3,4,5,6,7,8" tier="1,2,3,4,5,6"/>
+	</append>
+	<append xpath="/items/item[contains(@name, 'Boots')]/effect_group">
+		<passive_effect name="ModSlots" operation="base_set" value="2,3,4,5,6,7" tier="1,2,3,4,5,6"/>
+	</append>
+
+	<!-- Improves the Auger in every way -->
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='BlockDamage' and @operation='base_set']/@value">30</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='base_set']/@value">450</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">5000</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='SpreadDegreesVertical' and @operation='base_set']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='SpreadDegreesHorizontal' and @operation='base_set']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='KickDegreesVerticalMin' and @operation='base_set']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='KickDegreesVerticalMax' and @operation='base_set']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='KickDegreesHorizontalMin' and @operation='base_set']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='KickDegreesHorizontalMax' and @operation='base_set']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='MagazineSize' and @operation='perc_add']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='WeaponHandling' and @operation='perc_add']/@value">.08</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='RoundsPerMinute' and @operation='perc_add']/@value">0</set>
+	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='DegradationMax' and @operation='perc_add']/@value">0</set>
+
+	<append xpath="/items/item[@name='meleeToolAuger']/property[@name='Tags']/@value">,augerMod1,augerMod2</append>
+
+	<append xpath="/items">
+		<item name="modAugerDiamondTipSchematic">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CustomIcon" value="AugerBladeMod_schematic"/>
+			<property name="DescriptionKey" value="modAugerDiamondTipSchematicDesc"/>
+			<property name="EconomicValue" value="500"/>
+		</item>
+		
+		<item name="modAugerTurboSchematic">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CustomIcon" value="AugerTurboMod_schematic"/>
+			<property name="DescriptionKey" value="modAugerTurboSchematicDesc"/>
+			<property name="EconomicValue" value="500"/>
+		</item>
 	</append>
 	
 	<!-- Face items now have 1 mod slot -->
@@ -108,7 +147,8 @@
 	<!-- End of zombie modification section -->
 	<!-- Weapons Modifications -->
 	<!-- Increases Sniper Rifle magazine to 24 rounds -->
-	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='gunMR10']/passive_effect[@name='MagazineSize']/@value">24</set>
+	<set xpath="/items/item[@name='gunMR10']/effect_group[@name='gunMR10']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">15</set>
+	<set xpath="/items/item[@name='gunM60']/effect_group[@name='gunM60']/passive_effect[@name='MagazineSize' and @operation='base_set']/@value">85</set>
 	<!-- Reduces Sledgehammer stamina usage -->
 	<set xpath="/items/item[@name='meleeToolSledgehammerStone']/effect_group[@name='meleeToolSledgehammerStone']/passive_effect[@name='StaminaLoss']/@value">18</set>
 	<set xpath="/items/item[@name='meleeToolSledgehammerIron']/effect_group[@name='meleeToolSledgehammerIron']/passive_effect[@name='StaminaLoss']/@value">20</set>
@@ -576,6 +616,8 @@
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.05,.05']/@value">.05</set>
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.122,.122']/@value">.122</set>
 	<set xpath="/items/item/effect_group/passive_effect[@value='-.08,.08']/@value">.08</set>
+	<set xpath="/items/item/effect_group/passive_effect[@value='-.122,.122']/@value">.122</set>
+	<set xpath="/items/item/effect_group/passive_effect[@value='-.5,1.6']/@value">1.6</set>
 
 	<!-- Clothing items now provide the same thermal resistance -->
 	<set xpath="/items/item/effect_group/passive_effect[@name='HypothermalResist']/@value">20</set>
@@ -1082,4 +1124,5 @@
 			</effect_group>
 		</item>
 	</append>
+
 </configs>
