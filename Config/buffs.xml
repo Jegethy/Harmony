@@ -2,12 +2,12 @@
 
 	<!-- Reduced Encumbrance Penalty -->
 	<set xpath="/buffs/buff[@name='buffEncumberedInv']/effect_group/triggered_effect[@trigger='onSelfBuffUpdate' and @operation='multiply']/@value">0.006</set>
-	
+
 	<!-- Removes the experience penalty incurred from dying -->
 	<append xpath="/buffs/buff[@name='buffNearDeathTraumaTrigger']/effect_group">
 		<triggered_effect trigger="onSelfBuffStart" action="GiveExp" exp="@_expdeficit"/>
 	</append>
-	
+
 	<append xpath="/buffs">
 		<buff name="buffHammerTimeDrunk" name_key="buffHammerTimeDrunkName" description_key="buffHammerTimeDrunkDesc" showonhud="false" icon="ui_game_symbol_sledge" icon_color="0,255,0">
 			<duration value="30"/>
@@ -15,6 +15,18 @@
 			<effect_group>
 				<passive_effect name="RunSpeed" operation="perc_add" value=".05"/>
 				<passive_effect name="EntityDamage" operation="perc_add" value=".05"/>
+			</effect_group>
+		</buff>
+	</append>
+
+	<append xpath="/buffs">	
+		<buff name="JuggernautMuzzle" hidden="true">
+			<duration value="1"/>
+			<effect_group>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" target="self" particle="p_rocketLauncherFire" local_offset="-.2,.13,0" local_rotation="180,0,0" parent_transform="LeftShoulder"/>
+				<triggered_effect trigger="onSelfBuffStart" action="AttachParticleEffectToEntity" target="self"  particle="p_nozzlesmoke_m136" local_offset="-.2,.13,0" local_rotation="180,0,0" parent_transform="LeftShoulder"/>
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" target="self"  particle="p_nozzlesmoke_m136" />
+				<triggered_effect trigger="onSelfBuffFinish" action="RemoveParticleEffectFromEntity" target="self"  particle="p_rocketLauncherFire" />
 			</effect_group>
 		</buff>
 	</append>

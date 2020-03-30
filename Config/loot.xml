@@ -22,34 +22,342 @@
 	</append>
 	<!-- Adds new airdrop loot table -->
 	<append xpath="/lootcontainers">
-		<lootcontainer id="34" count="16" size="10,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
-			<item group="cannedfood" count="4,16" prob="1"/>
-			<item group="seeds" count="4,12" prob="0.8"/>
-			<item group="perkBooks" count="2,4" prob="0.4"/>
-			<item group="modArmorT3" count="2,5" prob="0.2"/>
-			<item group="groupModAllScaled" count="2,5" prob="0.2"/>
-			<item group="treasureAmmo" count="10,30" prob="1"/>
-			<item group="rareOres" count="6,12" prob="0.2"/>
-			<item group="electricalDevices" count="1,3" prob="0.2"/>
-			<item name="ammoGasCan" count="20,55" prob="0.5"/>
-			<item name="resourceCoal" count="20,55" prob="0.5"/>
-			<item name="resourceGunPowder" count="20,55" prob="0.5"/>
-			<item name="resourcePotassiumNitratePowder" count="20,55" prob="0.5"/>
-			<item name="resourceGlue" count="10,35" prob="0.5"/>
-			<item name="resourceOilShale" count="20,55" prob="0.5"/>
-			<item name="medicalFirstAidKit" count="2,8" prob="1"/>
-			<item group="rareMedicine" count="4,32" prob="0.2"/>
-			<item group="labEquipment" count="4,32" prob="0.2"/>
-			<item group="groupBirdNest" count="4,32" prob="0.2"/>				
-			<item group="beverages" count="4,32" prob="0.2"/>	
-			<item group="survivalMedical" count="4,32" prob="0.2"/>	
-			<item group="vehicleParts" count="1,3" prob="0.06"/>	
-			<item group="rareBooks" count="1,3" prob="0.2"/>
-			<item group="commonBooks" count="2,6" prob="0.2"/>
-			<item group="groupArmor_HeavyTPlus" count="1,3" prob="0.2"/>
-			<item group="groupArmor_LightTPlus" count="1,3" prob="0.2"/>
+		<lootcontainer id="34" count="32" size="10,8" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item name="resourceAdamantium" count="3"/>
+			<item name="ammoAdvancedPipeBomb" count="5"/>
+			<item name="ammo762mmBulletBall" count="50,150"/>
+			<item name="ammo9mmBulletBall" count="50,150"/>
+			<item name="ammoArrowSteelAP" count="50,150"/>
+			<item name="ammoCrossbowBoltSteelAP" count="50,150"/>
+			<item name="qc_killjuggernaut" count="1"/>
+			<item name="armorSteelBoots" count="1"/>
+			<item name="armorSteelLegs" count="1"/>
+			<item name="armorSteelChest" count="1"/>
+			<item name="armorSteelGloves" count="1"/>
+			<item name="armorSteelHelmet" count="1"/>
+			<item name="armorMilitaryBoots" count="1"/>
+			<item name="armorMilitaryGloves" count="1"/>
+			<item name="armorMilitaryHelmet" count="1"/>
+			<item name="armorMilitaryLegs" count="1"/>
+			<item name="armorMilitaryVest" count="1"/>
+			<item name="gunMR10" count="1"/>
+			<item name="gunM60" count="1"/>
+			<item name="gunRocketLauncher" count="1"/>
+			<item name="gunSMG5" count="1"/>
+			<item name="gunPistol" count="1"/>
+			<item name="gunPumpShotgun" count="1"/>
+			<item name="gunDoubleBarrelShotgun" count="1"/>
+			<item name="gunAK47" count="1"/>
+			<item name="gunCrossbowCompound" count="1"/>
+			<item name="meleeToolSledgehammerSteel" count="1"/>
+			<item name="meleeClubBaseballBat" count="1"/>
+			<item name="meleeToolKnifeMachete" count="1"/>
+			<item name="meleeToolPickaxeSteel" count="1"/>
+			<item name="meleeToolFireaxeSteel" count="1"/>
+			<item name="meleeToolShovelSteel" count="1"/>
+			<item name="meleeToolChainsaw" count="1"/>
+			<item name="meleeToolAuger" count="1"/>
+			<item name="gunToolNailgun" count="1"/>
+			<item name="medicalFirstAidKit" count="5,15"/>
+			<item name="drugAntibiotics" count="5,15"/>
+			<item name="medicalSplint" count="5,15"/>
+			<item name="medicalFirstAidBandage" count="5,15"/>
+			<item name="bookRangersArrowRecovery" count="1"/>
+			<item name="bookRangersCripplingShot" count="1"/>
+			<item name="bookRangersKnockdown" count="1"/>
+			<item name="bookRangersFlamingArrows" count="1"/>
+			<item name="bookRangersAPAmmo" count="1"/>
+			<item name="bookRangersExplodingBolts" count="1"/>
+			<item name="bookRangersForestGuide" count="1"/>
+			<item name="bookArtOfMiningLuckyStrike" count="1"/>
+			<item name="bookArtOfMiningDiamondTools" count="1"/>
+			<item name="bookArtOfMiningCoffee" count="1"/>
+			<item name="bookArtOfMiningBlackStrap" count="1"/>
+			<item name="bookArtOfMiningPallets" count="1"/>
+			<item name="bookArtOfMiningAvalanche" count="1"/>
+			<item name="bookArtOfMiningLantern" count="1"/>
+			<item name="bookAutoWeaponsDamage" count="1"/>
+			<item name="bookAutoWeaponsRagdoll" count="1"/>
+			<item name="bookAutoWeaponsMaintenance" count="1"/>
+			<item name="bookAutoWeaponsRecoil" count="1"/>
+			<item name="bookAutoWeaponsDrumMag" count="1"/>
+			<item name="bookAutoWeaponsUncontrolledBurst" count="1"/>
+			<item name="bookAutoWeaponsMachineGuns" count="1"/>
+			<item name="bookBatterUpBaseballBats" count="1"/>
+			<item name="bookBatterUpBigHits" count="1"/>
+			<item name="bookBatterUpGear" count="1"/>
+			<item name="bookBatterUpKnockdown" count="1"/>
+			<item name="bookBatterUpSlowPitch" count="1"/>
+			<item name="bookBatterUpMaintenance" count="1"/>
+			<item name="bookBatterUpConditioning" count="1"/>
+			<item name="bookEnforcerAPAmmo" count="1"/>
+			<item name="bookEnforcerApparel" count="1"/>
+			<item name="bookEnforcerCriminalPursuit" count="1"/>
+			<item name="bookEnforcerHPAmmo" count="1"/>
+			<item name="bookEnforcerDamage" count="1"/>
+			<item name="bookHammerTimeDamage" count="1"/>
+			<item name="bookHammerTimeHarvest" count="1"/>
+			<item name="bookHammerTimeDefense" count="1"/>
+			<item name="bookHammerTimeDoorKey" count="1"/>
+			<item name="bookHammerTimeProtect" count="1"/>
+			<item name="bookHammerTimeUnstoppable" count="1"/>
+			<item name="bookHammerTimeDrunk" count="1"/>
+			<item name="bookEnforcerIntimidation" count="1"/>
+			<item name="bookEnforcerPunks" count="1"/>
+			<item name="bookFiremansAlmanacSpeed" count="1"/>
+			<item name="bookFiremansAlmanacAxes" count="1"/>
+			<item name="bookFiremansAlmanacEquipment" count="1"/>
+			<item name="bookFiremansAlmanacPrevention" count="1"/>
+			<item name="bookFiremansAlmanacHarvest" count="1"/>
+			<item name="bookFiremansAlmanacHeat" count="1"/>
+			<item name="bookFiremansAlmanacMolotov" count="1"/>
+			<item name="bookGreatHeistAdrenalineFall" count="1"/>
+			<item name="bookGreatHeistTimedCharge" count="1"/>
+			<item name="bookGreatHeistClaimed" count="1"/>
+			<item name="bookGreatHeistGems" count="1"/>
+			<item name="bookGreatHeistMotionDetection" count="1"/>
+			<item name="bookGreatHeistSafes" count="1"/>
+			<item name="bookGreatHeistSprintSneak" count="1"/>
+			<item name="bookHuntingJournalBears" count="1"/>
+			<item name="bookHuntingJournalCoyotes" count="1"/>
+			<item name="bookHuntingJournalDeer" count="1"/>
+			<item name="bookHuntingJournalMountainLions" count="1"/>
+			<item name="bookHuntingJournalVultures" count="1"/>
+			<item name="bookHuntingJournalWolves" count="1"/>
+			<item name="bookHuntingJournalSelfDefense" count="1"/>
+			<item name="bookLuckyLooterAmmunition" count="1"/>
+			<item name="bookLuckyLooterBooks" count="1"/>
+			<item name="bookLuckyLooterBrass" count="1"/>
+			<item name="bookLuckyLooterDukes" count="1"/>
+			<item name="bookLuckyLooterFood" count="1"/>
+			<item name="bookLuckyLooterLead" count="1"/>
+			<item name="bookLuckyLooterMedical" count="1"/>
+			<item name="bookNeedleAndThreadDesertWear" count="1"/>
+			<item name="bookNeedleAndThreadDusters" count="1"/>
+			<item name="bookNeedleAndThreadFootwear" count="1"/>
+			<item name="bookNeedleAndThreadLegwear" count="1"/>
+			<item name="bookNeedleAndThreadPockets" count="1"/>
+			<item name="bookNeedleAndThreadPufferCoats" count="1"/>
+			<item name="bookNeedleAndThreadWinterWear" count="1"/>
+			<item name="bookNightStalkerArchery" count="1"/>
+			<item name="bookNightStalkerBlades" count="1"/>
+			<item name="bookNightStalkerSilentNight" count="1"/>
+			<item name="bookNightStalkerSlumberParty" count="1"/>
+			<item name="bookNightStalkerStealthDamage" count="1"/>
+			<item name="bookNightStalkerThiefAdrenaline" count="1"/>
+			<item name="bookNightStalkerTwilightThief" count="1"/>
+			<item name="bookPistolPeteAPAmmo" count="1"/>
+			<item name="bookPistolPeteDamage" count="1"/>
+			<item name="bookPistolPeteHPAmmo" count="1"/>
+			<item name="bookPistolPeteMaintenance" count="1"/>
+			<item name="bookPistolPeteSteadyHand" count="1"/>
+			<item name="bookPistolPeteSwissKnees" count="1"/>
+			<item name="bookPistolPeteTakeAim" count="1"/>
+			<item name="bookShotgunMessiahBreachingSlugs" count="1"/>
+			<item name="bookShotgunMessiahDamage" count="1"/>
+			<item name="bookShotgunMessiahLimbShot" count="1"/>
+			<item name="bookShotgunMessiahMaintenance" count="1"/>
+			<item name="bookShotgunMessiahMagazine" count="1"/>
+			<item name="bookShotgunMessiahPartyStarter" count="1"/>
+			<item name="bookShotgunMessiahSlugs" count="1"/>
+			<item name="bookSniperAPAmmo" count="1"/>
+			<item name="bookSniperControlledBreathing" count="1"/>
+			<item name="bookSniperCripplingShot" count="1"/>
+			<item name="bookSniperDamage" count="1"/>
+			<item name="bookSniperHeadShot" count="1"/>
+			<item name="bookSniperGhost" count="1"/>
+			<item name="bookSniperHPAmmo" count="1"/>
+			<item name="bookUrbanCombatAdrenalineRush" count="1"/>
+			<item name="bookUrbanCombatControlledBreathing" count="1"/>
+			<item name="bookUrbanCombatRoomClearing" count="1"/>
+			<item name="bookUrbanCombatJumping" count="1"/>
+			<item name="bookUrbanCombatLandMines" count="1"/>
+			<item name="bookUrbanCombatLanding" count="1"/>
+			<item name="bookUrbanCombatSneaking" count="1"/>
+			<item name="bookWasteTreasuresAcid" count="1"/>
+			<item name="bookWasteTreasuresCloth" count="1"/>
+			<item name="bookWasteTreasuresCoffins" count="1"/>
+			<item name="bookWasteTreasuresDoors" count="1"/>
+			<item name="bookWasteTreasuresHoney" count="1"/>
+			<item name="bookWasteTreasuresSinks" count="1"/>
+			<item name="bookWasteTreasuresWater" count="1"/>
+			<item name="modGunRodAndSpringSchematic" count="1"/>
+			<item name="modGunScopeLargeSchematic" count="1"/>
+			<item name="modGunLaserSightSchematic" count="1"/>
+			<item name="modGunTriggerGroupBurst3Schematic" count="1"/>
+			<item name="modGunSoundSuppressorSilencerSchematic" count="1"/>
+			<item name="modGunTriggerGroupAutomaticSchematic" count="1"/>
+			<item name="modGunMeleeRadRemoverSchematic" count="1"/>
+			<item name="modArmorPlatingReinforcedSchematic" count="1"/>
+			<item name="modArmorTripleStoragePocketSchematic" count="1"/>
+			<item name="modArmorAdvancedMuffledConnectorsSchematic" count="1"/>
+			<item name="modArmorWaterPurifierSchematic" count="1"/>
+			<item name="modArmorCustomizedFittingsSchematic" count="1"/>
+			<item name="modMeleeBunkerBusterSchematic" count="1"/>
+			<item name="modMeleeIronBreakerSchematic" count="1"/>
+			<item name="modArmorImpactBracingSchematic" count="1"/>
+			<item name="medicalFirstAidKitSchematic" count="1"/>
+			<item name="medicalPlasterCastSchematic" count="1"/>
+			<item name="drugAntibioticsSchematic" count="1"/>
+			<item name="drugHerbalAntibioticsSchematic" count="1"/>
+			<item name="modArmorHelmetLightSchematic" count="1"/>
+			<item name="modArmorBandolierSchematic" count="1"/>
+			<item name="modArmorInsulatedLinerSchematic" count="1"/>
+			<item name="modArmorCoolingMeshSchematic" count="1"/>
+			<item name="modArmorPlatingBasicSchematic" count="1"/>
+			<item name="modArmorImprovedFittingsSchematic" count="1"/>
+			<item name="modArmorStoragePocketSchematic" count="1"/>
+			<item name="modArmorDoubleStoragePocketSchematic" count="1"/>
+			<item name="modArmorMuffledConnectorsSchematic" count="1"/>
+			<item name="modGunBarrelExtenderSchematic" count="1"/>
+			<item name="modGunMuzzleBrakeSchematic" count="1"/>
+			<item name="modGunFlashlightSchematic" count="1"/>
+			<item name="modGunScopeSmallSchematic" count="1"/>
+			<item name="modGunScopeMediumSchematic" count="1"/>
+			<item name="modGunReflexSightSchematic" count="1"/>
+			<item name="modGunTriggerGroupSemiSchematic" count="1"/>
+			<item name="modGunBipodSchematic" count="1"/>
+			<item name="modGunForegripSchematic" count="1"/>
+			<item name="modGunRetractingStockSchematic" count="1"/>
+			<item name="modGunDuckbillSchematic" count="1"/>
+			<item name="modGunChokeSchematic" count="1"/>
+			<item name="modGunMagazineExtenderSchematic" count="1"/>
+			<item name="modShotgunSawedOffBarrelSchematic" count="1"/>
+			<item name="modGunCrippleEmSchematic" count="1"/>
+			<item name="modGunBowArrowRestSchematic" count="1"/>
+			<item name="modGunBowPolymerStringSchematic" count="1"/>
+			<item name="modMeleeTemperedBladeSchematic" count="1"/>
+			<item name="modMeleeSerratedBladeSchematic" count="1"/>
+			<item name="modMeleeWeightedHeadSchematic" count="1"/>
+			<item name="modMeleeStructuralBraceSchematic" count="1"/>
+			<item name="modMeleeErgonomicGripSchematic" count="1"/>
+			<item name="modMeleeFortifyingGripSchematic" count="1"/>
+			<item name="modMeleeClubBarbedWireSchematic" count="1"/>
+			<item name="modMeleeClubMetalSpikesSchematic" count="1"/>
+			<item name="modMeleeClubBurningShaftSchematic" count="1"/>
+			<item name="modMeleeGraveDiggerSchematic" count="1"/>
+			<item name="modMeleeWoodSplitterSchematic" count="1"/>
+			<item name="modFuelTankSmallSchematic" count="1"/>
+			<item name="modFuelTankLargeSchematic" count="1"/>
+			<item name="medicalFirstAidBandageSchematic" count="1"/>
+			<item name="resourceMilitaryFiberSchematic" count="1"/>
+			<item name="modGunMeleeTheHunterSchematic" count="1"/>
+			<item name="gunToolNailgunSchematic" count="1"/>
+			<item name="meleeToolSteelSetSchematic" count="1"/>
+			<item name="meleeToolSledgehammerSteelSchematic" count="1"/>
+			<item name="meleeToolAugerSchematic" count="1"/>
+			<item name="meleeToolChainsawSchematic" count="1"/>
+			<item name="toolBellowsSchematic" count="1"/>
+			<item name="toolForgeCrucibleSchematic" count="1"/>
+			<item name="toolAnvilSchematic" count="1"/>
+			<item name="tableSawSchematic" count="1"/>
+			<item name="cementMixerSchematic" count="1"/>
+			<item name="workbenchSchematic" count="1"/>
+			<item name="chemistryStationSchematic" count="1"/>
+			<item name="gunBowCompoundSchematic" count="1"/>
+			<item name="gunCrossbowCompoundSchematic" count="1"/>
+			<item name="gun44MagnumSchematic" count="1"/>
+			<item name="gunPumpShotgunSchematic" count="1"/>
+			<item name="gunSMG5Schematic" count="1"/>
+			<item name="gunMR10Schematic" count="1"/>
+			<item name="gunRocketLauncherSchematic" count="1"/>
+			<item name="thrownDynamiteSchematic" count="1"/>
+			<item name="thrownGrenadeContactSchematic" count="1"/>
+			<item name="meleeKnucklesSteelSchematic" count="1"/>
+			<item name="thrownGrenadeContactSchematic" count="1"/>
+			<item name="thrownGrenadeSchematic" count="1"/>
+			<item name="thrownDynamiteSchematic" count="1"/>
+			<item name="meleeToolKnifeMacheteSchematic" count="1"/>
+			<item name="meleeThrownSpearSteelSchematic" count="1"/>
+			<item name="resourceSilverNugget" count="10,20"/>
+			<item name="resourceGoldNugget" count="8,16"/>
+			<item name="resourceRawDiamond" count="6,12"/>
+			<item name="forge" count="1"/>
+			<item name="workbench" count="1"/>
+			<item name="cementMixer" count="1"/>
+			<item name="modGunBipod" count="1"/>
+			<item name="modGunChoke" count="1"/>
+			<item name="modGunDuckbill" count="1"/>
+			<item name="modGunFlashlight" count="1"/>
+			<item name="modGunForegrip" count="1"/>
+			<item name="modGunMagazineExtender" count="1"/>
+			<item name="modGunMeleeTheHunter" count="1"/>
+			<item name="modGunMuzzleBrake" count="1"/>
+			<item name="modGunScopeSmall" count="1"/>
+			<item name="modGunTriggerGroupSemi" count="1"/>
+			<item name="modShotgunSawedOffBarrel" count="1"/>
+			<item name="modGunBarrelExtender" count="1"/>
+			<item name="modGunCrippleEm" count="1"/>
+			<item name="modGunBowArrowRest" count="1"/>
+			<item name="modGunLaserSight" count="1"/>
+			<item name="modGunReflexSight" count="1"/>
+			<item name="modGunRetractingStock" count="1"/>
+			<item name="modGunScopeMedium" count="1"/>
+			<item name="modGunSoundSuppressorSilencer" count="1"/>
+			<item name="modGunTriggerGroupBurst3" count="1"/>
+			<item name="modGunShotgunTubeExtenderMagazine" count="1"/>
+			<item name="modGunBowPolymerString" count="1"/>
+			<item name="modGunRodAndSpring" count="1"/>
+			<item name="modGunScopeLarge" count="1"/>
+			<item name="modGunTriggerGroupAutomatic" count="1"/>
+			<item name="modGunDrumMagazineExtender" count="1"/>
+			<item name="modArmorHelmetLight" count="1"/>
+			<item name="modArmorInsulatedLiner" count="1"/>
+			<item name="modArmorCoolingMesh" count="1"/>
+			<item name="modArmorPlatingBasic" count="1"/>
+			<item name="modArmorStoragePocket" count="1"/>
+			<item name="modArmorImprovedFittings" count="1"/>
+			<item name="modArmorWaterPurifier" count="1"/>
+			<item name="modArmorImpactBracing" count="1"/>
+			<item name="modArmorPlatingReinforced" count="1"/>
+			<item name="modArmorMuffledConnectors" count="1"/>
+			<item name="modArmorDoubleStoragePocket" count="1"/>
+			<item name="modArmorCustomizedFittings" count="1"/>
+			<item name="modArmorBandolier" count="1"/>
+			<item name="modArmorTripleStoragePocket" count="1"/>
+			<item name="modArmorAdvancedMuffledConnectors" count="1"/>
+			<item name="itemTraderbook" count="2"/>
+			<item name="itemLearningbook" count="1"/>	
+			<item name="modGunMeleeRadRemover" count="1"/>
+			<item name="modMeleeClubMetalSpikes" count="1"/>
+			<item name="modMeleeClubMetalChain" count="1"/>
+			<item name="modMeleeErgonomicGrip" count="1"/>
+			<item name="modMeleeTemperedBlade" count="1"/>
+			<item name="modMeleeIronBreaker" count="1"/>
+			<item name="modMeleeClubBurningShaft" count="1"/>
+			<item name="modMeleeClubBarbedWire" count="1"/>
+			<item name="modMeleeFortifyingGrip" count="1"/>
+			<item name="modMeleeBunkerBuster" count="1"/>
+			<item name="modFuelTankLarge" count="1"/>
+			<item name="modMeleeGraveDigger" count="1"/>
+			<item name="modMeleeSerratedBlade" count="1"/>
+			<item name="modMeleeStructuralBrace" count="1"/>
+			<item name="modMeleeWeightedHead" count="1"/>
+			<item name="modMeleeWoodSplitter" count="1"/>
+			<item name="modFuelTankSmall" count="1"/>
 		</lootcontainer>
 	</append>
+
+	<!-- Adds mystery box loot -->
+	<append xpath="/lootcontainers">
+		<lootcontainer id="246" count="1,2" size="5,1" destroy_on_close="true" sound_open="SupplyDrops/open_supply_crate" sound_close="SupplyDrops/close_supply_crate" loot_quality_template="qualBaseTemplate">
+			<item group="perkBooks" count="1,2" prob="0.5"/>
+			<item name="resourceAdamantium" count="2,3" prob="0.2"/>
+			<item group="groupModAllScaled" count="1" prob="0.4"/>
+			<item group="schematicsModsCommon" count="1" prob="0.3"/>
+			<item group="schematicsModsRare" count="1" prob="0.2"/>
+			<item group="schematicsToolsCommon" count="1" prob="0.3"/>
+			<item group="schematicsToolsRare" count="1" prob="0.2"/>
+			<item group="schematicsWeaponsCommon" count="1" prob="0.3"/>
+			<item group="schematicsWeaponsRare" count="1" prob="0.2"/>
+			<item name="itemTraderbook" count="2" prob="0.03"/>
+			<item name="itemLearningbook" count="1" prob="0.01"/>
+			<item name="resourceTornPage" count="2,3" prob="0.05"/>
+			<item name="casinoCoin" count="1000,5000" prob="0.3"/>
+			<item name="qc_killjuggernaut" count="1" prob="0.3"/>
+		</lootcontainer>
+	</append>
+
 	<!-- Adds Bile Duct loot to cop zombies -->
 	<append xpath="/lootcontainers">
 		<lootcontainer id="169" count="1" size="1,1" destroy_on_close="false" sound_open="UseActions/open_backpack" sound_close="UseActions/close_backpack" open_time="1" >
@@ -232,42 +540,58 @@
 	</append>
 
 	<!-- Increases the loot gain from zombie bag drops -->	
-	<set xpath="/lootcontainers/lootcontainer[@id='70']/@count">3,5</set>
-	<set xpath="/lootcontainers/lootcontainer[@id='71']/@count">4,6</set>
-	<set xpath="/lootcontainers/lootcontainer[@id='73']/@count">5,7</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='70']/@count">4,6</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='71']/@count">5,7</set>
+	<set xpath="/lootcontainers/lootcontainer[@id='73']/@count">6,8</set>
 
 	<!-- Adds Auger mods to loot -->
 	<append xpath="lootcontainers/lootgroup[@name='tools']">
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append>
 	<append xpath="lootcontainers/lootgroup[@name='rareTools']">
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append>
 	<append xpath="lootcontainers/lootgroup[@name='questTools']">
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append>
 	<append xpath="lootcontainers/lootgroup[@name='workingStiffs']">
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT2']">	
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append>
 	<append xpath="/lootcontainers/lootgroup[@name='modMeleeT3']">
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append>
 	<append xpath="/lootcontainers/lootcontainer[@id='22']">
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append> 
 	<append xpath="/lootcontainers/lootcontainer[@id='92']">
 		<item name="modAugerDiamondTip" count="1" prob="0.01"/>
 		<item name="modAugerTurbo" count="1" prob="0.01"/>
+		<item name="modAugerDiamondTipSchematic" count="1" prob="0.01"/>
+		<item name="modAugerTurboSchematic" count="1" prob="0.01"/>
 	</append>
 
 </config>

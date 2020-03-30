@@ -13,4 +13,11 @@
 		</item_display_info>
 	</append>
 
+	<append xpath="/ui_display_info/item_display">
+		<item_display_info display_type="advancedPipebomb" display_group="groupAmmo">
+			<display_entry name="dExDamageEntity" title_key="statEntityDamageExplosion"/>
+			<display_entry name="dExRadius" title_key="statExRadius"/>
+			<display_entry name="dFuseTime" title_key="statFuseTime" display_type="Time" negative_preferred="true"/>
+		</item_display_info>
+	</append>
 </config>

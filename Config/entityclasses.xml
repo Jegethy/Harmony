@@ -2,11 +2,11 @@
 
 	<!-- Increases the despawn timer of the player dropped backpack to 12 hours (real time) -->
 	<set xpath="/entity_classes/entity_class[contains(@name, 'Backpack')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>
-	
+
 	<!-- Increases the despawn timer of the zombie dropped loot bags from 5 minutes to 12 hours (real time) -->
 	<set xpath="/entity_classes/entity_class[@name='DroppedLootContainer']/property[@name='TimeStayAfterDeath']/@value">300</set>
 	<set xpath="/entity_classes/entity_class[contains(@name, 'EntityLoot')]/property[contains(@name, 'TimeStayAfterDeath')]/@value">43200</set>	
-	
+
 	<!-- Randomises the speed at which zombies recovery from knock downs -->
 	<set xpath="/entity_classes/entity_class/property[@name='KnockdownProneStunDuration']/@value">1.0,10.0</set>
 	<set xpath="/entity_classes/entity_class/property[@name='KnockdownKneelStunDuration']/@value">1.0,10.0</set>
@@ -15,7 +15,7 @@
 	<set xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='LootDropEntityClass']/@value">EntityLootContainerCop</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieFatCopFeral']/property[@name='LootDropProb']/@value">1</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieFatCopRadiated']/property[@name='LootDropProb']/@value">1</set>
-	
+
 	<!-- Remove Radiated Zombie Vultures -->
 	<remove xpath="/entity_classes/entity_class[@name='animalZombieVultureRadiated']/property[@name='Radiated']" />
 
@@ -37,7 +37,21 @@
 	<insertAfter xpath="/entity_classes/entity_class[@name='zombieFatCop']/property[@name='LootDropEntityClass']" >
 		<property name="LootDropProb" value="1.0"  />
 	</insertAfter>
-	
+
+	<!-- Removes dismember chance on animals -->
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalBear']/property[@name='Mesh']" >
+		<property name="DismemberMultiplierHead" value="0"/>
+	</insertAfter>
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalWolf']/property[@name='RagdollOnDeathChance']" >
+		<property name="DismemberMultiplierHead" value="0"/>
+	</insertAfter>
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalBoar']/property[@name='RagdollOnDeathChance']" >
+		<property name="DismemberMultiplierHead" value="0"/>
+	</insertAfter>
+	<insertAfter xpath="/entity_classes/entity_class[@name='animalStag']/property[@name='SightRange']" >
+		<property name="DismemberMultiplierHead" value="0"/>
+	</insertAfter>
+
 	<!-- Modifies the experience granted by all animals and zombies based on their health values -->
 	<!--Rabbit-->
 	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/property[@name='ExperienceGain']/@value">500</set>							<!--	From 173 XP, set high cause these bastards are hard to kill	-->
@@ -177,24 +191,24 @@
 
 	<!-- Modifies the meat drop rate of animals -->
 	<set xpath="/entity_classes/entity_class[@name='animalStag']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">35</set>
-	<set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">20</set>
-	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">3</set>
-	<set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">2</set>
+	<set xpath="/entity_classes/entity_class[@name='animalDoe']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">30</set>
+	<set xpath="/entity_classes/entity_class[@name='animalRabbit']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">8</set>
+	<set xpath="/entity_classes/entity_class[@name='animalChicken']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">6</set>
 	<set xpath="/entity_classes/entity_class[@name='animalBear']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">90</set>
-	<set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">20</set>
-	<set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">2</set>
+	<set xpath="/entity_classes/entity_class[@name='animalWolf']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">25</set>
+	<set xpath="/entity_classes/entity_class[@name='animalSnake']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">4</set>
 	<set xpath="/entity_classes/entity_class[@name='animalBoar']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">30</set>
 	<set xpath="/entity_classes/entity_class[@name='animalDireWolf']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">50</set>
 	<set xpath="/entity_classes/entity_class[@name='animalBossGrace']/drop[@name='foodRawMeat'][@tag='butcherHarvest']/@count">120</set>
-	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">15</set>
-	<set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">1</set>
-	<set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">2</set>
-	
+	<set xpath="/entity_classes/entity_class[@name='animalZombieBear']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">25</set>
+	<set xpath="/entity_classes/entity_class[@name='animalZombieVulture']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">2</set>
+	<set xpath="/entity_classes/entity_class[@name='animalZombieDog']/drop[@name='foodRottingFlesh'][@tag='butcherHarvest']/@count">4</set>
+
 	<!-- Increases the drop rate of loot bags -->
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Radiated'))]/property[contains(@name, 'LootDropProb')]/@value">0.20</set>
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.12</set>
 	<set xpath="/entity_classes/entity_class[contains(@name, 'zombie') and not (contains(@name, 'Feral'))]/property[contains(@name, 'LootDropProb')]/@value">0.05</set>
-	
+
 	<!-- Increases the despawn time of zombies and makes them harvestable 
 	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='TimeStayAfterDeath']/@value">300</set>
 	<set xpath="/entity_classes/entity_class[@name='zombieTemplateMale']/property[@name='DeadBodyHitPoints']/@value">500</set> -->
@@ -208,6 +222,108 @@
 		<drop event="Harvest" name="resourcePotassiumNitratePowder" tag="butcherHarvest" count="1,2"/>
 		<drop event="Harvest" name="foodRawMeat" count="1" tag="WasteTreasuresCompleteHarvest"/>
 		<drop event="Harvest" name="resourceLeather" count="1" tag="WasteTreasuresCompleteHarvest"/>
+	</append>
+
+	<append xpath="/entity_classes">
+		<entity_class name="Zombie_Template" extends="zombieSoldierRadiated">
+			<property name="EntityType" value="Zombie" />
+			<property name="Mesh" value="Zombies/zombie01Ragdoll" />
+			<property name="Prefab" value="NPC" />
+			<property name="Class" value="EntityZombie" />
+			<property name="Parent" value="Enemies" />
+			<property name="IsEnemyEntity" value="true" />
+			<property name="HandItem" value="meleeHandZombie01" />
+			<property name="SoundAlert" value="Enemies/Base_Zombie_Male/zombiemalealert" />
+			<property name="SoundSense" value="Enemies/Base_Zombie_Male/zombiemalesense" />
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Male/zombiemalepain" />
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Male/zombiemaledeath" />
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Male/zombiemaleattack" />
+			<property name="AttackTimeoutDay" value="1.5" />
+			<property name="AttackTimeoutNight" value="1.1" />
+			<property name="WalkType" value="7" />
+			<property name="ModelType" value="ZombieUMA" />
+			<property name="RootMotion" value="true" />
+			<property name="HasRagdoll" value="true" />
+			<property name="AvatarController" value="AvatarZombieUMAController" />
+			<property name="PhysicsBody" value="zombieUMA" />
+			<property name="HasDeathAnim" value="false" />
+			<property name="TimeStayAfterDeath" value="30" />
+		</entity_class>
+		<entity_class name="zombieBanshee" extends="zombieBoeFeral">
+			<property name="SizeScale" value="1"/>
+			<property name="Tags" value="entity,zombie,walker,boss" />
+			<property name="Mesh" value="Zombies/zombieStandardScreamerRagdoll"/>
+			<property name="ReplaceMaterial0" value="particleeffects/models/materials/p_glass"/>
+			<property name="SoundRandom" value=""/>
+			<property name="SoundAlert" value=""/>
+			<property name="SoundAttack" value="Enemies/Base_Zombie_Female/zombiefemalescoutattack"/>
+			<property name="SoundHurt" value="Enemies/Base_Zombie_Female/zombiefemalescoutpain"/>
+			<property name="SoundDeath" value="Enemies/Base_Zombie_Female/zombiefemalescoutdeath"/>
+			<property name="SoundSense" value=""/>
+			<property name="ExperienceGain" value="2000"/>
+			<!-- XP strong -->
+			<property name="WalkType" value="8"/>
+			<property name="HandItem" value="meleeHandBanshee"/>
+			<property name="LootDropProb" value="1"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="1000"/>
+				<passive_effect name="HealthMax" operation="perc_set" value="1"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="buffBansheeScream"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
+
+		<entity_class name="ZombieJuggernaut" extends="Zombie_Template">
+			<property name="Archetype" value="Juggernaut" />
+			<property name="LootDropEntityClass" value="EntityLootContainerBoss"/>
+			<property name="Tags" value="entity,zombie,walker,boss" />
+			<property name="HandItem" value="meleeHandJuggernaut"/>
+			<property name="RightHandJointName" value="LeftShoulder"/>
+			<property name="LootDropProb" value="1"/>
+			<property name="ExperienceGain" value="50000"/>
+			<property name="WalkType" value="2"/>
+			<property name="AITask-1" value="RangedAttackTarget" data="itemType=1;cooldown=3;duration=4;minRange=3;maxRange=300"/>
+			<property name="AITask-2" value="ApproachAndAttackTarget" data="class=EntityEnemyAnimal,0,EntityPlayer"/>
+			<property name="AITask-3" value="BreakBlock"/>
+			<property name="AITask-4" value="ApproachSpot"/>
+			<property name="AITask-5" value="Look"/>
+			<property name="AITask-6" value="Wander"/>
+			<property name="AITask-7" value=""/>
+			<property name="SoundRandom" value="demolitionzroam"/>
+			<property name="SoundAlert" value="demolitionzalert"/>
+			<property name="SoundAttack" value="demolitionzattack"/>
+			<property name="SoundHurt" value="demolitionzpain"/>
+			<property name="SoundDeath" value="demolitionzdeath"/>
+			<property name="SoundSense" value="demolitionzsense"/>
+			<property name="SoundFootstepModifier" value="bear_footstep"/>
+			<property name="SurfaceCategory" value="metal"/>
+			<property name="DismemberMultiplierHead" value="0"/>
+			<property name="DismemberMultiplierArms" value="0"/>
+			<property name="DismemberMultiplierLegs" value="0"/>
+			<property name="LegCrippleScale" value="0"/>
+			<property name="LegCrawlerThreshold" value="0"/>
+			<property name="KnockdownProneDamageThreshold" value="1"/>
+			<property name="KnockdownProneStunDuration" value="0"/>
+			<property name="KnockdownProneRefillRate" value="1"/>
+			<property name="KnockdownKneelDamageThreshold" value="1"/>
+			<property name="KnockdownKneelStunDuration" value="0"/>
+			<property name="KnockdownKneelRefillRate" value="1"/>
+			<property name="LegsExplosionDamageMultiplier" value="0"/>
+			<property name="ArmsExplosionDamageMultiplier" value="0"/>
+			<property name="HeadExplosionDamageMultiplier" value="0"/>
+			<property name="ChestExplosionDamageMultiplier" value="0"/>
+			<property name="PainResistPerHit" value="1"/>
+			<property name="MoveSpeed" value="0.5"/>
+			<property name="MoveSpeedAggro" value="1, 1.5"/>
+			<effect_group name="Base Effects">
+				<passive_effect name="HealthMax" operation="base_set" value="12000"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="AddBuff" target="self" buff="JuggernautDeco"/>
+				<triggered_effect trigger="onSelfFirstSpawn" action="ModifyCVar" target="self" cvar="EntityBoss" operation="set" value="1"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="ModifyCVar" target="self" cvar="RadiatedRegenAmount" operation="set" value="5"/>
+				<triggered_effect trigger="onOtherDamagedSelf" action="AddBuff" target="self" buff="buffRadiatedRegen"/>
+			</effect_group>
+		</entity_class>
 	</append>
 
 </configs>

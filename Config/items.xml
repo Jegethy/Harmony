@@ -11,7 +11,18 @@
 	<remove xpath="/items/item[@name='apparelFacialPiercings']"/>
 	<remove xpath="/items/item[@name='apparelCoatJacketLetterZU']"/>
 
-	<set xpath="/items/item[@name='schematicMaster']/property[@name='EconomicValue']/@value">500</set>
+	<set xpath="//property[@name='UseGrazingHits']/@value">false</set>
+
+	<set xpath="/items/item[@name='gunToolNailgun']/property[@name='ShowQuality']/@value">false</set>
+
+	<!-- Removes food poisoning from cooked foods -->
+	<set xpath="/items/item/effect_group/triggered_effect[@cvar='.DiseaseRoll' and @value='4']/@value">0</set>
+	<set xpath="/items/item/effect_group/display_value[@name='dFoodPoisoningRisk' and @value='.04']/@value">0</set>
+
+	<!-- Increases duration of coffee buff -->
+	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/triggered_effect[@cvar='$buffCoffeeDuration' and @operation='set']/@value">903</set>
+	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/triggered_effect[@cvar='$buffCoffeeDuration' and @operation='add']/@value">903</set>
+	<set xpath="/items/item[@name='drinkJarCoffee']/effect_group/display_value[@name='dDuration']/@value">903</set>
 
 	<!-- Adjusts the amount of mod slots on an item so that it is equal to its quality -->
 	<remove xpath="/items/item/effect_group/passive_effect[@name='ModSlots'][@value='1,1,2,2,3,4']"/>
@@ -24,6 +35,11 @@
 	<append xpath="/items/item[contains(@name, 'Boots')]/effect_group">
 		<passive_effect name="ModSlots" operation="base_set" value="2,3,4,5,6,7" tier="1,2,3,4,5,6"/>
 	</append>
+
+	<!-- Reduces envionrmental damage caused by sledgehammers -->
+	<insertAfter xpath="/items/item[contains(@name, 'meleeToolSledgehammer')]/effect_group[contains(@name, 'meleeToolSledgehammer')]/passive_effect[@name='HarvestCount' and @tags='oreWoodHarvest']">
+		<passive_effect name="DamageModifier" operation="perc_add" value="-1" tags="earth"/>	
+	</insertAfter>
 
 	<!-- Improves the Auger in every way -->
 	<set xpath="/items/item[@name='meleeToolAuger']/effect_group/passive_effect[@name='BlockDamage' and @operation='base_set']/@value">30</set>
@@ -49,7 +65,7 @@
 			<property name="DescriptionKey" value="modAugerDiamondTipSchematicDesc"/>
 			<property name="EconomicValue" value="500"/>
 		</item>
-		
+
 		<item name="modAugerTurboSchematic">
 			<property name="Extends" value="schematicMaster"/>
 			<property name="CustomIcon" value="AugerTurboMod_schematic"/>
@@ -57,7 +73,31 @@
 			<property name="EconomicValue" value="500"/>
 		</item>
 	</append>
-	
+
+	<!-- Face items now have 1 mod slot -->
+	<append xpath="/items">
+		<item name="modAdvTurretTacticsSchem">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CustomIcon" value="AugerBladeMod_schematic"/>
+			<property name="DescriptionKey" value="modAugerDiamondTipSchematicDesc"/>
+			<property name="EconomicValue" value="500"/>
+		</item>
+
+		<item name="modAdvTurretArmourSchem">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CustomIcon" value="AugerTurboMod_schematic"/>
+			<property name="DescriptionKey" value="modAugerTurboSchematicDesc"/>
+			<property name="EconomicValue" value="500"/>
+		</item>
+
+		<item name="modAdvTurretRadarSchem">
+			<property name="Extends" value="schematicMaster"/>
+			<property name="CustomIcon" value="AugerTurboMod_schematic"/>
+			<property name="DescriptionKey" value="modAugerTurboSchematicDesc"/>
+			<property name="EconomicValue" value="500"/>
+		</item>
+	</append>
+
 	<!-- Face items now have 1 mod slot -->
 	<set xpath="/items/item[@name='apparelBandana']/effect_group/passive_effect[@name='ModSlots']/@value">1</set>
 	<set xpath="/items/item[@name='apparelBandana']/property[@name='Tags']/@value">moddedHead,head,clothing,canHaveCosmetic</set>
@@ -83,6 +123,79 @@
 		<property name="Range" value="1.80"/>
 		<property name="Delay" value=".8"/>
 	</insertAfter>
+
+	<append xpath="/items">
+		<item name="meleeHandJuggernaut">
+			<property name="Extends" value="meleeHandMaster"/>
+			<property name="CreativeMode" value="None"/>
+			<property name="Degradation" value="99999" param1="true"/>
+			<property class="Action0">
+				<property name="Range" value="1.75"/>
+				<property name="DamageEntity" value="75"/>
+				<property name="DamageBlock" value="500"/>
+				<property name="Buff" value="buffInjuryBleedingZombie,buffInfectionCatch,buffInjuryStunned01"/>
+				<property name="Sound_start" value="Auger_Fire_Start"/>
+				<property class="HitSounds">
+					<property name="Override0" value="organic" param1="metalsolidhitorganic"/></property>
+			</property>
+			<property class="Action1">
+				<!-- UseAction -->
+				<property name="Class" value="Vomit"/>
+				<property name="Delay" value=".3"/>
+				<!-- obsolete if rounds per minute exists -->
+				<property name="Range" value="500"/>
+				<property name="Infinite_ammo" value="true"/>
+				<property name="Magazine_items" value="JuggernautProjectile"/>
+				<property name="Sound_warning" value="demolitionzexplodewarning"/>
+				<property name="Sound_start" value="m136_fire"/>
+				<property name="Sound_repeat" value=""/>
+				<property name="Sound_end" value=""/>
+				<property name="Sound_empty" value=""/>
+				<property name="Sound_reload" value=""/></property>
+			<effect_group name="meleeHandJuggernaut" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+				<passive_effect name="MaxRange" operation="base_set" value="100"/>
+				<passive_effect name="MagazineSize" operation="base_set" value="3"/>
+				<passive_effect name="BurstRoundCount" operation="base_set" value="3"/>
+				<passive_effect name="SpreadDegreesVertical" operation="base_set" value="1"/>
+				<passive_effect name="SpreadDegreesHorizontal" operation="base_set" value="3"/>
+				<passive_effect name="SpreadMultiplierIdle" operation="base_set" value="1"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInjuryBleedingZombie"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".20" tags="buffInfectionCatch"/>
+				<passive_effect name="BuffProcChance" operation="base_set" value=".25" tags="buffInjuryStunned01"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="ModifyCVar" target="other" cvar="infectionZombieHit" operation="set" value="30"/>
+				<!--InfectionRegular-->
+			</effect_group>
+		</item>
+		<item name="JuggernautProjectile">
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/RocketLauncher/rocketPrefab.prefab"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="CreativeMode" value="None"/>
+			<property class="Action1">
+				<property name="Class" value="Projectile"/>
+				<property name="DamageEntity" value="125"/>
+				<property name="DamageBlock" value="1000"/>
+				<property name="Explosion.ParticleIndex" value="4"/>
+				<!-- which Prefab/particle is used -->
+				<property name="Explosion.RadiusBlocks" value="5"/>
+				<!-- damage radius for blocks -->
+				<property name="Explosion.RadiusEntities" value="4"/>
+				<!-- damage radius for entities -->
+				<property name="Explosion.DamageBonus.water" value="0"/>
+				<property name="Velocity" value="18"/>
+				<property name="FlyTime" value="2"/>
+				<property name="LifeTime" value="4"/>
+				<property name="CollisionRadius" value="0.75"/>
+				<property name="DamageBonus.earth" value="0"/></property>
+			<effect_group name="JuggernautProjectile" tiered="false">
+				<passive_effect name="ModSlots" operation="base_set" value="0"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_set" value="0.5" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="1.2" tags="metal"/>
+			</effect_group>
+		</item>
+	</append>
 
 	<!-- Damage of all zombies increased. This is to balance the fact that their range has been drastically reduced. Dodge or die (or have armour). -->
 	<set xpath="/items/item[@name='meleeHandMaster']/property[@class='Action0']/property[@name='DamageEntity']/@value">18</set>
@@ -230,7 +343,6 @@
 	<!-- Speeds up forge smelting and increases maximum stack count to 75,000 (Default = 30,000) -->
 	<set xpath="/items/item[@name='unit_iron']/property[@name='MeltTimePerUnit']/@value">0.05</set>
 	<set xpath="/items/item[@name='unit_iron']/property[@name='CraftingIngredientTime']/@value">0.05</set>
-	<set xpath="/items/item[@name='unit_iron']/property[@name='Stacknumber']/@value">75000</set>
 
 	<!-- Increases the Nailgun speed -->
 	<set xpath="/items/item[@name='gunToolNailgun']/property[@class='Action1']/property[@name='Delay']/@value">0.25</set>
@@ -380,7 +492,7 @@
 			<property name="HoldType" value="21"/>
 			<property name="name_key" value="itemTraderbook" />
 			<property name="desc_key" value="itemTraderbookDesc" />
-			<property name="CustomIcon" value="treasureQuestMaster"/>
+			<property name="CustomIcon" value="treasureQuestMasterNew"/>
 			<property name="Meshfile" value="#Other/Items?Misc/bookPrefab.prefab"/>
 			<property name="DropMeshfile" value="#Other/Items?Misc/sack_droppedPrefab.prefab"/>
 			<property name="Material" value="Mpaper"/>
@@ -644,7 +756,7 @@
 	<!-- Advanced Junk Turret -->
 	<append xpath="/items">
 		<item name="gunAdvJunkTurret"> <!-- T2 turrets -->
-			<property name="Tags" value="turret,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic"/>
+			<property name="Tags" value="turret,weapon,ranged,reloadPenalty,drumMagazine,attIntellect,perkTurrets,canHaveCosmetic,AdvTurretMod"/>
 			<property name="CustomIcon" value="gunJunkTurret"/>
 			<property name="DescriptionKey" value="gunAdvJunkTurretDesc" />
 			<property name="DisplayType" value="rangedTurret"/>
@@ -691,7 +803,8 @@
 			</property>
 			<effect_group name="gunJunkTurret">
 				<passive_effect name="MaxRange" operation="base_set" value="100"/>
-				<passive_effect name="DamageFalloffRange" operation="base_set" value="40"/>
+				<passive_effect name="DamageFalloffRange" operation="base_set" value="50"/>
+				<passive_effect name="DamageFalloffRange" operation="perc_add" value=".2,1" tier="2,6"/>
 				<passive_effect name="BlockRange" operation="base_set" value="7"/>
 
 				<passive_effect name="EntityDamage" operation="base_set" value="25,50" tier="1,6"/>
@@ -729,9 +842,9 @@
 
 				<passive_effect name="JunkTurretActiveRange" operation="base_set" value="30"/>
 
-				<passive_effect name="DegradationMax" operation="base_set" value="250,600" tier="1,6" tags="perkTurrets"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="300,750" tier="1,6" tags="perkTurrets"/>
 				<passive_effect name="DegradationPerUse" operation="base_set" value="0.35" tags="perkTurrets"/>
-				<passive_effect name="ModSlots" operation="base_set" value="1,1,2,2,3,4" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModSlots" operation="base_set" value="1,2,3,4,5,6" tier="1,2,3,4,5,6"/>
 				<passive_effect name="ModPowerBonus" operation="perc_add" value=".10" tags="EntityDamage"/>
 				<passive_effect name="ModPowerBonus" operation="base_add" value="200" tags="EconomicValue"/>
 			</effect_group>
@@ -1121,6 +1234,208 @@
 				<passive_effect name="HealthLoss" operation="perc_add" value="-.025">
 					<requirement name="ProgressionLevel" progression_name="perkBatterUpGear" operation="Equals" value="1"/>
 				</passive_effect>
+			</effect_group>
+		</item>
+	</append>
+
+	<append xpath="/items">		
+		<item name="ammoAdvancedPipeBomb"> <!-- T2 demolitions (perk 1) -->
+			<property name="Tags" value="ammo,weapon,attPerception,perkDemolitionsExpert"/>
+			<property name="ItemTypeIcon" value="explosion"/>
+			<property name="DisplayType" value="advancedPipebomb"/>
+			<property name="CustomIcon" value="WL2_Pipebomb"/>
+			<property name="DescriptionKey" value="ammoAdvancedPipeBombDesc"/>
+			<property name="Class" value="ItemClassTimeBomb"/>
+			<property name="HoldType" value="25"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Ranged/PipeBomb/PipeBombPrefab.prefab"/>
+			<property name="DropScale" value="2.5"/>
+			<property name="Material" value="Mmetal"/>
+			<property name="Stacknumber" value="20"/>
+			<property name="EconomicValue" value="65"/>
+			<property name="Weight" value="0"/>
+			<property name="Explosion.ParticleIndex" value="12"/>
+			<property name="Explosion.RadiusBlocks" value="6"/>
+			<property name="Explosion.RadiusEntities" value="6"/>
+			<property name="Explosion.DamageBonus.earth" value="0"/> <!-- should work? -->
+			<property name="Explosion.DamageBonus.water" value="0"/>
+			<property name="Explosion.BlastPower" value="75"/> <!-- (int,100) how far ragdolls and such are flung -->
+			<property name="FuseTime" value="4"/> <!-- End: Needed for  time in sec, max 6 -->
+			<property name="StickPercent" value=".4"/>
+			<property name="UnlockedBy" value="perkDemolitionsExpert"/>
+			<property name="Group" value="Ammo/Weapons"/>
+			<property name="ActivationTransformToHide" value="Sparks"/>
+			<property class="Action0">
+				<property name="Class" value="ThrowAway"/>
+				<!-- <property name="Hitmask_override" value="Arrow"/> unfortunately this cannot work without a serious rewrite of the hitmask system -->
+				<property name="Delay" value="1.2"/> <!-- obsolete if rounds per minute exists -->
+				<property name="Throw_strength_default" value="8"/>
+				<property name="Throw_strength_max" value="50"/>
+				<property name="Max_strain_time" value="1.25"/>
+				<property name="Sound_start" value="swoosh"/>
+				<requirement name="CVarCompare" cvar="_underwater" operation="LT" value=".98"/>
+			</property>
+			<property class="Action1"> <!-- UseAction -->
+				<property name="Class" value="Activate"/>
+				<property name="Delay" value="1"/> <!-- obsolete if rounds per minute exists -->
+			</property>
+			<property name="ThrowableDecoy" value="true"/>
+			<effect_group tiered="false">
+				<passive_effect name="BlockDamage" operation="base_set" value="0"/><display_value name="dExDamageBlock" value="0"/>
+				<passive_effect name="EntityDamage" operation="base_set" value="753"/><display_value name="dExDamageEntity" value="750"/>
+				<display_value name="dExRadius" value="6"/>
+				<display_value name="dFuseTime" value="4"/>
+			</effect_group>
+			<effect_group tiered="false">
+				<requirement name="EntityTagCompare" target="other" tags="radiated"/>
+				<triggered_effect trigger="onSelfDamagedOther" action="AddBuff" target="other" buff="buffRadiatedRegenBlock"/>
+			</effect_group>
+		</item>
+	</append>
+
+	<append xpath="/items">	
+		<item name="resourceAdamantium">
+			<property name="Extends" value="resourceSilverNugget"/>
+			<property name="Tags" value="gems"/>
+			<property name="CustomIcon" value="Adamantium"/>
+			<property name="DescriptionKey" value="resourceAdamantiumDesc"/>
+			<property name="EconomicValue" value="150000"/>
+			<property name="CraftingIngredientTime" value="60"/>
+			<property name="DescriptionKey" value="resourceAdamantiumDesc"/>
+		</item>
+	</append>
+
+	<append xpath="/items">	
+		<item name="qc_killjuggernaut">
+			<property name="DescriptionKey" value="qc_killjuggernautDesc"/>
+			<property name="Extends" value="challengeQuestMaster"/>
+			<property class="Action0">
+				<property name="UseAnimation" value="false"/>
+				<property name="QuestGiven" value="killjuggernaut"/></property>
+		</item>
+	</append>
+
+	<append xpath="/items">		
+		<item name="Titanforged Pickaxe"> <!-- T3 Tools -->
+			<property name="Extends" value="meleeToolPickaxeIron"/>
+			<property name="DisplayType" value="melee"/>
+			<property name="HoldType" value="4"/>
+			<property name="Meshfile" value="#Other/Items?Tools/pickaxe_steelPrefab.prefab"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="6"/>
+			<property name="CustomIcon" value="titanforgedPickaxe"/>
+			<property name="ShowQuality" value="false"/>
+			<property class="Action0">
+				<property name="GrazeStart" value=".5"/>
+				<property name="GrazeEnd" value=".6"/>
+				<property name="SwingDegrees" value="65"/>
+				<property name="SwingAngle" value="180"/>
+				<property name="UseGrazingHits" value="false"/>
+			</property>
+			<property class="Action1">
+				<property name="UsePowerAttackAnimation" value="true"/>
+				<property name="UseGrazingHits" value="false"/>
+				<property name="GrazeStart" value=".4"/>
+				<property name="GrazeEnd" value=".48"/>
+				<property name="SwingDegrees" value="110"/>
+				<property name="SwingAngle" value="90"/>
+			</property>
+			<property name="Group" value="Tools/Traps"/>
+			<effect_group name="Titanforged Pickaxe">
+				<passive_effect name="EntityDamage" operation="base_set" value="59"/> <!-- meleeToolPickaxeSteel -->
+				<passive_effect name="BlockDamage" operation="base_set" value="165"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="62"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="15" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1750"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.6"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="7,7,7,7,7,7" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".12" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="325" tags="EconomicValue"/>
+
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value=".8" tags="terrGravel"/>
+			</effect_group>
+
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_add" value="34.1" tags="secondary"/>
+			</effect_group>
+		</item>
+
+		<item name="Imperial Excavator"> <!-- T3 Tools -->
+			<property name="Extends" value="meleeToolShovelIron"/>
+			<property name="Tags" value="melee,grunting,medium,tool,shovel,attStrength,perkMiner69r,perkMotherLode,canHaveCosmetic"/>
+			<property name="Meshfile" value="#Other/Items?Tools/shovel_steelPrefab.prefab"/>
+			<property name="RepairTools" value="resourceRepairKit"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="6"/>
+			<property name="CustomIcon" value="newShovel"/>
+			<property name="ShowQuality" value="false"/>
+
+			<effect_group name="Imperial Excavator">
+				<passive_effect name="EntityDamage" operation="base_set" value="45"/> <!-- meleeToolShovelSteel -->
+				<passive_effect name="BlockDamage" operation="base_set" value="178"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="55"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="15.8" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1750"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.6"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="7,7,7,7,7,7" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".12" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="320" tags="EconomicValue"/>
+
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.7" tags="wood"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="metal"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_add" value="31.6" tags="secondary"/>
+			</effect_group>
+		</item>
+
+		<item name="Dwarvern Great Axe"> <!-- T3 Tools -->
+			<property name="Extends" value="meleeToolFireaxeIron"/>
+			<property name="Meshfile" value="#Other/Items?Weapons/Melee/Axe/fireaxePrefab.prefab"/>
+			<property name="EconomicValue" value="1000"/>
+			<property name="Material" value="MmeleeToolAllSteel"/> <property name="Weight" value="6"/>
+			<property name="CustomIcon" value="waraxeIcon"/>
+			<property name="ShowQuality" value="false"/>
+
+			<effect_group name="Dwarvern Great Axe">
+				<passive_effect name="EntityDamage" operation="base_set" value="75"/> <!-- meleeToolFireaxeSteel -->
+				<passive_effect name="BlockDamage" operation="base_set" value="225"/>
+				<passive_effect name="AttacksPerMinute" operation="base_set" value="52"/>
+				<passive_effect name="StaminaLoss" operation="base_set" value="18" tags="primary"/>
+				<passive_effect name="DegradationMax" operation="base_set" value="1750"/>
+				<passive_effect name="DegradationPerUse" operation="base_set" value="1" tags="perkMiner69r"/>
+				<passive_effect name="MaxRange" operation="base_set" value="2.6"/>
+				<passive_effect name="BlockRange" operation="base_set" value="3.5"/>
+
+				<passive_effect name="ModSlots" operation="base_set" value="7,7,7,7,7,7" tier="1,2,3,4,5,6"/>
+				<passive_effect name="ModPowerBonus" operation="perc_add" value=".12" tags="EntityDamage,BlockDamage"/>
+				<passive_effect name="ModPowerBonus" operation="base_add" value="320" tags="EconomicValue"/>
+
+				<passive_effect name="HarvestCount" operation="base_set" value=".7" tags="butcherHarvest"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.8" tags="earth"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="stone"/>
+				<passive_effect name="DamageModifier" operation="perc_add" value="-.75" tags="metal"/>
+			</effect_group>
+			<effect_group name="Power Attack">
+				<passive_effect name="EntityDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="BlockDamage" operation="perc_add" value="1.25" tags="secondary"/>
+				<passive_effect name="AttacksPerMinute" operation="perc_add" value="-.3" tags="secondary"/>
+				<passive_effect name="StaminaLoss" operation="base_add" value="40" tags="secondary"/>
 			</effect_group>
 		</item>
 	</append>

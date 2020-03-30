@@ -150,4 +150,6 @@
 	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@value">1</set>
 	<set xpath="/progression/perks/perk[@name='perkTurrets']/effect_group/passive_effect[@name='RecipeTagUnlocked']/@tags">gunJunkTurret,gunAdvJunkTurret</set>
 	
+	<set xpath="/progression/perks/perk[@name='perkDemolitionsExpert']/effect_group/passive_effect[@name='RecipeTagUnlocked' and @level='4,5']/@tags">gunRocketLauncher,ammoRocketHE,ammoRocketFrag,resourceRocketTip,resourceRocketCasing,ammoAdvancedPipeBomb</set>
+	
 </configs>

@@ -7,6 +7,9 @@
 	
 	<!-- Removes neon sign buzzing -->
 	<remove xpath="/Sounds//SoundDataNode[@name='NeonSignLP']" />
+	
+	<!-- Removes Generator idle sound -->
+	<remove xpath="/Sounds//SoundDataNode[@name='generator_run']" />
 
 	<!-- Removes the default surpressed sounds -->
 	<remove xpath="/Sounds//SoundDataNode[@name='pistol_s_fire']" />

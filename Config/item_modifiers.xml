@@ -234,4 +234,39 @@
 		</item_modifier>
 	</append>
 
+	<append xpath="/item_modifiers">
+		<item_modifier name="modAdvTurretTactics" installable_tags="AdvTurretMod" modifier_tags="shafttip" type="attachment" rarity="0.5">
+			<property name="CustomIcon" value="modGunMeleeBlessedMetal"/>
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="RoundsPerMinute" operation="perc_add" value=".2"/>
+				<passive_effect name="MagazineSize" operation="perc_add" value=".2" />	
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="modAdvTurretArmour" installable_tags="AdvTurretMod" modifier_tags="shaft" type="attachment" rarity="0.5">
+			<property name="CustomIcon" value="modAdvTurretArmour"/>
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="DegradationMax" operation="perc_add" value="3"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+
+		<item_modifier name="modAdvTurretRadar" installable_tags="AdvTurretMod" modifier_tags="sideAttachment" type="attachment" rarity="0.5">
+			<property name="CustomIcon" value="modAdvTurretRadar"/>
+			<property name="name_key" value="modAdvTurretRadar" />
+			<property name="description_key" value="modAdvTurretRadarDesc" />
+			<property name="Stacknumber" value="1"/>
+			<effect_group tiered="false">
+				<passive_effect name="KickDegreesVerticalMin" operation="base_set" value="0"/>
+				<passive_effect name="KickDegreesVerticalMax" operation="base_set" value="0"/>
+				<passive_effect name="KickDegreesHorizontalMin" operation="base_set" value="0"/>
+				<passive_effect name="KickDegreesHorizontalMax" operation="base_set" value="0"/>
+			</effect_group>
+			<property name="PickupJournalEntry" value="augmentGunsTip"/>
+		</item_modifier>
+	</append>
+
 </configs>

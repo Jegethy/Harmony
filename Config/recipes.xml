@@ -40,7 +40,7 @@
 			<ingredient name="resourceBrokenGlass" count="1"/>
 		</recipe>
 
-		<recipe name="Jeg's Industrial Light" count="1" craft_area="workbench">
+		<recipe name="Jeg's Wall-Mounted Flood Light" count="1" craft_area="workbench">
 			<ingredient name="resourceElectricParts" count="8"/>
 			<ingredient name="resourceForgedIron" count="5"/>
 			<ingredient name="resourceBrokenGlass" count="10"/>
@@ -520,7 +520,7 @@
 	</append>
 
 	<append xpath="/recipes">
-		<recipe name="modAugerDiamondTip" counts="1" craft_area="workbench" tags="learnable">
+		<recipe name="modAugerDiamondTip" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="modAugerDiamondTipSchematic" count="1"/>
 			<ingredient name="itemPartsTemplateMaster" count="5"/>
 			<ingredient name="resourceGunPowder" count="15"/>
@@ -528,7 +528,7 @@
 			<ingredient name="resourceForgedSteel" count="15"/>		
 		</recipe>
 
-		<recipe name="modAugerTurbo" counts="1" craft_area="workbench" tags="learnable">
+		<recipe name="modAugerTurbo" count="1" craft_area="workbench" tags="learnable">
 			<ingredient name="modAugerTurboSchematic" count="1"/>
 			<ingredient name="smallEngine" count="3"/>
 			<ingredient name="resourceElectricParts" count="25"/>
@@ -537,4 +537,130 @@
 		</recipe>
 	</append>
 
+	<append xpath="/recipes">
+		<recipe name="modAdvTurretTactics" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceGunPowder" count="15"/>
+			<ingredient name="resourceSpring" count="10"/>
+			<ingredient name="resourceForgedSteel" count="15"/>		
+		</recipe>
+
+		<recipe name="modAdvTurretArmour" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceForgedIron" count="25"/>
+			<ingredient name="resourceScrapPolymers" count="25"/>
+			<ingredient name="resourceForgedSteel" count="15"/>		
+		</recipe>
+
+		<recipe name="modAdvTurretRadar" count="1" craft_area="workbench" tags="learnable">
+			<ingredient name="itemPartsTemplateMaster" count="3"/>
+			<ingredient name="resourceDuctTape" count="10"/>
+			<ingredient name="resourceElectricParts" count="25"/>
+			<ingredient name="resourceScrapPolymers" count="25"/>
+			<ingredient name="resourceForgedSteel" count="15"/>		
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="blockMysteryBoxOuter" count="1" always_unlocked="true" craft_time="4">
+			<ingredient name="resourceRawDiamond" count="1"/>
+			<ingredient name="resourceGoldNugget" count="2"/>
+			<ingredient name="resourceSilverNugget" count="3"/>
+			<ingredient name="resourceGlue" count="8"/>
+			<ingredient name="resourceWood" count="6"/>		
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="ammoAdvancedPipeBomb" count="1" craft_time="8" craft_area="workbench" tags="learnable,workbenchCrafting">
+			<ingredient name="itemPartsTemplateMaster" count="1"/>
+			<ingredient name="resourceGunPowder" count="20"/>
+			<ingredient name="resourceScrapPolymers" count="8"/>
+			<ingredient name="resourceMetalPipe" count="1"/>	
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="ammo762mmBulletBall" count="1500" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceGunPowder" count="75"/>	
+		</recipe>
+
+		<recipe name="ammo9mmBulletBall" count="1500" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceGunPowder" count="75"/>	
+		</recipe>
+
+		<recipe name="ammoArrowSteelAP" count="500" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceForgedSteel" count="15"/>	
+		</recipe>
+
+		<recipe name="ammoCrossbowBoltSteelAP" count="500" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceForgedSteel" count="15"/>	
+		</recipe>
+
+		<recipe name="ammoGasCan" count="6000" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceOilShale" count="75"/>	
+		</recipe>
+
+		<recipe name="resourceConcreteMix" count="6000" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceCobblestones" count="75"/>	
+		</recipe>
+
+		<recipe name="ammoAdvancedPipeBomb" count="5" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceGunPowder" count="25"/>
+			<ingredient name="resourceMetalPipe" count="5"/>
+		</recipe>
+
+		<recipe name="resourceTornPage" count="24" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourcePaper" count="12"/>	
+		</recipe>
+
+		<recipe name="itemPartsTemplateMaster" count="50" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceMilitaryFiber" count="5"/>	
+		</recipe>
+
+		<recipe name="resourceRepairKit" count="100" craft_time="12">
+			<ingredient name="resourceAdamantium" count="1"/>
+			<ingredient name="resourceForgedIron" count="10"/>	
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="reinforcedBladeTrap" count="1" craft_area="workbench" craft_time="28"> <!-- trap -->
+			<ingredient name="bladeTrap" count="1"/>
+			<ingredient name="resourceForgedSteel" count="50"/>
+			<ingredient name="resourceForgedIron" count="50"/>
+		</recipe>
+	</append>
+
+	<append xpath="/recipes">
+		<recipe name="stealBarsJeg" count="1" material_based="true" craft_area="forge">
+			<ingredient name="unit_iron" count="150"/>
+			<ingredient name="unit_clay" count="50"/>
+		</recipe>
+
+		<recipe name="stealBarsCenteredJeg" count="1" material_based="true" craft_area="forge">
+			<ingredient name="unit_iron" count="150"/>
+			<ingredient name="unit_clay" count="50"/>
+		</recipe>
+	</append>
+	
+	<append xpath="/recipes">
+		<recipe name="Wireless Junction Box" count="1" craft_area="workbench" craft_time="15"> <!-- trap -->
+			<ingredient name="resourceElectricParts" count="5"/>
+			<ingredient name="resourceForgedSteel" count="5"/>
+			<ingredient name="resourceLeather" count="2"/>
+		</recipe>
+	</append>
+	
 </configs>
